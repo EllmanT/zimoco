@@ -1,0 +1,36 @@
+{
+  "id": "model_categories",
+  "name": "ModelCategories",
+  "type": "SharedSlice",
+  "variations": [
+    {
+      "description": "Default",
+      "docURL": "",
+      "id": "default",
+      "imageUrl": "",
+      "name": "Default",
+      "primary": {
+        "heading": {
+          "config": {
+            "label": "Heading"
+          },
+          "type": "Text"
+        },
+        "cta": {
+          "config": {
+            "allowText": true,
+            "label": "Discover all button"
+          },
+          "type": "Link"
+        },
+        "view_label": {
+          "config": {
+            "label": "Label for 'view this brand' link"
+          },
+          "type": "Text"
+        }
+      },
+      "version": ""
+    }
+  ]
+}

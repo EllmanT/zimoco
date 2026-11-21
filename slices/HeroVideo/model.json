@@ -1,0 +1,63 @@
+{
+  "id": "hero_video",
+  "name": "HeroVideo",
+  "type": "SharedSlice",
+  "variations": [
+    {
+      "description": "Default",
+      "docURL": "",
+      "id": "default",
+      "imageUrl": "",
+      "name": "Default",
+      "primary": {
+        "slides": {
+          "config": {
+            "fields": {
+              "video_id": {
+                "config": {
+                  "label": "Bunny Stream video ID"
+                },
+                "type": "Text"
+              },
+              "kicker": {
+                "config": {
+                  "label": "Kicker (small text above headline)"
+                },
+                "type": "Text"
+              },
+              "headline": {
+                "config": {
+                  "label": "Headline"
+                },
+                "type": "Text"
+              },
+              "body": {
+                "config": {
+                  "label": "Supporting text"
+                },
+                "type": "Text"
+              },
+              "primary_cta": {
+                "config": {
+                  "allowText": true,
+                  "label": "Primary button"
+                },
+                "type": "Link"
+              },
+              "secondary_cta": {
+                "config": {
+                  "allowText": true,
+                  "label": "Secondary button"
+                },
+                "type": "Link"
+              }
+            },
+            "label": "Slides"
+          },
+          "type": "Group"
+        }
+      },
+      "version": ""
+    }
+  ]
+}

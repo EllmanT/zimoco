@@ -20,6 +20,74 @@
           "label": "Logo"
         },
         "type": "Image"
+      },
+      "order": {
+        "config": {
+          "label": "Order in brand pill bar"
+        },
+        "type": "Number"
+      },
+      "top_picks": {
+        "config": {
+          "fields": {
+            "title": {
+              "config": {
+                "label": "Title"
+              },
+              "type": "Text"
+            },
+            "subtitle": {
+              "config": {
+                "label": "Subtitle"
+              },
+              "type": "Text"
+            },
+            "image": {
+              "config": {
+                "label": "Image"
+              },
+              "type": "Image"
+            },
+            "cta": {
+              "config": {
+                "allowText": true,
+                "label": "Button"
+              },
+              "type": "Link"
+            }
+          },
+          "label": "Top picks (bento grid, first is the large tile)"
+        },
+        "type": "Group"
+      },
+      "category_images": {
+        "config": {
+          "fields": {
+            "category": {
+              "config": {
+                "customtypes": [
+                  {
+                    "fields": [
+                      "name"
+                    ],
+                    "id": "category"
+                  }
+                ],
+                "label": "Category",
+                "select": "document"
+              },
+              "type": "Link"
+            },
+            "image": {
+              "config": {
+                "label": "Image for this brand"
+              },
+              "type": "Image"
+            }
+          },
+          "label": "Body types shown in Our Models"
+        },
+        "type": "Group"
       }
     }
   },

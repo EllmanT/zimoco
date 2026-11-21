@@ -5,7 +5,29 @@
     "Main": {
       "slices": {
         "config": {
-          "choices": {}
+          "choices": {
+            "hero_video": {
+              "type": "SharedSlice"
+            },
+            "brand_picks": {
+              "type": "SharedSlice"
+            },
+            "model_categories": {
+              "type": "SharedSlice"
+            },
+            "vehicle_highlights": {
+              "type": "SharedSlice"
+            },
+            "browse_strip": {
+              "type": "SharedSlice"
+            },
+            "split_feature": {
+              "type": "SharedSlice"
+            },
+            "service_tiles": {
+              "type": "SharedSlice"
+            }
+          }
         },
         "fieldset": "Slice Zone",
         "type": "Slices"

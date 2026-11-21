@@ -1,0 +1,30 @@
+{
+  "id": "browse_strip",
+  "name": "BrowseStrip",
+  "type": "SharedSlice",
+  "variations": [
+    {
+      "description": "Default",
+      "docURL": "",
+      "id": "default",
+      "imageUrl": "",
+      "name": "Default",
+      "primary": {
+        "text": {
+          "config": {
+            "label": "Strip text"
+          },
+          "type": "Text"
+        },
+        "cta": {
+          "config": {
+            "allowText": true,
+            "label": "Button"
+          },
+          "type": "Link"
+        }
+      },
+      "version": ""
+    }
+  ]
+}

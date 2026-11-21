@@ -1,0 +1,29 @@
+{
+  "id": "brand_picks",
+  "name": "BrandPicks",
+  "type": "SharedSlice",
+  "variations": [
+    {
+      "description": "Default",
+      "docURL": "",
+      "id": "default",
+      "imageUrl": "",
+      "name": "Default",
+      "primary": {
+        "heading": {
+          "config": {
+            "label": "Top picks heading"
+          },
+          "type": "Text"
+        },
+        "pills_label": {
+          "config": {
+            "label": "Brand bar accessible label"
+          },
+          "type": "Text"
+        }
+      },
+      "version": ""
+    }
+  ]
+}

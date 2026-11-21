@@ -1,0 +1,63 @@
+{
+  "id": "service_tiles",
+  "name": "ServiceTiles",
+  "type": "SharedSlice",
+  "variations": [
+    {
+      "description": "Default",
+      "docURL": "",
+      "id": "default",
+      "imageUrl": "",
+      "name": "Default",
+      "primary": {
+        "heading": {
+          "config": {
+            "label": "Heading"
+          },
+          "type": "Text"
+        },
+        "tiles": {
+          "config": {
+            "fields": {
+              "title": {
+                "config": {
+                  "label": "Title"
+                },
+                "type": "Text"
+              },
+              "blurb": {
+                "config": {
+                  "label": "Short description"
+                },
+                "type": "Text"
+              },
+              "icon": {
+                "config": {
+                  "label": "Icon",
+                  "options": [
+                    "store",
+                    "steering-wheel",
+                    "banknote",
+                    "shield",
+                    "sliders"
+                  ]
+                },
+                "type": "Select"
+              },
+              "link": {
+                "config": {
+                  "allowText": true,
+                  "label": "Link"
+                },
+                "type": "Link"
+              }
+            },
+            "label": "Tiles"
+          },
+          "type": "Group"
+        }
+      },
+      "version": ""
+    }
+  ]
+}

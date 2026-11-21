@@ -1,0 +1,91 @@
+{
+  "id": "split_feature",
+  "name": "SplitFeature",
+  "type": "SharedSlice",
+  "variations": [
+    {
+      "description": "Default",
+      "docURL": "",
+      "id": "default",
+      "imageUrl": "",
+      "name": "Default",
+      "primary": {
+        "eyebrow": {
+          "config": {
+            "label": "Eyebrow"
+          },
+          "type": "Text"
+        },
+        "heading": {
+          "config": {
+            "label": "Heading"
+          },
+          "type": "Text"
+        },
+        "body": {
+          "config": {
+            "label": "Body",
+            "multi": "paragraph,strong,em,hyperlink"
+          },
+          "type": "StructuredText"
+        },
+        "cta": {
+          "config": {
+            "allowText": true,
+            "label": "Button"
+          },
+          "type": "Link"
+        },
+        "image": {
+          "config": {
+            "label": "Image"
+          },
+          "type": "Image"
+        }
+      },
+      "version": ""
+    },
+    {
+      "description": "Image left",
+      "docURL": "",
+      "id": "imageLeft",
+      "imageUrl": "",
+      "name": "Image left",
+      "primary": {
+        "eyebrow": {
+          "config": {
+            "label": "Eyebrow"
+          },
+          "type": "Text"
+        },
+        "heading": {
+          "config": {
+            "label": "Heading"
+          },
+          "type": "Text"
+        },
+        "body": {
+          "config": {
+            "label": "Body",
+            "multi": "paragraph,strong,em,hyperlink"
+          },
+          "type": "StructuredText"
+        },
+        "cta": {
+          "config": {
+            "allowText": true,
+            "label": "Button"
+          },
+          "type": "Link"
+        },
+        "image": {
+          "config": {
+            "label": "Image"
+          },
+          "type": "Image"
+        }
+      },
+      "version": ""
+    }
+  ]
+}

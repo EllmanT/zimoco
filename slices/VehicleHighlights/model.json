@@ -1,0 +1,54 @@
+{
+  "id": "vehicle_highlights",
+  "name": "VehicleHighlights",
+  "type": "SharedSlice",
+  "variations": [
+    {
+      "description": "Default",
+      "docURL": "",
+      "id": "default",
+      "imageUrl": "",
+      "name": "Default",
+      "primary": {
+        "heading": {
+          "config": {
+            "label": "Heading"
+          },
+          "type": "Text"
+        },
+        "cta": {
+          "config": {
+            "allowText": true,
+            "label": "View all vehicles link"
+          },
+          "type": "Link"
+        },
+        "vehicles": {
+          "config": {
+            "fields": {
+              "vehicle": {
+                "config": {
+                  "customtypes": [
+                    "vehicle"
+                  ],
+                  "label": "Vehicle",
+                  "select": "document"
+                },
+                "type": "Link"
+              },
+              "label": {
+                "config": {
+                  "label": "Label (e.g. Hatchback)"
+                },
+                "type": "Text"
+              }
+            },
+            "label": "Highlighted vehicles"
+          },
+          "type": "Group"
+        }
+      },
+      "version": ""
+    }
+  ]
+}
