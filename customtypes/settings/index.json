@@ -1,0 +1,124 @@
+{
+  "format": "custom",
+  "id": "settings",
+  "json": {
+    "Main": {
+      "site_name": {
+        "config": {
+          "label": "Site name"
+        },
+        "type": "Text"
+      },
+      "tagline": {
+        "config": {
+          "label": "Tagline"
+        },
+        "type": "Text"
+      },
+      "phone": {
+        "config": {
+          "label": "Phone"
+        },
+        "type": "Text"
+      },
+      "email": {
+        "config": {
+          "label": "Email"
+        },
+        "type": "Text"
+      },
+      "whatsapp": {
+        "config": {
+          "label": "WhatsApp (digits only, international)"
+        },
+        "type": "Text"
+      },
+      "address": {
+        "config": {
+          "label": "Address"
+        },
+        "type": "Text"
+      },
+      "map_url": {
+        "config": {
+          "label": "Map link"
+        },
+        "type": "Link"
+      },
+      "directions_url": {
+        "config": {
+          "label": "Directions link"
+        },
+        "type": "Link"
+      },
+      "opening_hours": {
+        "config": {
+          "fields": {
+            "days": {
+              "config": {
+                "label": "Days"
+              },
+              "type": "Text"
+            },
+            "hours": {
+              "config": {
+                "label": "Hours"
+              },
+              "type": "Text"
+            }
+          },
+          "label": "Opening hours"
+        },
+        "type": "Group"
+      },
+      "navigation": {
+        "config": {
+          "fields": {
+            "label": {
+              "config": {
+                "label": "Label"
+              },
+              "type": "Text"
+            },
+            "link": {
+              "config": {
+                "label": "Link"
+              },
+              "type": "Link"
+            }
+          },
+          "label": "Navigation"
+        },
+        "type": "Group"
+      },
+      "footer_note": {
+        "config": {
+          "label": "Footer note",
+          "multi": "paragraph,strong,em,hyperlink"
+        },
+        "type": "StructuredText"
+      },
+      "default_meta_title": {
+        "config": {
+          "label": "Default meta title"
+        },
+        "type": "Text"
+      },
+      "default_meta_description": {
+        "config": {
+          "label": "Default meta description"
+        },
+        "type": "Text"
+      },
+      "default_meta_image": {
+        "config": {
+          "label": "Default share image"
+        },
+        "type": "Image"
+      }
+    }
+  },
+  "label": "Settings",
+  "repeatable": false,
+  "status": true
+}

@@ -1,0 +1,23 @@
+{
+  "format": "custom",
+  "id": "category",
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "name": {
+        "config": {
+          "label": "Name"
+        },
+        "type": "Text"
+      }
+    }
+  },
+  "label": "Category",
+  "repeatable": true,
+  "status": true
+}

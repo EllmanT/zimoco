@@ -1,0 +1,29 @@
+{
+  "format": "custom",
+  "id": "brand",
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "name": {
+        "config": {
+          "label": "Name"
+        },
+        "type": "Text"
+      },
+      "logo": {
+        "config": {
+          "label": "Logo"
+        },
+        "type": "Image"
+      }
+    }
+  },
+  "label": "Brand",
+  "repeatable": true,
+  "status": true
+}

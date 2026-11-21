@@ -1,0 +1,397 @@
+{
+  "format": "page",
+  "id": "vehicle",
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "slices": {
+        "config": {
+          "choices": {}
+        },
+        "fieldset": "Slice Zone",
+        "type": "Slices"
+      },
+      "model_name": {
+        "config": {
+          "label": "Model name"
+        },
+        "type": "Text"
+      },
+      "tagline": {
+        "config": {
+          "label": "Tagline"
+        },
+        "type": "Text"
+      },
+      "summary": {
+        "config": {
+          "label": "Summary"
+        },
+        "type": "Text"
+      },
+      "short_description": {
+        "config": {
+          "label": "Short description",
+          "multi": "paragraph,strong,em,hyperlink"
+        },
+        "type": "StructuredText"
+      },
+      "long_description": {
+        "config": {
+          "label": "Long description",
+          "multi": "paragraph,heading3,heading4,strong,em,list-item,o-list-item,hyperlink"
+        },
+        "type": "StructuredText"
+      },
+      "brand": {
+        "config": {
+          "customtypes": [
+            {
+              "fields": [
+                "name",
+                "logo"
+              ],
+              "id": "brand"
+            }
+          ],
+          "label": "Brand",
+          "select": "document"
+        },
+        "type": "Link"
+      },
+      "category": {
+        "config": {
+          "customtypes": [
+            {
+              "fields": [
+                "name"
+              ],
+              "id": "category"
+            }
+          ],
+          "label": "Category",
+          "select": "document"
+        },
+        "type": "Link"
+      },
+      "stock_status": {
+        "config": {
+          "default_value": "Available",
+          "label": "Stock status",
+          "options": [
+            "Available",
+            "Limited Stock",
+            "Out of Stock"
+          ]
+        },
+        "type": "Select"
+      },
+      "base_price": {
+        "config": {
+          "label": "Base price (USD)",
+          "min": 0
+        },
+        "type": "Number"
+      },
+      "hero_image": {
+        "config": {
+          "label": "Hero image"
+        },
+        "type": "Image"
+      },
+      "card_image": {
+        "config": {
+          "label": "Card image"
+        },
+        "type": "Image"
+      },
+      "featured": {
+        "config": {
+          "label": "Show on home page"
+        },
+        "type": "Boolean"
+      },
+      "variants": {
+        "config": {
+          "fields": {
+            "variant_id": {
+              "config": {
+                "label": "Variant ID (matches image folder)"
+              },
+              "type": "Text"
+            },
+            "name": {
+              "config": {
+                "label": "Name"
+              },
+              "type": "Text"
+            },
+            "from_price": {
+              "config": {
+                "label": "Price (USD)",
+                "min": 0
+              },
+              "type": "Number"
+            },
+            "blurb": {
+              "config": {
+                "label": "Blurb"
+              },
+              "type": "Text"
+            },
+            "engine": {
+              "config": {
+                "label": "Engine"
+              },
+              "type": "Text"
+            },
+            "fuel": {
+              "config": {
+                "label": "Fuel",
+                "options": [
+                  "Petrol",
+                  "Diesel",
+                  "Petrol Hybrid",
+                  "Diesel Hybrid",
+                  "Electric"
+                ]
+              },
+              "type": "Select"
+            },
+            "power_kw": {
+              "config": {
+                "label": "Power (kW)"
+              },
+              "type": "Number"
+            },
+            "torque_nm": {
+              "config": {
+                "label": "Torque (Nm)"
+              },
+              "type": "Number"
+            },
+            "transmission": {
+              "config": {
+                "label": "Transmission"
+              },
+              "type": "Text"
+            },
+            "drive": {
+              "config": {
+                "label": "Drive"
+              },
+              "type": "Text"
+            },
+            "economy": {
+              "config": {
+                "label": "Economy (L/100 km)"
+              },
+              "type": "Number"
+            },
+            "seats": {
+              "config": {
+                "label": "Seats"
+              },
+              "type": "Number"
+            },
+            "payload_kg": {
+              "config": {
+                "label": "Payload (kg)"
+              },
+              "type": "Number"
+            },
+            "towing_kg": {
+              "config": {
+                "label": "Towing (kg)"
+              },
+              "type": "Number"
+            },
+            "length_mm": {
+              "config": {
+                "label": "Length (mm)"
+              },
+              "type": "Number"
+            },
+            "safety": {
+              "config": {
+                "label": "Safety"
+              },
+              "type": "Text"
+            },
+            "specs": {
+              "config": {
+                "label": "Spec table"
+              },
+              "type": "Table"
+            }
+          },
+          "label": "Variants"
+        },
+        "type": "Group"
+      },
+      "colour_options": {
+        "config": {
+          "fields": {
+            "variant_id": {
+              "config": {
+                "label": "Variant IDs (comma-separated, trims that share this colour)"
+              },
+              "type": "Text"
+            },
+            "colour_name": {
+              "config": {
+                "label": "Colour name"
+              },
+              "type": "Text"
+            },
+            "hex": {
+              "config": {
+                "label": "Hex (e.g. #1a1a1a)"
+              },
+              "type": "Text"
+            },
+            "image": {
+              "config": {
+                "label": "Studio image"
+              },
+              "type": "Image"
+            }
+          },
+          "label": "Colour options"
+        },
+        "type": "Group"
+      },
+      "exterior_shots": {
+        "config": {
+          "fields": {
+            "image": {
+              "config": {
+                "label": "Image"
+              },
+              "type": "Image"
+            },
+            "caption": {
+              "config": {
+                "label": "Caption"
+              },
+              "type": "Text"
+            }
+          },
+          "label": "Exterior shots"
+        },
+        "type": "Group"
+      },
+      "interior_shots": {
+        "config": {
+          "fields": {
+            "image": {
+              "config": {
+                "label": "Image"
+              },
+              "type": "Image"
+            },
+            "caption": {
+              "config": {
+                "label": "Caption"
+              },
+              "type": "Text"
+            }
+          },
+          "label": "Interior shots"
+        },
+        "type": "Group"
+      },
+      "rivals": {
+        "config": {
+          "fields": {
+            "vehicle": {
+              "config": {
+                "customtypes": [
+                  {
+                    "fields": [
+                      "model_name"
+                    ],
+                    "id": "vehicle"
+                  }
+                ],
+                "label": "Vehicle",
+                "select": "document"
+              },
+              "type": "Link"
+            }
+          },
+          "label": "Rivals"
+        },
+        "type": "Group"
+      },
+      "faq": {
+        "config": {
+          "fields": {
+            "question": {
+              "config": {
+                "label": "Question"
+              },
+              "type": "Text"
+            },
+            "answer": {
+              "config": {
+                "label": "Answer",
+                "multi": "paragraph,strong,em,hyperlink"
+              },
+              "type": "StructuredText"
+            }
+          },
+          "label": "FAQ"
+        },
+        "type": "Group"
+      },
+      "source_uid": {
+        "config": {
+          "label": "Source FM document uid (empty if Starbell-only)"
+        },
+        "type": "Text"
+      },
+      "synced_at": {
+        "config": {
+          "label": "Last synced from FM"
+        },
+        "type": "Timestamp"
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      }
+    }
+  },
+  "label": "Vehicle",
+  "repeatable": true,
+  "status": true
+}
