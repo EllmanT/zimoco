@@ -1,0 +1,109 @@
+{
+ "contact/viewing-handover": {
+  "source": "Pexels",
+  "page": "https://www.pexels.com/photo/7144174/",
+  "license": "Pexels License"
+ },
+ "contact/keys-handshake": {
+  "source": "Pexels",
+  "page": "https://www.pexels.com/photo/7144207/",
+  "license": "Pexels License"
+ },
+ "contact/showroom-dark": {
+  "source": "Pexels",
+  "page": "https://www.pexels.com/photo/4141962/",
+  "license": "Pexels License"
+ },
+ "contact/harare-hotel": {
+  "source": "Pexels",
+  "page": "https://www.pexels.com/photo/13355611/",
+  "license": "Pexels License"
+ },
+ "contact/harare-avenue": {
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Jason_Moyo_ave_Harare.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Itaisibanda"
+ },
+ "contact/harare-dusk": {
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:View_from_residential_area_in_north_Harare.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Itaisibanda"
+ },
+ "about/paperwork": {
+  "source": "Pexels",
+  "page": "https://www.pexels.com/photo/4173196/",
+  "license": "Pexels License"
+ },
+ "about/inspection-lift": {
+  "source": "Pexels",
+  "page": "https://www.pexels.com/photo/8986070/",
+  "license": "Pexels License"
+ },
+ "about/inspection-engine": {
+  "source": "Pexels",
+  "page": "https://www.pexels.com/photo/3807517/",
+  "license": "Pexels License"
+ },
+ "about/workshop-bay": {
+  "source": "Pexels",
+  "page": "https://www.pexels.com/photo/8986145/",
+  "license": "Pexels License"
+ },
+ "about/port-cranes": {
+  "source": "Pexels",
+  "page": "https://www.pexels.com/photo/34060583/",
+  "license": "Pexels License"
+ },
+ "about/port-ship": {
+  "source": "Pexels",
+  "page": "https://www.pexels.com/photo/38726116/",
+  "license": "Pexels License"
+ },
+ "about/road-plains": {
+  "source": "Pexels",
+  "page": "https://www.pexels.com/photo/28202561/",
+  "license": "Pexels License"
+ },
+ "about/road-suv": {
+  "source": "Pexels",
+  "page": "https://www.pexels.com/photo/11822722/",
+  "license": "Pexels License"
+ },
+ "about/harare-gardens": {
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Monument_in_Harare_Gardens.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "MbuleloMwanza"
+ },
+ "about/harare-tower": {
+  "source": "Pexels",
+  "page": "https://www.pexels.com/photo/14093842/",
+  "license": "Pexels License"
+ },
+ "about/victoria-falls": {
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Victoria_Falls,_Zimbabwe_03.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Bernard Gagnon"
+ },
+ "compare/hilux-gr-sport": {
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Toyota_HiLux_GR_Sport_1X7A7281.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Alexander-93"
+ },
+ "compare/hilux-showroom": {
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:2026_Toyota_Hilux_Z.jpg",
+  "license": "CC0",
+  "author": "TTTNIS"
+ },
+ "compare/ranger-wildtrak": {
+  "source": "Wikimedia Commons",
+  "page": "https://commons.wikimedia.org/wiki/File:Ford_Ranger_(T6,_P703)_Wildtrak_IMG_7323.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Alexander-93"
+ }
+}

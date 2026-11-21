@@ -1,0 +1,234 @@
+@import "tailwindcss";
+
+@theme {
+  --color-canvas: #ffffff;
+  --color-sunken: #f5f5f5;
+  --color-ink: #111111;
+  --color-chrome: #0d0d0d;
+  --color-soft: #f7f7f7;
+  --color-muted: #5a5a5a;
+  --color-red: #d3202a;
+  --color-red-deep: #a8141d;
+  --color-brass: #d3202a;
+  --color-brass-deep: #a8141d;
+  --color-line: rgb(0 0 0 / 0.12);
+
+  --font-display: var(--f-body), system-ui, sans-serif;
+  --font-sans: var(--f-body), system-ui, sans-serif;
+
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
+  --topbar: 3.5rem;
+}
+
+html {
+  background: #fff;
+  color: var(--color-ink);
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font-family: var(--f-body), system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  caret-color: var(--color-brass-deep);
+  font-variant-numeric: lining-nums;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: var(--color-red); color: #fff; }
+* { scrollbar-color: #bdbdbd #fff; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #fff; }
+::-webkit-scrollbar-thumb { background: #c4c4c4; border-radius: 10px; border: 2px solid #fff; }
+
+:focus-visible { outline: 2px solid var(--color-brass); outline-offset: 3px; border-radius: 4px; }
+
+/* Display: bold humanist sans, sentence case (Toyota-style). */
+.display {
+  font-family: var(--f-body), system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+.display-case { text-transform: none; }
+.label {
+  font-family: var(--f-body), system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.measure { max-width: 62ch; }
+.tnum { font-variant-numeric: tabular-nums lining-nums; white-space: nowrap; }
+a { text-underline-offset: 0.22em; text-decoration-thickness: 1px; }
+
+/* Materials */
+.material {
+  background: rgb(255 255 255 / 0.78);
+  -webkit-backdrop-filter: saturate(180%) blur(22px);
+  backdrop-filter: saturate(180%) blur(22px);
+}
+.material-card {
+  background: rgb(255 255 255 / 0.8);
+  -webkit-backdrop-filter: saturate(180%) blur(28px);
+  backdrop-filter: saturate(180%) blur(28px);
+  border: 1px solid rgb(255 255 255 / 0.7);
+  box-shadow: 0 1px 0 rgb(255 255 255 / 0.9) inset, 0 24px 60px -24px rgb(0 0 0 / 0.35), 0 2px 6px rgb(0 0 0 / 0.06);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;
+  min-height: 48px; padding: 0 1.6rem; border-radius: 999px;
+  font-weight: 500; font-size: 0.97rem;
+  border: 1px solid transparent;
+  transition: transform 140ms var(--ease-out-strong), background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+.btn:active { transform: scale(0.97); }
+.btn:disabled { opacity: 0.55; }
+.btn-solid { background: var(--color-ink); color: #fff; }
+.btn-ghost { background: transparent; color: var(--color-ink); border-color: rgb(0 0 0 / 0.25); }
+@media (hover: hover) and (pointer: fine) {
+  .btn-solid:hover { background: #2b2b2b; }
+  .btn-ghost:hover { border-color: var(--color-ink); background: rgb(0 0 0 / 0.04); }
+}
+
+.field {
+  width: 100%; min-height: 50px; padding: 0.75rem 1rem;
+  background: #fff; color: var(--color-ink);
+  border: 1px solid rgb(0 0 0 / 0.2); border-radius: 6px;
+  font: inherit;
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+.field::placeholder { color: #858585; }
+.field:focus { outline: none; border-color: var(--color-ink); box-shadow: 0 0 0 4px rgb(0 0 0 / 0.08); }
+.field[aria-invalid="true"] { border-color: #b4472f; }
+
+/* ---- The ring: the Zimoco signature (progress circle used for timers, rails and buttons) ---- */
+.prog-ring { display: block; overflow: visible; }
+.prog-track { opacity: 0.28; }
+.prog-fill { transform: rotate(-90deg); transform-origin: 50% 50%; stroke-linecap: round; }
+.prog-fill:not(.prog-timer) { transition: stroke-dashoffset 300ms linear; }
+@keyframes ring-run { from { stroke-dashoffset: var(--c); } to { stroke-dashoffset: 0; } }
+.prog-timer { animation: ring-run var(--dur, 6000ms) linear forwards; animation-play-state: var(--play, running); }
+
+.ring-btn {
+  display: inline-flex; align-items: center; gap: 0.75rem;
+}
+.ring-btn .ring-btn-disc {
+  position: relative; display: inline-grid; place-items: center;
+  width: 2.5rem; height: 2.5rem; border-radius: 999px;
+  border: 1.5px solid currentColor; color: inherit;
+  transition: background-color 220ms ease, color 220ms ease, transform 140ms var(--ease-out-strong);
+}
+.ring-btn:active .ring-btn-disc { transform: scale(0.94); }
+@media (hover: hover) and (pointer: fine) {
+  .ring-btn:hover .ring-btn-disc { background: currentColor; }
+  .ring-btn:hover .ring-btn-disc svg { color: var(--ring-invert, #fff); }
+}
+
+/* Left dot rail: inverts against any background so it reads on photos, white and black */
+.rail { mix-blend-mode: difference; color: #fff; }
+.rail-item { display: flex; align-items: center; height: 26px; gap: 14px; }
+.rail-dot { width: 4px; height: 4px; border-radius: 99px; background: currentColor; opacity: 0.7; transition: opacity 200ms ease, transform 300ms var(--ease-out-strong); }
+.rail-label { opacity: 0; transform: translateX(-6px); transition: opacity 300ms ease, transform 400ms var(--ease-out-strong); white-space: nowrap; pointer-events: none; }
+.rail[data-show="true"] .rail-item[aria-current="true"] .rail-label,
+.rail-item:focus-visible .rail-label { opacity: 1; transform: none; }
+@media (hover: hover) and (pointer: fine) { .rail-item:hover .rail-label { opacity: 1; transform: none; } }
+.rail-item[aria-current="true"] .rail-dot { opacity: 0; transform: scale(0.4); }
+@media (hover: hover) and (pointer: fine) { .rail-item:hover .rail-dot { opacity: 1; transform: scale(1.6); } }
+
+/* Nav: plain colour change on hover, no underline animation */
+.nav-link { display: inline-flex; align-items: center; height: var(--topbar); color: rgb(17 17 17 / 0.78); transition: color 160ms ease; }
+.nav-link[aria-current="page"] { color: var(--color-red); }
+header[data-overlay="true"] .nav-link { color: rgb(255 255 255 / 0.9); }
+header[data-overlay="true"] .nav-link[aria-current="page"] { color: #fff; }
+@media (hover: hover) and (pointer: fine) { .nav-link:hover { color: var(--color-red); } }
+
+.btn-red { background: var(--color-red); color: #fff; }
+@media (hover: hover) and (pointer: fine) { .btn-red:hover { background: var(--color-red-deep); } }
+
+/* Loader: logo fades up from soft grey into full colour, then the sheet lifts away */
+@keyframes loader-in { from { opacity: 0.35; filter: grayscale(1); transform: translateY(8px) scale(0.96); } to { opacity: 1; filter: grayscale(0); transform: none; } }
+@keyframes loader-out { to { transform: translateY(-100%); } }
+.loader-logo { animation: loader-in 1100ms var(--ease-out-strong) 100ms both; }
+.loader-out { animation: loader-out 700ms cubic-bezier(0.76, 0, 0.24, 1) forwards; }
+
+/* Hero entrance (kept until Phase 2 replaces the hero) */
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+.rise { animation: rise 800ms var(--ease-out-strong) both; }
+.rise-2 { animation-delay: 80ms; }
+.rise-3 { animation-delay: 160ms; }
+@keyframes settle { from { transform: scale(1.06); } to { transform: scale(1); } }
+.settle { animation: settle 1600ms var(--ease-out-strong) both; }
+@keyframes float-in { from { opacity: 0; transform: translateY(24px) scale(0.985); } to { opacity: 1; transform: translateY(0) scale(1); } }
+.float-in { animation: float-in 900ms var(--ease-out-strong) 380ms both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .loader-logo { animation: none; }
+  .loader-out { animation-duration: 1ms; }
+  .rise, .settle, .float-in { animation: none; }
+  .prog-timer { animation: none; stroke-dashoffset: 0; }
+  html { scroll-behavior: auto; }
+  * { transition-duration: 0ms !important; }
+}
+/* Short entrance for frequently-switched panels (tabs, success states): fast ease-out, no overshoot */
+@keyframes panel-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.panel-in { animation: panel-in 220ms var(--ease-out-strong) both; }
+.chip-glass { -webkit-backdrop-filter: saturate(160%) blur(14px); backdrop-filter: saturate(160%) blur(14px); }
+@media (prefers-reduced-motion: reduce) { .panel-in { animation: none; } }
+@media (prefers-reduced-transparency: reduce) {
+  .chip-glass { -webkit-backdrop-filter: none; backdrop-filter: none; background: rgb(17 17 17 / 0.92) !important; }
+  .chip-glass-light { background: #fff !important; }
+  .material { background: #fff; -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .material-card { background: #fff; -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
+@media (prefers-contrast: more) { :root { --color-line: rgb(0 0 0 / 0.45); } }
+
+/* Hero slow zoom + hidden scrollbars for carousels */
+@keyframes hero-zoom { from { transform: scale(1); } to { transform: scale(1.07); } }
+.hero-zoom { animation: hero-zoom 9000ms ease-out both; }
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+@media (prefers-reduced-motion: reduce) { .hero-zoom { animation: none; } }
+
+/* Scroll reveal and the slow dotted rings of the Performance chapter */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 700ms var(--ease-out-strong), transform 700ms var(--ease-out-strong); }
+.reveal-in { opacity: 1; transform: none; }
+@media (scripting: none) { .reveal { opacity: 1; transform: none; } }
+@keyframes ring-spin { to { transform: rotate(360deg); } }
+.ring-spin { transform-origin: 0 0; animation: ring-spin 160s linear infinite; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } .ring-spin { animation: none; } }
+
+/* Configurator image swap: quick fade-in on remount */
+@keyframes cfg-in { from { opacity: 0; transform: scale(0.985); } to { opacity: 1; transform: none; } }
+.cfg-fade { animation: cfg-in 260ms var(--ease-out-strong) both; }
+@media (prefers-reduced-motion: reduce) { .cfg-fade { animation: none; } }
+
+/* Category showcase: directional slide-fade when the vehicle changes */
+@keyframes showcase-r { from { opacity: 0; transform: translateX(28px); } to { opacity: 1; transform: none; } }
+@keyframes showcase-l { from { opacity: 0; transform: translateX(-28px); } to { opacity: 1; transform: none; } }
+.showcase-in-r { animation: showcase-r 420ms var(--ease-out-strong) both; }
+.showcase-in-l { animation: showcase-l 420ms var(--ease-out-strong) both; }
+@media (prefers-reduced-motion: reduce) { .showcase-in-r, .showcase-in-l { animation: none; } }
+
+/* Brand hero: logo settles in */
+@keyframes brand-in { from { opacity: 0; transform: translateY(12px) scale(0.97); } to { opacity: 1; transform: none; } }
+.brand-in { animation: brand-in 650ms var(--ease-out-strong) both; }
+@media (prefers-reduced-motion: reduce) { .brand-in { animation: none; } }
+
+/* Brand marquee: drifts left to right, seamless loop, pauses on hover */
+@keyframes marquee-ltr { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+.marquee-track { animation: marquee-ltr 60s linear infinite; will-change: transform; }
+@media (hover: hover) and (pointer: fine) { .marquee:hover .marquee-track { animation-play-state: paused; } }
+@media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; transform: none; } .marquee { overflow-x: auto; } }
+
+/* Clickable things show a pointer, everywhere. Tailwind v4 no longer does this for buttons. */
+a[href], button, summary, select, label[for], [role="button"], [role="tab"], [role="link"],
+input:is([type="button"], [type="submit"], [type="reset"], [type="range"], [type="file"], [type="checkbox"], [type="radio"]) {
+  cursor: pointer;
+}
+:is(button, select, input, [role="button"], [role="tab"]):disabled, [aria-disabled="true"] { cursor: not-allowed; }

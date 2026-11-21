@@ -1,0 +1,163 @@
+{
+  "toyota-hilux": {
+    "variants": {
+      "country": [
+        {
+          "colour": "black",
+          "src": "/showroom/toyota-hilux/country/black.png"
+        },
+        {
+          "colour": "green",
+          "src": "/showroom/toyota-hilux/country/green.png"
+        },
+        {
+          "colour": "grey",
+          "src": "/showroom/toyota-hilux/country/grey.png"
+        },
+        {
+          "colour": "orange",
+          "src": "/showroom/toyota-hilux/country/orange.png"
+        },
+        {
+          "colour": "pearl",
+          "src": "/showroom/toyota-hilux/country/pearl.png"
+        },
+        {
+          "colour": "red",
+          "src": "/showroom/toyota-hilux/country/red.png"
+        },
+        {
+          "colour": "silver",
+          "src": "/showroom/toyota-hilux/country/silver.png"
+        },
+        {
+          "colour": "white",
+          "src": "/showroom/toyota-hilux/country/white.png"
+        }
+      ],
+      "raider": [
+        {
+          "colour": "black",
+          "src": "/showroom/toyota-hilux/raider/black.png"
+        },
+        {
+          "colour": "bronze",
+          "src": "/showroom/toyota-hilux/raider/bronze.png"
+        },
+        {
+          "colour": "grey",
+          "src": "/showroom/toyota-hilux/raider/grey.png"
+        },
+        {
+          "colour": "orange",
+          "src": "/showroom/toyota-hilux/raider/orange.png"
+        },
+        {
+          "colour": "pearl",
+          "src": "/showroom/toyota-hilux/raider/pearl.png"
+        },
+        {
+          "colour": "red",
+          "src": "/showroom/toyota-hilux/raider/red.png"
+        },
+        {
+          "colour": "silver",
+          "src": "/showroom/toyota-hilux/raider/silver.png"
+        },
+        {
+          "colour": "white",
+          "src": "/showroom/toyota-hilux/raider/white.png"
+        }
+      ],
+      "single-cab": [
+        {
+          "colour": "black",
+          "src": "/showroom/toyota-hilux/single-cab/black.png"
+        },
+        {
+          "colour": "green",
+          "src": "/showroom/toyota-hilux/single-cab/green.png"
+        },
+        {
+          "colour": "grey",
+          "src": "/showroom/toyota-hilux/single-cab/grey.png"
+        },
+        {
+          "colour": "orange",
+          "src": "/showroom/toyota-hilux/single-cab/orange.png"
+        },
+        {
+          "colour": "red",
+          "src": "/showroom/toyota-hilux/single-cab/red.png"
+        },
+        {
+          "colour": "white",
+          "src": "/showroom/toyota-hilux/single-cab/white.png"
+        }
+      ],
+      "single-cab-raider": [
+        {
+          "colour": "black",
+          "src": "/showroom/toyota-hilux/single-cab-raider/black.png"
+        },
+        {
+          "colour": "green",
+          "src": "/showroom/toyota-hilux/single-cab-raider/green.png"
+        },
+        {
+          "colour": "orange",
+          "src": "/showroom/toyota-hilux/single-cab-raider/orange.png"
+        },
+        {
+          "colour": "red",
+          "src": "/showroom/toyota-hilux/single-cab-raider/red.png"
+        },
+        {
+          "colour": "silver",
+          "src": "/showroom/toyota-hilux/single-cab-raider/silver.png"
+        },
+        {
+          "colour": "white",
+          "src": "/showroom/toyota-hilux/single-cab-raider/white.png"
+        }
+      ],
+      "standard": [
+        {
+          "colour": "bronze",
+          "src": "/showroom/toyota-hilux/standard/bronze.png"
+        },
+        {
+          "colour": "grey",
+          "src": "/showroom/toyota-hilux/standard/grey.png"
+        },
+        {
+          "colour": "orange",
+          "src": "/showroom/toyota-hilux/standard/orange.png"
+        },
+        {
+          "colour": "silver",
+          "src": "/showroom/toyota-hilux/standard/silver.png"
+        },
+        {
+          "colour": "white",
+          "src": "/showroom/toyota-hilux/standard/white.png"
+        }
+      ]
+    },
+    "exterior": [
+      "/showroom/toyota-hilux/gallery/exterior-01.jpg",
+      "/showroom/toyota-hilux/gallery/exterior-02.avif",
+      "/showroom/toyota-hilux/gallery/exterior-03.avif",
+      "/showroom/toyota-hilux/gallery/exterior-04.avif",
+      "/showroom/toyota-hilux/gallery/exterior-05.jpg",
+      "/showroom/toyota-hilux/gallery/exterior-06.jpg"
+    ],
+    "interior": [
+      "/showroom/toyota-hilux/gallery/interior-01.jpg",
+      "/showroom/toyota-hilux/gallery/interior-02.jpg",
+      "/showroom/toyota-hilux/gallery/interior-03.jpg",
+      "/showroom/toyota-hilux/gallery/interior-04.jpg"
+    ],
+    "hero": null
+  }
+}

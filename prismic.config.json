@@ -1,0 +1,21 @@
+{
+  "repositoryName": "xcgt84rk",
+  "routes": [
+    {
+      "type": "homepage",
+      "path": "/"
+    },
+    {
+      "type": "about_page",
+      "path": "/about"
+    },
+    {
+      "type": "contact_page",
+      "path": "/contact"
+    },
+    {
+      "type": "vehicle",
+      "path": "/showroom/:uid"
+    }
+  ]
+}

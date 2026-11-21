@@ -1,0 +1,10 @@
+{
+  "note": "Logos are trademarks of their respective owners, shown only to identify brands Zimoco sells. Sourced from Wikimedia Commons.",
+  "toyota": { "page": "https://commons.wikimedia.org/wiki/File:Toyota_carlogo.svg", "license": "Public domain (trademarked)" },
+  "lexus": { "page": "https://commons.wikimedia.org/wiki/File:Lexus_Logo.svg", "license": "CC0" },
+  "ford": { "page": "https://commons.wikimedia.org/wiki/File:Ford_logo_flat.svg", "license": "Public domain (trademarked)" },
+  "honda": { "page": "https://commons.wikimedia.org/wiki/File:Honda.svg", "license": "Public domain (trademarked)" },
+  "isuzu": { "page": "https://commons.wikimedia.org/wiki/File:Isuzu.svg", "license": "Public domain (trademarked)" },
+  "land-rover": { "page": "https://commons.wikimedia.org/wiki/File:Land_Rover_2023.svg", "license": "Public domain (trademarked)" },
+  "mazda": { "page": "https://commons.wikimedia.org/wiki/File:Mazda_logo_2024.svg", "license": "Public domain (trademarked)" }
+}
