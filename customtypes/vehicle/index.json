@@ -228,6 +228,12 @@
                 "label": "Spec table"
               },
               "type": "Table"
+            },
+            "hero_image": {
+              "type": "Image",
+              "config": {
+                "label": "Hero image for this version"
+              }
             }
           },
           "label": "Variants"
@@ -361,6 +367,298 @@
           "label": "Last synced from FM"
         },
         "type": "Timestamp"
+      },
+      "highlights": {
+        "type": "Group",
+        "config": {
+          "label": "Highlights (bento)",
+          "fields": {
+            "variant_id": {
+              "type": "Text",
+              "config": {
+                "label": "Version IDs (comma-separated; blank = all versions)"
+              }
+            },
+            "title": {
+              "type": "Text",
+              "config": {
+                "label": "Title"
+              }
+            },
+            "text": {
+              "type": "Text",
+              "config": {
+                "label": "Text"
+              }
+            },
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "Image"
+              }
+            }
+          }
+        }
+      },
+      "exterior_views": {
+        "type": "Group",
+        "config": {
+          "label": "Exterior colour views",
+          "fields": {
+            "variant_id": {
+              "type": "Text",
+              "config": {
+                "label": "Version IDs (comma-separated; blank = all versions)"
+              }
+            },
+            "colour_name": {
+              "type": "Text",
+              "config": {
+                "label": "Colour name"
+              }
+            },
+            "colour_hex": {
+              "type": "Text",
+              "config": {
+                "label": "Colour hex (e.g. #1a1a1a)"
+              }
+            },
+            "angle": {
+              "type": "Select",
+              "config": {
+                "label": "Angle",
+                "options": [
+                  "Front",
+                  "Front left",
+                  "Left",
+                  "Rear left",
+                  "Rear",
+                  "Rear right",
+                  "Right",
+                  "Front right"
+                ]
+              }
+            },
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "Studio image"
+              }
+            }
+          }
+        }
+      },
+      "wheel_options": {
+        "type": "Group",
+        "config": {
+          "label": "Wheel options",
+          "fields": {
+            "variant_id": {
+              "type": "Text",
+              "config": {
+                "label": "Version IDs (comma-separated; blank = all versions)"
+              }
+            },
+            "name": {
+              "type": "Text",
+              "config": {
+                "label": "Wheel name"
+              }
+            },
+            "angle": {
+              "type": "Select",
+              "config": {
+                "label": "Angle",
+                "options": [
+                  "Front",
+                  "Front left",
+                  "Left",
+                  "Rear left",
+                  "Rear",
+                  "Rear right",
+                  "Right",
+                  "Front right"
+                ]
+              }
+            },
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "Image"
+              }
+            }
+          }
+        }
+      },
+      "interior_views": {
+        "type": "Group",
+        "config": {
+          "label": "Interior views",
+          "fields": {
+            "variant_id": {
+              "type": "Text",
+              "config": {
+                "label": "Version IDs (comma-separated; blank = all versions)"
+              }
+            },
+            "tab": {
+              "type": "Select",
+              "config": {
+                "label": "Tab",
+                "options": [
+                  "Upholstery",
+                  "Trims"
+                ],
+                "default_value": "Upholstery"
+              }
+            },
+            "option_name": {
+              "type": "Text",
+              "config": {
+                "label": "Option name"
+              }
+            },
+            "swatch_hex": {
+              "type": "Text",
+              "config": {
+                "label": "Swatch hex"
+              }
+            },
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "Image"
+              }
+            }
+          }
+        }
+      },
+      "equipment": {
+        "type": "Group",
+        "config": {
+          "label": "Equipment highlights",
+          "fields": {
+            "variant_id": {
+              "type": "Text",
+              "config": {
+                "label": "Version IDs (comma-separated; blank = all versions)"
+              }
+            },
+            "category": {
+              "type": "Text",
+              "config": {
+                "label": "Category (e.g. Multimedia)"
+              }
+            },
+            "title": {
+              "type": "Text",
+              "config": {
+                "label": "Title"
+              }
+            },
+            "text": {
+              "type": "Text",
+              "config": {
+                "label": "Text"
+              }
+            },
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "Image"
+              }
+            }
+          }
+        }
+      },
+      "spec_rows": {
+        "type": "Group",
+        "config": {
+          "label": "Technical data rows",
+          "fields": {
+            "variant_id": {
+              "type": "Text",
+              "config": {
+                "label": "Version IDs (comma-separated; blank = all versions)"
+              }
+            },
+            "section": {
+              "type": "Text",
+              "config": {
+                "label": "Section (e.g. Performance)"
+              }
+            },
+            "label": {
+              "type": "Text",
+              "config": {
+                "label": "Label"
+              }
+            },
+            "value": {
+              "type": "Text",
+              "config": {
+                "label": "Value"
+              }
+            },
+            "key_figure": {
+              "type": "Boolean",
+              "config": {
+                "label": "Show in the key figures table"
+              }
+            }
+          }
+        }
+      },
+      "offers": {
+        "type": "Group",
+        "config": {
+          "label": "Offers and prices",
+          "fields": {
+            "variant_id": {
+              "type": "Text",
+              "config": {
+                "label": "Version IDs (comma-separated; blank = all versions)"
+              }
+            },
+            "type": {
+              "type": "Select",
+              "config": {
+                "label": "Type",
+                "options": [
+                  "Leasing",
+                  "Finance",
+                  "Cash offer",
+                  "Trade-in",
+                  "Other"
+                ]
+              }
+            },
+            "title": {
+              "type": "Text",
+              "config": {
+                "label": "Title"
+              }
+            },
+            "text": {
+              "type": "Text",
+              "config": {
+                "label": "Text"
+              }
+            },
+            "cta_label": {
+              "type": "Text",
+              "config": {
+                "label": "Button label"
+              }
+            },
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "Background image"
+              }
+            }
+          }
+        }
       }
     },
     "SEO & Metadata": {

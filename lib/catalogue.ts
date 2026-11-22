@@ -33,10 +33,25 @@ export type Variant = {
 /** `colour` is the lowercase key (e.g. "sulfur metallic"); `hex` is the swatch colour when Prismic supplies one. */
 export type ColourOption = { colour: string; src: string; hex?: string };
 
+/** Rows authored in Prismic for the vehicle page. `ids` = versions the row applies to (empty = every version). */
+type Scoped = { ids: string[] };
+export type PageGroups = {
+  highlights: (Scoped & { title: string; text: string; src?: string })[];
+  exterior: (Scoped & { name: string; hex?: string; angle: string; src: string })[];
+  wheels: (Scoped & { name: string; angle: string; src: string })[];
+  interior: (Scoped & { tab: string; name: string; hex?: string; src: string })[];
+  equipment: (Scoped & { category: string; title: string; text: string; src?: string })[];
+  specs: (Scoped & { section: string; label: string; value: string; key: boolean })[];
+  offers: (Scoped & { type: string; title: string; text: string; cta: string; src?: string })[];
+  heroByVersion: Record<string, string>;
+};
+
 /** Content that comes from Prismic (set by lib/prismic/mapVehicle.ts). Takes priority over the local scan manifest. */
 export type Cms = {
   hero?: string;
   card?: string;
+  /** Vehicle-page groups (highlights, views, specs, offers). */
+  page?: PageGroups;
   /** Studio colour images per variant id. */
   colours: Record<string, ColourOption[]>;
   exterior: string[];

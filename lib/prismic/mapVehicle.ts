@@ -1,5 +1,5 @@
 import { asText, isFilled, type Content } from "@prismicio/client";
-import type { Body, Cms, ColourOption, Model, Spec, Variant } from "@/lib/catalogue";
+import type { Body, Cms, ColourOption, Model, PageGroups, Spec, Variant } from "@/lib/catalogue";
 
 const BODIES: Body[] = ["Pickup", "SUV", "Hatchback", "Commercial"];
 const TBC = "To be confirmed";
@@ -28,6 +28,29 @@ function rowSpec(v: Row): Partial<Spec> {
   if (v.length_mm != null) s.lengthMm = v.length_mm;
   if (v.safety) s.safety = v.safety;
   return s;
+}
+
+type Img = Content.VehicleDocument["data"]["hero_image"];
+type Raw = { variant_id?: string | null } & Record<string, unknown>;
+const ids = (r: Raw) => (r.variant_id ?? "").split(/[,\s]+/).filter(Boolean);
+const txt = (v: unknown) => (typeof v === "string" ? v.trim() : "");
+const img = (v: unknown) => (isFilled.image(v as Img) ? ((v as Img).url as string) : undefined);
+
+/** Reads the vehicle-page groups. Every group may be absent (older Prismic model), so each defaults to empty. */
+function mapPage(d: unknown, rows: Row[]): PageGroups {
+  const g = (k: string) => (((d as Record<string, unknown>)[k] as Raw[] | undefined) ?? []);
+  const heroByVersion: Record<string, string> = {};
+  for (const v of rows) { const u = img((v as unknown as Raw).hero_image); if (u && v.variant_id) heroByVersion[v.variant_id] = u; }
+  return {
+    heroByVersion,
+    highlights: g("highlights").filter((r) => txt(r.title) || img(r.image)).map((r) => ({ ids: ids(r), title: txt(r.title), text: txt(r.text), src: img(r.image) })),
+    exterior: g("exterior_views").flatMap((r) => { const src = img(r.image), name = txt(r.colour_name); return src && name ? [{ ids: ids(r), name, hex: txt(r.colour_hex) || undefined, angle: txt(r.angle) || "Front left", src }] : []; }),
+    wheels: g("wheel_options").flatMap((r) => { const src = img(r.image), name = txt(r.name); return src && name ? [{ ids: ids(r), name, angle: txt(r.angle) || "Front left", src }] : []; }),
+    interior: g("interior_views").flatMap((r) => { const src = img(r.image); return src ? [{ ids: ids(r), tab: txt(r.tab) || "Upholstery", name: txt(r.option_name) || "Interior", hex: txt(r.swatch_hex) || undefined, src }] : []; }),
+    equipment: g("equipment").filter((r) => txt(r.title)).map((r) => ({ ids: ids(r), category: txt(r.category) || "Highlights", title: txt(r.title), text: txt(r.text), src: img(r.image) })),
+    specs: g("spec_rows").filter((r) => txt(r.label) && txt(r.value)).map((r) => ({ ids: ids(r), section: txt(r.section) || "General", label: txt(r.label), value: txt(r.value), key: r.key_figure === true })),
+    offers: g("offers").filter((r) => txt(r.title)).map((r) => ({ ids: ids(r), type: txt(r.type) || "Other", title: txt(r.title), text: txt(r.text), cta: txt(r.cta_label) || "Make an enquiry", src: img(r.image) })),
+  };
 }
 
 /**
@@ -93,6 +116,7 @@ export function mapVehicle(doc: Content.VehicleDocument): Model | null {
     credits: credits.length ? credits : undefined,
     hero: isFilled.image(d.hero_image) ? d.hero_image.url : undefined,
     card: isFilled.image(d.card_image) ? d.card_image.url : undefined,
+    page: mapPage(d, rows),
     colours,
     exterior: shots(d.exterior_shots),
     interior: shots(d.interior_shots),
