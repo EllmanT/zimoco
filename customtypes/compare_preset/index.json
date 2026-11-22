@@ -1,0 +1,68 @@
+{
+  "format": "custom",
+  "id": "compare_preset",
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "label": {
+        "config": {
+          "label": "Label"
+        },
+        "type": "Text"
+      },
+      "vehicle_a": {
+        "config": {
+          "customtypes": [
+            {
+              "fields": [
+                "model_name"
+              ],
+              "id": "vehicle"
+            }
+          ],
+          "label": "Vehicle A",
+          "select": "document"
+        },
+        "type": "Link"
+      },
+      "vehicle_b": {
+        "config": {
+          "customtypes": [
+            {
+              "fields": [
+                "model_name"
+              ],
+              "id": "vehicle"
+            }
+          ],
+          "label": "Vehicle B",
+          "select": "document"
+        },
+        "type": "Link"
+      },
+      "vehicle_c": {
+        "config": {
+          "customtypes": [
+            {
+              "fields": [
+                "model_name"
+              ],
+              "id": "vehicle"
+            }
+          ],
+          "label": "Vehicle C (optional)",
+          "select": "document"
+        },
+        "type": "Link"
+      }
+    }
+  },
+  "label": "Compare Preset",
+  "repeatable": true,
+  "status": true
+}
