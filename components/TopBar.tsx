@@ -6,11 +6,9 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { site, whatsappLink } from "@/lib/site";
 import { useRfq } from "./RfqProvider";
-import { useCompare } from "./CompareProvider";
 
 const nav = [
   { href: "/showroom", label: "Showroom" },
-  { href: "/compare", label: "Compare" },
   { href: "/find-my-car", label: "Find my car" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
@@ -20,7 +18,6 @@ export default function TopBar() {
   const path = usePathname();
   const [open, setOpen] = useState(false);
   const rfq = useRfq();
-  const { slugs } = useCompare();
   // On the home page the bar floats over the hero video (transparent, dark at the top fading out) until you scroll past it.
   const [pastHero, setPastHero] = useState(false);
   const overlay = path === "/" && !pastHero && !open;
@@ -58,7 +55,6 @@ export default function TopBar() {
               {nav.map((n) => (
                 <Link key={n.href} href={n.href} aria-current={active(n.href)} className="nav-link">
                   {n.label}
-                  {n.href === "/compare" && slugs.length > 0 && <span className="ml-2 grid h-5 min-w-5 place-items-center rounded-full bg-accent px-1 text-xs leading-none text-white">{slugs.length}</span>}
                 </Link>
               ))}
             </nav>

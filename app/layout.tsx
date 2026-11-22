@@ -5,10 +5,8 @@ import "./globals.css";
 import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
 import Preloader from "@/components/Preloader";
-import CompareTray from "@/components/CompareTray";
 import FloatingActions from "@/components/FloatingActions";
 import FirstTouch from "@/components/FirstTouch";
-import { CompareProvider } from "@/components/CompareProvider";
 import { RfqProvider } from "@/components/RfqProvider";
 import { CatalogueProvider } from "@/components/CatalogueProvider";
 import { getCatalogue } from "@/lib/prismic/catalogue";
@@ -19,7 +17,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: "Zimoco | Mercedes-Benz, Jeep, Mitsubishi, GWM, Haval and more in Zimbabwe", template: "%s | Zimoco" },
-  description: "Zimoco is the official distributor of Mercedes-Benz, Jeep, Fiat, Alfa Romeo, GWM, Haval and Mitsubishi in Zimbabwe. Explore the range, compare vehicles and request a quote.",
+  description: "Zimoco is the official distributor of Mercedes-Benz, Jeep, Fiat, Alfa Romeo, GWM, Haval and Mitsubishi in Zimbabwe. Explore the range and request a quote.",
   openGraph: { siteName: "Zimoco", type: "website", locale: "en_ZW" },
   alternates: { canonical: "/" },
 };
@@ -47,17 +45,14 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         */}
         <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[110] focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-white">Skip to content</a>
         <CatalogueProvider catalogue={catalogue}>
-          <CompareProvider>
             <RfqProvider>
               <Preloader />
               <FirstTouch />
               <TopBar />
               <main id="main" className="pt-14">{children}</main>
               <Footer />
-              <CompareTray />
               <FloatingActions />
             </RfqProvider>
-          </CompareProvider>
         </CatalogueProvider>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }} />
       </body>

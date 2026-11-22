@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useRfq } from "./RfqProvider";
-import { useCompare } from "./CompareProvider";
 
 export function ModelCta({ slug, configurable, onPhoto = false }: { slug: string; configurable: boolean; onPhoto?: boolean }) {
   const rfq = useRfq();
@@ -11,16 +10,6 @@ export function ModelCta({ slug, configurable, onPhoto = false }: { slug: string
       <button className="btn btn-accent" onClick={() => rfq.open({ modelSlug: slug })}>Request a quote</button>
       {configurable && <a href="#configure" className={`btn ${onPhoto ? "border-white/60 text-white hover:bg-white/15" : "btn-ghost"}`}>Configure</a>}
     </>
-  );
-}
-
-export function CompareRivals({ slug, rivals }: { slug: string; rivals: string[] }) {
-  const { set } = useCompare();
-  const all = [slug, ...rivals];
-  return (
-    <div className="mt-8">
-      <Link href={`/compare?m=${all.join(",")}`} onClick={() => set(all)} className="btn btn-ghost">Compare all {all.length} side by side</Link>
-    </div>
   );
 }
 

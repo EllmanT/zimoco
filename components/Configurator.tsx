@@ -5,7 +5,6 @@ import { useEffect, useMemo, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { colourLabel, colourOptions, configurableVariants, kwLabel, nmLabel, specFor, swatchFor, usd, type Model } from "@/lib/catalogue";
 import { useRfq } from "./RfqProvider";
-import { useCompare } from "./CompareProvider";
 
 /** Ferrari-style configurator, light edition. Variant owns its colour list; colour persists by name across variants. */
 export default function Configurator({ model }: { model: Model }) {
@@ -14,7 +13,6 @@ export default function Configurator({ model }: { model: Model }) {
   const router = useRouter();
   const path = usePathname();
   const rfq = useRfq();
-  const { has, toggle } = useCompare();
 
   const initialV = variants.find((v) => v.id === params.get("v"))?.id ?? variants[0]?.id;
   const [variantId, setVariantId] = useState(initialV);
@@ -119,7 +117,6 @@ export default function Configurator({ model }: { model: Model }) {
           <p className="mt-1 text-xs text-muted">Available. Final price and timing are confirmed in your quote.</p>
           <div className="mt-5 flex flex-wrap gap-3">
             <button className="btn btn-accent flex-1" onClick={() => rfq.open({ modelSlug: model.slug, variantId: variant.id, colour: colour.colour })}>Request a quote</button>
-            <button className={`btn ${has(model.slug) ? "border-accent bg-accent/10 text-accent-deep" : "btn-ghost"}`} aria-pressed={has(model.slug)} onClick={() => toggle(model.slug)}>{has(model.slug) ? "In compare ✓" : "Add to compare"}</button>
           </div>
         </div>
       </div>

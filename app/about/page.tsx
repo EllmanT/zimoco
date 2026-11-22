@@ -39,7 +39,7 @@ const chapters = [
 
 const points = [
   ["A showroom that is always open", "Browse every model, trim and colour any time, from your phone or your desk."],
-  ["Compare before you commit", "Put vehicles side by side on price, power, economy and capacity, so you know what you are choosing."],
+  ["Know what you are choosing", "See price, power, economy and capacity for every trim, so you know what you are choosing."],
   ["One clear next step", "When you are ready, request a quote. We confirm availability and a firm price, and a consultant guides you from there."],
 ];
 
@@ -51,7 +51,7 @@ export default function About() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/85 via-black/40 to-black/10" />
         <div className="mx-auto w-full max-w-[1100px] px-5 pb-12 pt-32 md:px-10 md:pb-16">
           <h1 id="about-h" className="display rise rise-2 mt-3 max-w-3xl text-[clamp(2.4rem,5.4vw,4.4rem)]">Buying a vehicle, made clear.</h1>
-          <p className="measure rise rise-3 mt-5 text-lg text-white/80">Zimoco is based at 24 Douglas Road, Workington, Harare, with showrooms at Borrowdale and the Harare Showgrounds. Our digital showroom helps you explore, configure and compare, then request a quote when you are ready.</p>
+          <p className="measure rise rise-3 mt-5 text-lg text-white/80">Zimoco is based at 24 Douglas Road, Workington, Harare, with showrooms at Borrowdale and the Harare Showgrounds. Our digital showroom helps you explore and configure, then request a quote when you are ready.</p>
         </div>
       </section>
 

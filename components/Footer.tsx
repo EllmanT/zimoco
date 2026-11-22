@@ -7,7 +7,7 @@ import { site, whatsappLink } from "@/lib/site";
 import { getHomeBrands } from "@/lib/prismic/home";
 
 const makeColumns = (brands: string[]) => [
-  { title: "Showroom", links: [{ href: "/showroom", label: "All vehicles" }, { href: "/compare", label: "Compare vehicles" }, { href: "/find-my-car", label: "Find my car" }] },
+  { title: "Showroom", links: [{ href: "/showroom", label: "All vehicles" }, { href: "/find-my-car", label: "Find my car" }] },
   { title: "Brands", links: brands.slice(0, 9).map((b) => ({ href: `/showroom?brand=${encodeURIComponent(b)}`, label: b })) },
   { title: "Company", links: [{ href: "/about", label: "About Zimoco" }, { href: "/contact", label: "Contact and showroom" }, { href: "/credits", label: "Image credits" }] },
 ];

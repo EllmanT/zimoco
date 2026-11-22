@@ -107,10 +107,6 @@ export default function ShowroomGrid() {
       </div>
 
       <div className="mt-6 flex flex-wrap items-center justify-between gap-x-8 gap-y-4">
-        <Link href="/compare" className="btn btn-ghost !min-h-12 !text-base">
-          <svg width="18" height="18" viewBox="0 0 16 16" aria-hidden fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M2.5 5h8M8.5 2.5 11 5 8.5 7.5M13.5 11h-8M7.5 8.5 5 11l2.5 2.5" /></svg>
-          Compare vehicles
-        </Link>
         <div className="flex flex-wrap items-center gap-x-8 gap-y-2">
           <QuietSelect label="Brand" value={brand} onChange={setBrand} options={["All", ...brands].map((b) => [b, b === "All" ? "All brands" : b])} />
           <QuietSelect label="Budget" value={String(bi)} onChange={(v) => setBi(Number(v))} options={budgets.map((b, i) => [String(i), b[0]])} />

@@ -2,18 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import { FLIPPED_CARD_SLUGS, cardImage, fromPrice, usd, type Model } from "@/lib/catalogue";
-import { useCompare } from "./CompareProvider";
 import { useRfq } from "./RfqProvider";
 
 /** Borderless card: image, name, "From" price. The whole card is the link (Toyota SA pattern). */
 export default function ModelCard({ model, priority = false }: { model: Model; priority?: boolean }) {
   const img = cardImage(model);
-  const { has, toggle, full } = useCompare();
   const rfq = useRfq();
-  const [warn, setWarn] = useState(false);
-  const picked = has(model.slug);
   const price = fromPrice(model);
 
   return (
@@ -41,22 +36,7 @@ export default function ModelCard({ model, priority = false }: { model: Model; p
         <p className="tnum mt-1 text-base"><span className="text-muted">From </span><span className="font-bold">{usd(price)}</span></p>
         <div className="relative z-10 mt-3 flex items-center gap-6 text-sm font-semibold">
           <button type="button" onClick={() => rfq.open({ modelSlug: model.slug })} className="text-accent transition-colors hover:text-accent-deep">Get a quote</button>
-          <button
-            type="button"
-            aria-pressed={picked}
-            aria-label={picked ? `Remove ${model.name} from compare` : `Add ${model.name} to compare`}
-            onClick={() => { if (!toggle(model.slug)) { setWarn(true); setTimeout(() => setWarn(false), 2200); } }}
-            className={`inline-flex items-center gap-1.5 transition-colors ${picked ? "text-ink" : "text-muted hover:text-ink"} ${full && !picked ? "opacity-60" : ""}`}
-          >
-            {picked ? (
-              <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m3.5 8.5 3 3 6-7" /></svg>
-            ) : (
-              <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M8 3v10M3 8h10" /></svg>
-            )}
-            {picked ? "Added to compare" : "Compare"}
-          </button>
         </div>
-        {warn && <p role="status" className="relative z-10 mt-2 text-xs text-accent">You can compare up to 3 vehicles.</p>}
       </div>
     </article>
   );

@@ -10,13 +10,14 @@ export default function ModelsGrid({ brands }: { brands: BrandData[] }) {
   const brand = brands.find((b) => b.uid === uid) ?? brands[0];
   const cats = brand?.categories ?? [];
   return (
-    <div key={uid} className="panel-in mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div key={uid} className="panel-in mt-16 grid gap-x-4 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
       {cats.map((c) => (
-        <Link key={c.name} href={c.href} className="group block overflow-hidden rounded-[2rem] border border-line">
-          <div className="relative aspect-[5/2] bg-gradient-to-b from-sky-soft to-sunken">
-            {c.image && <Image src={c.image.url} alt={c.image.alt || `${brand?.name} ${c.name}`} fill sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw" className="object-contain p-3 transition-transform duration-500 ease-[var(--ease-out-strong)] group-hover:scale-[1.04]" />}
+        <Link key={c.name} href={c.href} className="group relative block rounded-[1.75rem] border border-line bg-gradient-to-b from-sky-soft to-sunken transition-transform duration-300 ease-[var(--ease-out-strong)] [@media(hover:hover)]:hover:-translate-y-0.5">
+          {/* Car sits higher than the card: it grows out of the top edge. */}
+          <div className="relative -mt-9 h-[7.5rem] sm:-mt-11 sm:h-[8.5rem]">
+            {c.image && <Image src={c.image.url} alt={c.image.alt || `${brand?.name} ${c.name}`} fill sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw" className="object-contain object-bottom drop-shadow-[0_8px_10px_rgba(0,0,0,0.12)] transition-transform duration-500 ease-[var(--ease-out-strong)] [@media(hover:hover)]:group-hover:scale-[1.04]" />}
           </div>
-          <p className="display bg-white py-3 text-center text-lg transition-colors group-hover:text-accent">{c.name}</p>
+          <p className="display rounded-b-[1.75rem] bg-white py-2.5 text-center text-base transition-colors group-hover:text-accent">{c.name}</p>
         </Link>
       ))}
       {!cats.length && <p className="text-muted">Models for this brand are coming soon.</p>}

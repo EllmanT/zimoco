@@ -15,6 +15,7 @@ const nextConfig: NextConfig = {
     return [
       { source: "/stock", destination: "/showroom", permanent: true },
       { source: "/stock/:slug", destination: "/showroom", permanent: true },
+      { source: "/compare", destination: "/showroom", permanent: true },
       { source: "/source", destination: "/find-my-car", permanent: true },
       // The single local Hilux page became the FM-based Hilux Double Cab page.
       { source: "/showroom/toyota-hilux", destination: "/showroom/toyota-hilux-double-cab", permanent: true },
