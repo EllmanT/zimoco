@@ -40,7 +40,7 @@ export default function ModelCard({ model, priority = false }: { model: Model; p
         <h3 className="display mt-1 text-xl"><Link href={`/showroom/${model.slug}`} className="after:absolute after:inset-0 after:content-['']">{model.name}</Link></h3>
         <p className="tnum mt-1 text-base"><span className="text-muted">From </span><span className="font-bold">{usd(price)}</span></p>
         <div className="relative z-10 mt-3 flex items-center gap-6 text-sm font-semibold">
-          <button type="button" onClick={() => rfq.open({ modelSlug: model.slug })} className="text-red transition-colors hover:text-red-deep">Get a quote</button>
+          <button type="button" onClick={() => rfq.open({ modelSlug: model.slug })} className="text-accent transition-colors hover:text-accent-deep">Get a quote</button>
           <button
             type="button"
             aria-pressed={picked}
@@ -56,7 +56,7 @@ export default function ModelCard({ model, priority = false }: { model: Model; p
             {picked ? "Added to compare" : "Compare"}
           </button>
         </div>
-        {warn && <p role="status" className="relative z-10 mt-2 text-xs text-red">You can compare up to 3 vehicles.</p>}
+        {warn && <p role="status" className="relative z-10 mt-2 text-xs text-accent">You can compare up to 3 vehicles.</p>}
       </div>
     </article>
   );

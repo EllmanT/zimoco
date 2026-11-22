@@ -2,6 +2,7 @@ import { FC } from "react";
 import Link from "next/link";
 import { Content, asLink, isFilled } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
+import { rel } from "@/lib/href";
 import ModelsGrid from "@/components/home/ModelsGrid";
 import { getHomeBrands } from "@/lib/prismic/home";
 
@@ -10,7 +11,7 @@ export type ModelCategoriesProps = SliceComponentProps<Content.ModelCategoriesSl
 /** "Our models": body types for the brand currently selected in the pill bar. */
 const ModelCategories: FC<ModelCategoriesProps> = async ({ slice }) => {
   const brands = await getHomeBrands();
-  const href = isFilled.link(slice.primary.cta) ? asLink(slice.primary.cta) : null;
+  const href = isFilled.link(slice.primary.cta) ? rel(asLink(slice.primary.cta)) : null;
   return (
     <section data-slice-type={slice.slice_type} data-brand-end className="bg-white">
       <div className="mx-auto max-w-[1600px] px-5 pb-20 md:px-8">

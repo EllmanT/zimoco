@@ -68,13 +68,13 @@ export default function FindMyCar() {
       {matches.length ? (
         <>
           <div key={matches.map((m) => m.slug).join()} className="panel-in mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{matches.map((m) => <ModelCard key={m.slug} model={m} />)}</div>
-          <button className="btn btn-red mt-8" onClick={() => rfq.open({ type: "find-my-car", notes: `Find my car. Budget: ${budgets[budget][0]}. Body: ${body}. Use: ${use}. Matches: ${matches.map(fullName).join(", ")}.` })}>Quote all my matches</button>
+          <button className="btn btn-accent mt-8" onClick={() => rfq.open({ type: "find-my-car", notes: `Find my car. Budget: ${budgets[budget][0]}. Body: ${body}. Use: ${use}. Matches: ${matches.map(fullName).join(", ")}.` })}>Quote all my matches</button>
         </>
       ) : (
         <div className="mt-6 rounded-2xl bg-soft p-10 text-center">
           <p className="display text-xl">No exact match, but we can find it</p>
           <p className="mt-2 text-muted">Tell us what you want and the team will source it.</p>
-          <button className="btn btn-red mt-6" onClick={() => rfq.open({ type: "find-my-car", notes: `Find my car, no catalogue match. Budget: ${budgets[budget][0]}. Body: ${body}. Use: ${use}.` })}>Tell us what you need</button>
+          <button className="btn btn-accent mt-6" onClick={() => rfq.open({ type: "find-my-car", notes: `Find my car, no catalogue match. Budget: ${budgets[budget][0]}. Body: ${body}. Use: ${use}.` })}>Tell us what you need</button>
         </div>
       )}
     </div>

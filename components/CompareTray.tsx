@@ -35,7 +35,7 @@ export default function CompareTray() {
           })}
         </ul>
         <button onClick={clear} className="label hidden text-muted hover:text-ink sm:inline">Clear</button>
-        <Link href={`/compare?m=${slugs.join(",")}`} className={`btn btn-red !min-h-11 ${slugs.length < 2 ? "pointer-events-none opacity-50" : ""}`} aria-disabled={slugs.length < 2}>
+        <Link href={`/compare?m=${slugs.join(",")}`} className={`btn btn-accent !min-h-11 ${slugs.length < 2 ? "pointer-events-none opacity-50" : ""}`} aria-disabled={slugs.length < 2}>
           Compare {slugs.length}/{MAX_COMPARE}
         </Link>
       </div>

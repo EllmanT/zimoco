@@ -35,7 +35,7 @@ export type Attribution = z.infer<typeof attributionSchema>;
 export const leadInput = z.object({
   type: z.enum(LEAD_TYPES),
   name: z.string().trim().min(2, "Please enter your name").max(80),
-  phone: z.string().trim().max(24).refine((v) => normalisePhone(v) !== null, "Enter a valid phone number, e.g. 077 226 2946"),
+  phone: z.string().trim().max(24).refine((v) => normalisePhone(v) !== null, "Enter a valid phone number, e.g. 0772 589 624"),
   email: z.union([z.literal(""), z.email("Enter a valid email")]).optional(),
   contactMethod: z.enum(["WhatsApp", "Call", "Email"]).optional(),
   // vehicle / configuration

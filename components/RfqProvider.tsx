@@ -87,7 +87,7 @@ function RfqModal({ prefill, onClose }: { prefill: RfqPrefill; onClose: () => vo
   }, [onClose]);
 
   function validatePhone(v: string) {
-    return normalisePhone(v) ? "" : "Enter a valid phone number, e.g. 077 226 2946";
+    return normalisePhone(v) ? "" : "Enter a valid phone number, e.g. 0772 589 624";
   }
   function validateEmail(v: string) {
     return !v || /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v) ? "" : "Enter a valid email";
@@ -156,7 +156,7 @@ function RfqModal({ prefill, onClose }: { prefill: RfqPrefill; onClose: () => vo
 
         {done ? (
           <div>
-            <div className="grid h-12 w-12 place-items-center rounded-full bg-red text-white" aria-hidden>
+            <div className="grid h-12 w-12 place-items-center rounded-full bg-accent text-white" aria-hidden>
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
             </div>
             <h2 id="rfq-title" className="display mt-5 text-2xl">Thank you, {done.name}</h2>
@@ -172,15 +172,15 @@ function RfqModal({ prefill, onClose }: { prefill: RfqPrefill; onClose: () => vo
                 </div>
               </div>
             </div>
-            <a className="btn btn-red mt-6 w-full" href={whatsappLink(`Hello Zimoco, my reference is ${done.id}. I enquired about: ${done.summary}.`)} target="_blank" rel="noreferrer">Continue on WhatsApp</a>
+            <a className="btn btn-accent mt-6 w-full" href={whatsappLink(`Hello Zimoco, my reference is ${done.id}. I enquired about: ${done.summary}.`)} target="_blank" rel="noreferrer">Continue on WhatsApp</a>
             <button className="btn btn-ghost mt-3 w-full" onClick={onClose}>Back to the showroom</button>
             <p className="mt-4 text-center text-xs text-muted">Demo build: this request is saved to the demo admin at /admin/leads.</p>
           </div>
         ) : (
           <form onSubmit={submit} noValidate>
-            <p className="label text-red">Request a quote · step {step} of 3</p>
+            <p className="label text-accent">Request a quote · step {step} of 3</p>
             <h2 id="rfq-title" className="display mt-2 text-2xl">{step === 1 ? "Which vehicle?" : step === 2 ? "What do you need?" : "How do we reach you?"}</h2>
-            <div className="mt-3 flex gap-1.5" aria-hidden>{[1, 2, 3].map((n) => <span key={n} className={`h-1 flex-1 rounded-full ${n <= step ? "bg-red" : "bg-sunken"}`} />)}</div>
+            <div className="mt-3 flex gap-1.5" aria-hidden>{[1, 2, 3].map((n) => <span key={n} className={`h-1 flex-1 rounded-full ${n <= step ? "bg-accent" : "bg-sunken"}`} />)}</div>
 
             {step === 1 && (
               <div className="mt-6 space-y-4">
@@ -190,7 +190,7 @@ function RfqModal({ prefill, onClose }: { prefill: RfqPrefill; onClose: () => vo
                     <option value="">Select a vehicle…</option>
                     {models.map((m) => <option key={m.slug} value={m.slug}>{m.brand} {m.name}</option>)}
                   </select>
-                  {errors.model && <p role="alert" className="mt-1 text-sm text-red">{errors.model}</p>}
+                  {errors.model && <p role="alert" className="mt-1 text-sm text-accent">{errors.model}</p>}
                 </div>
                 {model && (
                   <div>
@@ -206,7 +206,7 @@ function RfqModal({ prefill, onClose }: { prefill: RfqPrefill; onClose: () => vo
                     <p className="text-sm font-medium">Colour (optional)</p>
                     <div className="mt-2 flex flex-wrap gap-2">
                       {colours.map((c) => (
-                        <button type="button" key={c.colour} onClick={() => setColour(c.colour === colour ? "" : c.colour)} aria-pressed={c.colour === colour} className={`rounded-full border px-3.5 py-2 text-sm ${c.colour === colour ? "border-red bg-red text-white" : "border-line"}`}>{colourLabel(c.colour)}</button>
+                        <button type="button" key={c.colour} onClick={() => setColour(c.colour === colour ? "" : c.colour)} aria-pressed={c.colour === colour} className={`rounded-full border px-3.5 py-2 text-sm ${c.colour === colour ? "border-accent bg-accent text-white" : "border-line"}`}>{colourLabel(c.colour)}</button>
                       ))}
                     </div>
                   </div>
@@ -222,14 +222,14 @@ function RfqModal({ prefill, onClose }: { prefill: RfqPrefill; onClose: () => vo
                       {image && <Image src={image} alt="" width={96} height={44} className="h-11 w-auto object-contain" />}
                       <span className="truncate font-medium">{isCompare ? compareNames.join(" vs ") : [model && `${model.brand} ${model.name}`, variant?.name, colour && colourLabel(colour)].filter(Boolean).join(" · ")}</span>
                     </div>
-                    {!isCompare && <button type="button" className="label shrink-0 text-red" onClick={() => setStep(1)}>Change</button>}
+                    {!isCompare && <button type="button" className="label shrink-0 text-accent" onClick={() => setStep(1)}>Change</button>}
                   </div>
                 )}
                 <fieldset>
                   <legend className="text-sm font-medium">I am interested in</legend>
                   <div className="mt-2 flex flex-wrap gap-2">
                     {REQUEST_KINDS.map((k) => (
-                      <button type="button" key={k} aria-pressed={kinds.includes(k)} onClick={() => toggleKind(k)} className={`rounded-full border px-4 py-2.5 text-sm ${kinds.includes(k) ? "border-red bg-red text-white" : "border-line"}`}>{k}</button>
+                      <button type="button" key={k} aria-pressed={kinds.includes(k)} onClick={() => toggleKind(k)} className={`rounded-full border px-4 py-2.5 text-sm ${kinds.includes(k) ? "border-accent bg-accent text-white" : "border-line"}`}>{k}</button>
                     ))}
                   </div>
                 </fieldset>
@@ -261,17 +261,17 @@ function RfqModal({ prefill, onClose }: { prefill: RfqPrefill; onClose: () => vo
                 <div>
                   <label htmlFor="rq-name" className="text-sm font-medium">Full name</label>
                   <input id="rq-name" className="field mt-2" autoComplete="name" value={name} onChange={(e) => setName(e.target.value)} onBlur={() => setTouched((t) => ({ ...t, name: true }))} aria-invalid={!!shown("name")} />
-                  {shown("name") && <p role="alert" className="mt-1 text-sm text-red">{shown("name")}</p>}
+                  {shown("name") && <p role="alert" className="mt-1 text-sm text-accent">{shown("name")}</p>}
                 </div>
                 <div>
                   <label htmlFor="rq-phone" className="text-sm font-medium">Phone or WhatsApp</label>
-                  <input id="rq-phone" className="field mt-2" type="tel" inputMode="tel" autoComplete="tel" placeholder="077 226 2946" value={phone} onChange={(e) => setPhone(e.target.value)} onBlur={() => setTouched((t) => ({ ...t, phone: true }))} aria-invalid={!!shown("phone")} />
-                  {shown("phone") && <p role="alert" className="mt-1 text-sm text-red">{shown("phone")}</p>}
+                  <input id="rq-phone" className="field mt-2" type="tel" inputMode="tel" autoComplete="tel" placeholder="0772 589 624" value={phone} onChange={(e) => setPhone(e.target.value)} onBlur={() => setTouched((t) => ({ ...t, phone: true }))} aria-invalid={!!shown("phone")} />
+                  {shown("phone") && <p role="alert" className="mt-1 text-sm text-accent">{shown("phone")}</p>}
                 </div>
                 <div>
                   <label htmlFor="rq-email" className="text-sm font-medium">Email (optional)</label>
                   <input id="rq-email" className="field mt-2" type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} onBlur={() => setTouched((t) => ({ ...t, email: true }))} aria-invalid={!!shown("email")} />
-                  {shown("email") && <p role="alert" className="mt-1 text-sm text-red">{shown("email")}</p>}
+                  {shown("email") && <p role="alert" className="mt-1 text-sm text-accent">{shown("email")}</p>}
                 </div>
                 <fieldset>
                   <legend className="text-sm font-medium">Best way to reach you</legend>
@@ -282,16 +282,16 @@ function RfqModal({ prefill, onClose }: { prefill: RfqPrefill; onClose: () => vo
                   </div>
                 </fieldset>
                 <input type="text" name="hp_extra" tabIndex={-1} autoComplete="off" data-lpignore="true" data-1p-ignore aria-hidden className="absolute -left-[9999px] h-0 w-0 opacity-0" value={hp} onChange={(e) => setHp(e.target.value)} />
-                {serverErr && <p role="alert" className="rounded-lg bg-red/10 p-3 text-sm text-red-deep">{serverErr}</p>}
+                {serverErr && <p role="alert" className="rounded-lg bg-accent/10 p-3 text-sm text-accent-deep">{serverErr}</p>}
               </div>
             )}
 
             <div className="mt-8 flex items-center gap-3">
               {step > (known ? 2 : 1) && <button type="button" className="btn btn-ghost" onClick={() => setStep((s) => s - 1)}>Back</button>}
               {step < 3 ? (
-                <button type="button" className="btn btn-red flex-1" onClick={next}>Continue</button>
+                <button type="button" className="btn btn-accent flex-1" onClick={next}>Continue</button>
               ) : (
-                <button type="submit" className="btn btn-red flex-1" disabled={busy}>{busy ? "Sending…" : "Send my request"}</button>
+                <button type="submit" className="btn btn-accent flex-1" disabled={busy}>{busy ? "Sending…" : "Send my request"}</button>
               )}
             </div>
             <p className="mt-4 text-xs text-muted">No obligation. Prices shown on the site are indicative; we confirm availability and a firm price in your quote.</p>

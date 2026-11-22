@@ -2,11 +2,12 @@ import { FC } from "react";
 import Link from "next/link";
 import { Content, asLink, isFilled } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
+import { rel } from "@/lib/href";
 
 export type BrowseStripProps = SliceComponentProps<Content.BrowseStripSlice>;
 
 const BrowseStrip: FC<BrowseStripProps> = ({ slice }) => {
-  const href = isFilled.link(slice.primary.cta) ? asLink(slice.primary.cta) : null;
+  const href = isFilled.link(slice.primary.cta) ? rel(asLink(slice.primary.cta)) : null;
   return (
     <section data-slice-type={slice.slice_type} className="bg-black text-white">
       <div className="mx-auto flex max-w-[1600px] flex-wrap items-center justify-between gap-4 px-5 py-6 md:px-8">

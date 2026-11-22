@@ -1,0 +1,32 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "design-system-color",
+        "value": "#c4c4c4",
+        "createdAt": "2026-11-21T20:38:07.072Z",
+        "reason": "Claude: pre-existing neutral UI value in globals.css, scrollbar thumb neutral grey, UI chrome not brand palette"
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "10px",
+        "createdAt": "2026-11-21T20:38:07.231Z",
+        "reason": "Claude: pre-existing neutral UI value in globals.css, scrollbar thumb radius, browser chrome"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#2b2b2b",
+        "createdAt": "2026-11-21T20:38:07.446Z",
+        "reason": "Claude: pre-existing neutral UI value in globals.css, hover tint of the ink solid button, a shade of Ink"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#858585",
+        "createdAt": "2026-11-21T20:38:07.664Z",
+        "reason": "Claude: pre-existing neutral UI value in globals.css, input placeholder grey, neutral UI text"
+      }
+    ]
+  }
+}

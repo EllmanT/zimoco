@@ -15,8 +15,8 @@ export default function VariantCards({ model }: { model: Model }) {
   return (
     <div className="relative">
       <div className="mb-5 hidden justify-end gap-2 md:flex">
-        <button aria-label="Scroll trims left" onClick={() => by(-1)} className="grid h-11 w-11 place-items-center rounded-full border border-line text-lg transition-colors hover:border-red hover:text-red">‹</button>
-        <button aria-label="Scroll trims right" onClick={() => by(1)} className="grid h-11 w-11 place-items-center rounded-full border border-line text-lg transition-colors hover:border-red hover:text-red">›</button>
+        <button aria-label="Scroll trims left" onClick={() => by(-1)} className="grid h-11 w-11 place-items-center rounded-full border border-line text-lg transition-colors hover:border-accent hover:text-accent">‹</button>
+        <button aria-label="Scroll trims right" onClick={() => by(1)} className="grid h-11 w-11 place-items-center rounded-full border border-line text-lg transition-colors hover:border-accent hover:text-accent">›</button>
       </div>
       <ul ref={row} className="no-scrollbar -mx-5 flex snap-x snap-mandatory gap-5 overflow-x-auto px-5 pb-2 md:-mx-8 md:px-8" tabIndex={0} aria-label={`${model.name} trims, swipe to see more`}>
         {model.variants.map((v) => {
@@ -36,7 +36,7 @@ export default function VariantCards({ model }: { model: Model }) {
                 <p className="mt-3"><span className="text-sm text-muted">From </span><span className="display tnum text-xl">{usd(v.from)}</span><span className="text-sm text-muted"> indicative</span></p>
                 <div className="mt-auto flex gap-3 pt-5">
                   {opts.length > 0 && <Link href={`?v=${v.id}#configure`} className="btn btn-ghost !min-h-11 flex-1 !text-sm">Configure</Link>}
-                  <button className="btn btn-red !min-h-11 flex-1 !text-sm" onClick={() => rfq.open({ modelSlug: model.slug, variantId: v.id })}>Quote</button>
+                  <button className="btn btn-accent !min-h-11 flex-1 !text-sm" onClick={() => rfq.open({ modelSlug: model.slug, variantId: v.id })}>Quote</button>
                 </div>
               </div>
             </li>

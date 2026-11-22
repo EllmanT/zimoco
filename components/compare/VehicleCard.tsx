@@ -42,9 +42,9 @@ export default function VehicleCard({ m, onRemove, onQuote, priority }: { m: Mod
       </div>
       <div className="p-5">
         <p className="label text-muted">{m.brand}</p>
-        <Link href={`/showroom/${m.slug}`} className="display mt-1 block text-xl hover:text-red">{m.name}</Link>
+        <Link href={`/showroom/${m.slug}`} className="display mt-1 block text-xl hover:text-accent">{m.name}</Link>
         <p className="mt-1 line-clamp-2 text-sm text-muted">{m.tagline}</p>
-        <button className="btn btn-red mt-4 w-full !min-h-11 !text-sm" onClick={onQuote}>Request a quote</button>
+        <button className="btn btn-accent mt-4 w-full !min-h-11 !text-sm" onClick={onQuote}>Request a quote</button>
       </div>
     </article>
   );

@@ -8,7 +8,7 @@ export function ModelCta({ slug, configurable, onPhoto = false }: { slug: string
   const rfq = useRfq();
   return (
     <>
-      <button className="btn btn-red" onClick={() => rfq.open({ modelSlug: slug })}>Request a quote</button>
+      <button className="btn btn-accent" onClick={() => rfq.open({ modelSlug: slug })}>Request a quote</button>
       {configurable && <a href="#configure" className={`btn ${onPhoto ? "border-white/60 text-white hover:bg-white/15" : "btn-ghost"}`}>Configure</a>}
     </>
   );
@@ -31,7 +31,7 @@ export function HomeQuoteCta() {
       <h2 className="display text-[clamp(1.6rem,3vw,2.6rem)]">Don&apos;t see exactly what you want?</h2>
       <p className="mx-auto mt-4 max-w-md text-muted">Every model here is available to order. Tell us the trim, colour and budget and we will confirm a firm price.</p>
       <div className="mt-8 flex flex-wrap justify-center gap-3">
-        <button className="btn btn-red" onClick={() => rfq.open()}>Request a quote</button>
+        <button className="btn btn-accent" onClick={() => rfq.open()}>Request a quote</button>
         <Link href="/find-my-car" className="btn btn-ghost">Help me choose</Link>
       </div>
     </div>

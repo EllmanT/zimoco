@@ -17,7 +17,7 @@ export default function SpecBar({ ratio, best, delay = 0 }: { ratio: number; bes
   return (
     <span ref={ref} aria-hidden className="mt-2 block h-1.5 overflow-hidden rounded-full bg-black/[0.07]">
       <span
-        className={`block h-full origin-left rounded-full transition-transform duration-[600ms] ease-[var(--ease-out-strong)] ${best ? "bg-red" : "bg-ink/35"}`}
+        className={`block h-full origin-left rounded-full transition-transform duration-[600ms] ease-[var(--ease-out-strong)] ${best ? "bg-accent" : "bg-ink/35"}`}
         style={{ width: `${Math.max(4, Math.min(100, ratio * 100))}%`, transform: on ? "scaleX(1)" : "scaleX(0)", transitionDelay: `${delay}ms` }}
       />
     </span>

@@ -19,13 +19,13 @@ export default function MapEmbed() {
           <div className="absolute inset-x-0 bottom-0 flex flex-col gap-4 p-5 text-white sm:flex-row sm:items-end sm:justify-between md:p-7">
             <p className="flex items-start gap-3">
               <MapPin className="mt-1 h-5 w-5 shrink-0" aria-hidden />
-              <span><span className="display block text-lg">Mount Pleasant, Harare</span><span className="text-white/80">{site.address}</span></span>
+              <span><span className="display block text-lg">Workington, Harare</span><span className="text-white/80">{site.address}</span></span>
             </p>
             <button type="button" onClick={() => setOn(true)} className="btn bg-white text-ink">Load interactive map</button>
           </div>
         </>
       )}
-      <a href={directionsUrl} target="_blank" rel="noopener noreferrer" className="btn btn-red absolute right-4 top-4 !min-h-11 !text-sm shadow-lg">
+      <a href={directionsUrl} target="_blank" rel="noopener noreferrer" className="btn btn-accent absolute right-4 top-4 !min-h-11 !text-sm shadow-lg">
         <Navigation className="h-4 w-4" aria-hidden /> Get directions
       </a>
     </div>

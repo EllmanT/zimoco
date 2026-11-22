@@ -8,8 +8,8 @@ import MapEmbed from "@/components/contact/MapEmbed";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Contact Zimoco, Mount Pleasant, Harare",
-  description: "Visit Zimoco on Norfolk Road, Mount Pleasant. Book a viewing, send an enquiry, call, email or message on WhatsApp.",
+  title: "Contact Zimoco, Harare",
+  description: "Visit Zimoco in Borrowdale, at the Harare Showgrounds or at our Workington head office. Book a viewing, send an enquiry, call, email or message on WhatsApp.",
   alternates: { canonical: "/contact" },
 };
 
@@ -28,9 +28,9 @@ export default function Contact() {
         <div className="mx-auto w-full max-w-[1280px] px-5 pb-12 pt-32 md:px-10 md:pb-16">
           <p className="label rise text-white/80">Contact</p>
           <h1 id="contact-h" className="display rise rise-2 mt-3 max-w-3xl text-[clamp(2.4rem,6vw,4.6rem)]">Talk to a consultant</h1>
-          <p className="rise rise-3 mt-4 max-w-xl text-lg text-white/80">Visit us in Mount Pleasant, or tell us what you are looking for and we will come back to you.</p>
+          <p className="rise rise-3 mt-4 max-w-xl text-lg text-white/80">Visit one of our Harare locations, or tell us what you are looking for and we will come back to you.</p>
           <div className="rise rise-3 mt-7 flex flex-wrap items-center gap-3">
-            <a href={whatsappLink("Hello Zimoco, I would like to enquire about a vehicle.")} className="btn btn-red"><MessageCircle className="h-5 w-5" aria-hidden /> Message on WhatsApp</a>
+            <a href={whatsappLink("Hello Zimoco, I would like to enquire about a vehicle.")} className="btn btn-accent"><MessageCircle className="h-5 w-5" aria-hidden /> Message on WhatsApp</a>
             <a href={`tel:${site.phoneTel}`} className="btn border-white/40 text-white hover:bg-white/10"><Phone className="h-5 w-5" aria-hidden /> Call us</a>
             <OpenStatus />
           </div>
@@ -46,13 +46,13 @@ export default function Contact() {
               {cards.map(({ Icon, label, value, href, external }) => (
                 <li key={label}>
                   <a href={href} {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="group flex items-center gap-4 rounded-2xl bg-soft p-5 transition-[border-color,transform] duration-200 active:scale-[0.98] hover:border-ink">
-                    <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-soft text-red transition-colors group-hover:bg-red group-hover:text-white"><Icon className="h-5 w-5" aria-hidden /></span>
+                    <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-soft text-accent transition-colors group-hover:bg-accent group-hover:text-white"><Icon className="h-5 w-5" aria-hidden /></span>
                     <span><span className="label block text-muted">{label}</span><span className="text-lg">{value}</span></span>
                   </a>
                 </li>
               ))}
               <li className="flex items-center gap-4 rounded-2xl bg-soft p-5">
-                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-soft text-red"><Clock className="h-5 w-5" aria-hidden /></span>
+                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-soft text-accent"><Clock className="h-5 w-5" aria-hidden /></span>
                 <span><span className="label block text-muted">Hours</span><span className="text-lg">{site.hours}</span></span>
               </li>
             </ul>
@@ -65,8 +65,8 @@ export default function Contact() {
         </div>
 
         <Reveal className="mt-16 md:mt-24">
-          <p className="label text-red">Find us</p>
-          <h2 className="display mt-3 text-[clamp(1.6rem,3.2vw,2.6rem)]">Norfolk Road, Mount Pleasant</h2>
+          <p className="label text-accent">Find us</p>
+          <h2 className="display mt-3 text-[clamp(1.6rem,3.2vw,2.6rem)]">Visit us in Harare</h2>
           <div className="mt-8"><MapEmbed /></div>
           <p className="mt-4 text-sm text-muted">Listing details as shown on our public profile. Please call before a long drive.</p>
         </Reveal>

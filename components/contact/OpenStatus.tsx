@@ -20,7 +20,7 @@ export default function OpenStatus({ tone = "dark" }: { tone?: "dark" | "light" 
         <>
           <span className="relative flex h-2.5 w-2.5" aria-hidden>
             {s.open && <span className="absolute inset-0 animate-ping rounded-full bg-emerald-400/70 motion-reduce:hidden" />}
-            <span className={`relative h-2.5 w-2.5 rounded-full ${s.open ? "bg-emerald-400" : "bg-red"}`} />
+            <span className={`relative h-2.5 w-2.5 rounded-full ${s.open ? "bg-emerald-400" : "bg-accent"}`} />
           </span>
           <span className="font-medium">{s.headline}</span>
           <span className={tone === "dark" ? "text-white/70" : "text-muted"}>{s.detail}</span>

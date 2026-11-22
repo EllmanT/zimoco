@@ -1,0 +1,35 @@
+[
+  {
+    "slug": "freightliner--pick-1",
+    "file": "freightliner--pick-1.jpg",
+    "title": "Freightliner Cascadia.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Freightliner_Cascadia.jpg",
+    "author": "Oleg Yunakov",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 5712,
+    "height": 4284
+  },
+  {
+    "slug": "freightliner--pick-2",
+    "file": "freightliner--pick-2.jpg",
+    "title": "Freightliner Business Class M2 106.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Freightliner_Business_Class_M2_106.jpg",
+    "author": "Frank Deanrdo",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "width": 3648,
+    "height": 2736
+  },
+  {
+    "slug": "freightliner--cat-commercial",
+    "file": "freightliner--cat-commercial.jpg",
+    "title": "Freightliner eCascadia 4x2.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Freightliner_eCascadia_4x2.jpg",
+    "author": "Bill Beers",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "width": 4032,
+    "height": 2268
+  }
+]

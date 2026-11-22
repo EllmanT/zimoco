@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Figtree } from "next/font/google";
+import "@fontsource-variable/inter";
+import "@fontsource-variable/inter-tight";
 import "./globals.css";
 import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
@@ -13,13 +14,12 @@ import { CatalogueProvider } from "@/components/CatalogueProvider";
 import { getCatalogue } from "@/lib/prismic/catalogue";
 import { site } from "@/lib/site";
 
-// Closest free match to Toyota Type (humanist sans): bold for headings, regular for text.
-const figtree = Figtree({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"], variable: "--f-body", display: "swap" });
+// Mercedes-Benz uses licensed MBCorpo; Inter Tight (display, light) and Inter (text) are the closest free pairing, self-hosted via fontsource (see --f-display / --f-body in globals.css).
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: "Zimoco | Digital showroom: Hilux, Ranger, Prado and more", template: "%s | Zimoco" },
-  description: "Explore the Zimoco digital showroom. Configure your colour and trim, compare vehicles side by side, and request a quote in minutes.",
+  title: { default: "Zimoco | Mercedes-Benz, Jeep, Mitsubishi, GWM, Haval and more in Zimbabwe", template: "%s | Zimoco" },
+  description: "Zimoco is the official distributor of Mercedes-Benz, Jeep, Fiat, Alfa Romeo, GWM, Haval and Mitsubishi in Zimbabwe. Explore the range, compare vehicles and request a quote.",
   openGraph: { siteName: "Zimoco", type: "website", locale: "en_ZW" },
   alternates: { canonical: "/" },
 };
@@ -35,15 +35,15 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     url: site.url,
     email: site.email,
     telephone: site.phoneTel,
-    address: { "@type": "PostalAddress", streetAddress: "Norfolk Road, Mount Pleasant", addressLocality: "Harare", addressCountry: "ZW" },
+    address: { "@type": "PostalAddress", streetAddress: "24 Douglas Road, Workington", addressLocality: "Harare", addressCountry: "ZW" },
   };
   return (
-    <html lang="en" className={figtree.variable}>
+    <html lang="en">
       <body>
         {/*
           THESIS: a digital showroom. Explore, configure, compare, request a quote. No sourcing story.
-          WORLD: white showroom floor, black type and footer, Zimoco red as the single signature (rings, active states, CTAs).
-          FIRST VIEWPORT: logo loader, then a centred full-screen hero with red ring indicators.
+          WORLD: white showroom floor, black type and footer, Zimoco light blue as the single accent (active pills, CTAs).
+          FIRST VIEWPORT: logo loader, then a full-screen hero with copy and CTAs on the left.
         */}
         <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[110] focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-white">Skip to content</a>
         <CatalogueProvider catalogue={catalogue}>

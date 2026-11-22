@@ -79,7 +79,7 @@ export default function Configurator({ model }: { model: Model }) {
                 aria-label={colourLabel(c.colour)}
                 title={colourLabel(c.colour)}
                 onClick={() => { setColourName(c.colour); }}
-                className={`grid h-12 w-12 place-items-center rounded-full ring-2 ring-offset-2 transition-shadow ${on ? "ring-red" : "ring-transparent hover:ring-black/20"}`}
+                className={`grid h-12 w-12 place-items-center rounded-full ring-2 ring-offset-2 transition-shadow ${on ? "ring-accent" : "ring-transparent hover:ring-black/20"}`}
               >
                 <span className="h-9 w-9 rounded-full border border-black/15" style={{ background: swatchFor(c) ?? "var(--color-muted)" }} />
               </button>
@@ -97,7 +97,7 @@ export default function Configurator({ model }: { model: Model }) {
               role="radio"
               aria-checked={v.id === variant.id}
               onClick={() => { setVariantId(v.id); }}
-              className={`rounded-full border px-4 py-2.5 text-sm transition-colors ${v.id === variant.id ? "border-red bg-red text-white" : "border-line hover:border-ink"}`}
+              className={`rounded-full border px-4 py-2.5 text-sm transition-colors ${v.id === variant.id ? "border-accent bg-accent text-white" : "border-line hover:border-ink"}`}
             >
               {v.name}
             </button>
@@ -118,8 +118,8 @@ export default function Configurator({ model }: { model: Model }) {
           <p className="mt-4"><span className="text-sm text-muted">Indicative from </span><span className="display tnum text-2xl">{usd(variant.from)}</span></p>
           <p className="mt-1 text-xs text-muted">Available. Final price and timing are confirmed in your quote.</p>
           <div className="mt-5 flex flex-wrap gap-3">
-            <button className="btn btn-red flex-1" onClick={() => rfq.open({ modelSlug: model.slug, variantId: variant.id, colour: colour.colour })}>Request a quote</button>
-            <button className={`btn ${has(model.slug) ? "border-red bg-red/10 text-red-deep" : "btn-ghost"}`} aria-pressed={has(model.slug)} onClick={() => toggle(model.slug)}>{has(model.slug) ? "In compare ✓" : "Add to compare"}</button>
+            <button className="btn btn-accent flex-1" onClick={() => rfq.open({ modelSlug: model.slug, variantId: variant.id, colour: colour.colour })}>Request a quote</button>
+            <button className={`btn ${has(model.slug) ? "border-accent bg-accent/10 text-accent-deep" : "btn-ghost"}`} aria-pressed={has(model.slug)} onClick={() => toggle(model.slug)}>{has(model.slug) ? "In compare ✓" : "Add to compare"}</button>
           </div>
         </div>
       </div>

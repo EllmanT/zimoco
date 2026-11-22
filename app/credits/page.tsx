@@ -18,6 +18,12 @@ export default async function Credits() {
     author: c.author || (c.source === "Pexels" ? "Pexels contributor (see photo page)" : ""),
     license: c.license || c.source || "",
   }));
+  // Homepage demo images (_tools/upload-images.mjs writes public/image-credits.json).
+  type Demo = { slug: string; title: string; source_url: string; author: string; license: string };
+  let demo: Demo[] = [];
+  try { demo = JSON.parse(await fs.readFile(path.join(process.cwd(), "public/image-credits.json"), "utf8")); } catch {}
+  const demoCredits = demo.map((d) => ({ page: d.source_url, file: d.title.replace(/^File:/, ""), author: d.author, license: d.license }));
+  credits.push(...demoCredits.filter((d) => !credits.some((c) => c.page === d.page)));
   return (
     <div className="mx-auto max-w-[1280px] px-5 py-16 md:px-10 md:py-24">
       <h1 className="display text-[clamp(1.73rem,3.00vw,2.64rem)]">Photo credits</h1>
@@ -37,7 +43,7 @@ export default async function Credits() {
       <ul className="mt-12 max-w-4xl">
         {credits.map((c) => (
           <li key={c.page} className="grid gap-1 border-t border-line py-4 md:grid-cols-[1.4fr_1fr_0.6fr] md:gap-6">
-            <a href={c.page} className="underline decoration-brass-deep">{c.file}</a>
+            <a href={c.page} className="underline decoration-accent-deep">{c.file}</a>
             <span className="text-muted">{c.author || "Unknown author"}</span>
             <span className="tnum text-muted">{c.license}</span>
           </li>

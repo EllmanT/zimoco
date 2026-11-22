@@ -57,11 +57,11 @@ export default function DotRail({ items }: { items: Item[] }) {
               <button type="button" onClick={() => go(it.id)} aria-label={it.label} aria-current={on ? "true" : undefined} className="group grid h-8 w-8 place-items-center">
                 {on ? (
                   <span className="relative grid place-items-center">
-                    <Ring size={24} stroke={1.8} progress={progress} className="text-red" trackClassName="!text-black" />
-                    <span className="absolute h-1 w-1 rounded-full bg-red" />
+                    <Ring size={24} stroke={1.8} progress={progress} className="text-accent" trackClassName="!text-black" />
+                    <span className="absolute h-1 w-1 rounded-full bg-accent" />
                   </span>
                 ) : (
-                  <span className={`h-1.5 w-1.5 rounded-full transition-[transform,background-color] duration-300 group-hover:scale-150 group-hover:bg-red ${i < active ? "bg-red" : "bg-black/45"}`} />
+                  <span className={`h-1.5 w-1.5 rounded-full transition-[transform,background-color] duration-300 group-hover:scale-150 group-hover:bg-accent ${i < active ? "bg-accent" : "bg-black/45"}`} />
                 )}
               </button>
             </li>

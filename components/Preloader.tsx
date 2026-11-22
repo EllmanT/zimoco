@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const SEEN = "sb_loader_seen";
+const SEEN = "zm_loader_seen";
 const HOLD = 1900;
 
 /** Logo intro: the logo fades up from soft grey into full colour, then the sheet lifts away. Once per session. */
@@ -30,8 +30,8 @@ export default function Preloader() {
 
   if (phase === "gone") return null;
   return (
-    <div className={`sb-loader fixed inset-0 z-[100] grid cursor-pointer place-items-center bg-white ${phase === "out" ? "loader-out" : ""}`} role="status" aria-label="Loading Zimoco" onClick={() => setPhase("out")}>
-      <Image src="/starbell-auto-no-bg-logo.png" alt="" width={620} height={402} priority className="loader-logo h-44 w-auto" />
+    <div className={`sb-loader fixed inset-0 z-[100] grid cursor-pointer place-items-center bg-black ${phase === "out" ? "loader-out" : ""}`} role="status" aria-label="Loading Zimoco" onClick={() => setPhase("out")}>
+      <Image src="/zimoco-logo-white.png" alt="" width={333} height={152} priority className="loader-logo h-24 w-auto" />
     </div>
   );
 }

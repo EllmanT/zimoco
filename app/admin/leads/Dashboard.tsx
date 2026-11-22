@@ -16,7 +16,7 @@ function Bars({ data, label }: { data: [string, number][]; label: string }) {
         {data.map(([k, v]) => (
           <li key={k} className="grid grid-cols-[8.5rem_1fr_2rem] items-center gap-3 text-sm">
             <span className="truncate">{k}</span>
-            <span className="h-2 rounded-full bg-sunken"><span className="block h-2 rounded-full bg-red" style={{ width: `${(v / max) * 100}%` }} /></span>
+            <span className="h-2 rounded-full bg-sunken"><span className="block h-2 rounded-full bg-accent" style={{ width: `${(v / max) * 100}%` }} /></span>
             <span className="tnum text-right text-muted">{v}</span>
           </li>
         ))}
@@ -78,7 +78,7 @@ export default function Dashboard({ leads }: { leads: Lead[] }) {
     <div className="mx-auto max-w-[1400px] px-5 py-12 md:px-8">
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="label text-red">Demo admin</p>
+          <p className="label text-accent">Demo admin</p>
           <h1 className="display mt-2 text-3xl">Leads</h1>
           <p className="mt-2 text-sm text-muted">{live} live submission{live === 1 ? "" : "s"} plus sample data. Sample rows are marked.</p>
         </div>
@@ -126,7 +126,7 @@ export default function Dashboard({ leads }: { leads: Lead[] }) {
                 <td className="px-4 py-3">{leadSummary(l)}</td>
                 <td className="px-4 py-3">{l.budget || "—"}</td>
                 <td className="px-4 py-3">{l.attribution?.utmSource ?? "direct"}</td>
-                <td className="px-4 py-3"><span className={`rounded-full px-2.5 py-1 text-xs ${l.status === "New" ? "bg-red text-white" : "bg-sunken"}`}>{l.status}</span></td>
+                <td className="px-4 py-3"><span className={`rounded-full px-2.5 py-1 text-xs ${l.status === "New" ? "bg-accent text-white" : "bg-sunken"}`}>{l.status}</span></td>
               </tr>
             ))}
           </tbody>
@@ -138,7 +138,7 @@ export default function Dashboard({ leads }: { leads: Lead[] }) {
           <button className="absolute inset-0 bg-black/40" aria-label="Close" onClick={() => setOpen(null)} />
           <aside className="absolute right-0 top-0 h-full w-full max-w-md overflow-y-auto bg-white p-7 shadow-2xl">
             <button className="label float-right text-muted" onClick={() => setOpen(null)}>Close</button>
-            <p className="label text-red">{open.id}</p>
+            <p className="label text-accent">{open.id}</p>
             <h2 className="display mt-2 text-2xl">{open.name}</h2>
             <p className="mt-1 text-sm text-muted">{fmt(open.createdAt)} · {open.type}</p>
             {open.image && <img src={open.image} alt="" className="mt-6 w-full rounded-lg bg-white" />}
@@ -150,7 +150,7 @@ export default function Dashboard({ leads }: { leads: Lead[] }) {
             <label className="mt-6 block text-sm font-medium" htmlFor="st">Status</label>
             <select id="st" className="field mt-2" value={open.status} onChange={(e) => update(open, e.target.value as LeadStatus)}>{STATUSES.map((s) => <option key={s}>{s}</option>)}</select>
             <div className="mt-6 flex gap-3">
-              <a className="btn btn-red flex-1" href={`https://wa.me/${open.phone.replace(/\D/g, "")}?text=${encodeURIComponent(`Hello ${open.name.split(" ")[0]}, thank you for your enquiry about ${leadSummary(open)} at Zimoco.`)}`}>WhatsApp</a>
+              <a className="btn btn-accent flex-1" href={`https://wa.me/${open.phone.replace(/\D/g, "")}?text=${encodeURIComponent(`Hello ${open.name.split(" ")[0]}, thank you for your enquiry about ${leadSummary(open)} at Zimoco.`)}`}>WhatsApp</a>
               <a className="btn btn-ghost flex-1" href={`tel:${open.phone}`}>Call</a>
             </div>
             {open.email && <a className="btn btn-ghost mt-3 w-full" href={`mailto:${open.email}`}>Email</a>}

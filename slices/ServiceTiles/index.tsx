@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Banknote, ShieldCheck, SlidersHorizontal, Store, CarFront, type LucideIcon } from "lucide-react";
 import { Content, asLink, isFilled } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
+import { rel } from "@/lib/href";
 
 export type ServiceTilesProps = SliceComponentProps<Content.ServiceTilesSlice>;
 
@@ -15,7 +16,7 @@ const ServiceTiles: FC<ServiceTilesProps> = ({ slice }) => (
       <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
         {slice.primary.tiles.map((t, i) => {
           const Icon = icons[t.icon ?? ""] ?? Store;
-          const href = isFilled.link(t.link) ? asLink(t.link) : null;
+          const href = isFilled.link(t.link) ? rel(asLink(t.link)) : null;
           const body = (
             <>
               <Icon size={28} strokeWidth={1.5} aria-hidden className="text-accent-deep" />
@@ -26,8 +27,8 @@ const ServiceTiles: FC<ServiceTilesProps> = ({ slice }) => (
           return (
             <li key={i}>
               {href
-                ? <Link href={href} className="group block h-full rounded border border-line p-6 transition-colors hover:border-sky hover:bg-sky-soft">{body}</Link>
-                : <div className="h-full rounded border border-line p-6">{body}</div>}
+                ? <Link href={href} className="group block h-full rounded-[2rem] border border-line p-7 transition-colors hover:border-sky hover:bg-sky-soft">{body}</Link>
+                : <div className="h-full rounded-[2rem] border border-line p-7">{body}</div>}
             </li>
           );
         })}

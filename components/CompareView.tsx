@@ -111,7 +111,7 @@ export default function CompareView() {
         <p className="label text-muted">Popular comparisons</p>
         <div className="mt-3 flex flex-wrap gap-2">
           {comparePresets.map((p) => (
-            <button key={p.label} onClick={() => set([p.a, p.b, ...(p.c ? [p.c] : [])])} className="group inline-flex items-center gap-2.5 rounded-full border border-line min-h-11 py-1.5 pl-4 pr-4 text-sm transition-[border-color,color,transform] duration-200 active:scale-[0.97] hover:border-red hover:text-red"><span className="-ml-2.5 flex -space-x-2 empty:hidden" aria-hidden>{[p.a, p.b].map((sl) => <Thumb key={sl} slug={sl} cat={cat} />)}</span>{p.label}</button>
+            <button key={p.label} onClick={() => set([p.a, p.b, ...(p.c ? [p.c] : [])])} className="group inline-flex items-center gap-2.5 rounded-full border border-line min-h-11 py-1.5 pl-4 pr-4 text-sm transition-[border-color,color,transform] duration-200 active:scale-[0.97] hover:border-accent hover:text-accent"><span className="-ml-2.5 flex -space-x-2 empty:hidden" aria-hidden>{[p.a, p.b].map((sl) => <Thumb key={sl} slug={sl} cat={cat} />)}</span>{p.label}</button>
           ))}
         </div>
       </div>
@@ -120,7 +120,7 @@ export default function CompareView() {
         <div className="mt-12 rounded-3xl bg-soft p-12 text-center">
           <p className="display text-2xl">Nothing to compare yet</p>
           <p className="mt-3 text-muted">Choose a popular comparison above, or add vehicles from the showroom.</p>
-          <Link href="/showroom" className="btn btn-red mt-6">Browse the showroom</Link>
+          <Link href="/showroom" className="btn btn-accent mt-6">Browse the showroom</Link>
         </div>
       ) : (
         <>
@@ -156,7 +156,7 @@ export default function CompareView() {
                 {items.map(({ m }) => (
                   <div key={m.slug} className="pb-2">
                     <p className="label text-muted">{m.brand}</p>
-                    <Link href={`/showroom/${m.slug}`} className="display text-lg hover:text-red">{m.name}</Link>
+                    <Link href={`/showroom/${m.slug}`} className="display text-lg hover:text-accent">{m.name}</Link>
                   </div>
                 ))}
                 {cols < MAX_COMPARE && <span />}
@@ -176,7 +176,7 @@ export default function CompareView() {
                         const n = nums[i];
                         return (
                           <div key={m.slug}>
-                            <p className={`text-[0.97rem] ${isBest ? "font-semibold text-red" : ""}`}>{r.get(m, s)}{isBest && <span className="sr-only"> (best in this row)</span>}</p>
+                            <p className={`text-[0.97rem] ${isBest ? "font-semibold text-accent" : ""}`}>{r.get(m, s)}{isBest && <span className="sr-only"> (best in this row)</span>}</p>
                             {r.num && n != null && valid.length > 1 && <SpecBar ratio={n / Math.max(...valid)} best={isBest} delay={i * 90} />}
                           </div>
                         );
@@ -200,7 +200,7 @@ export default function CompareView() {
           )}
 
           <div className="mt-10 flex flex-wrap items-center gap-3">
-            <button className="btn btn-red" disabled={items.length < 2} onClick={() => rfq.open({ type: "comparison", compare: slugs, notes: `Comparing: ${items.map(({ m }) => fullName(m)).join(" vs ")}` })}>Send me this comparison</button>
+            <button className="btn btn-accent" disabled={items.length < 2} onClick={() => rfq.open({ type: "comparison", compare: slugs, notes: `Comparing: ${items.map(({ m }) => fullName(m)).join(" vs ")}` })}>Send me this comparison</button>
             <button className="btn btn-ghost" onClick={async () => { try { await navigator.clipboard.writeText(shareUrl); } catch {} }}>Copy link</button>
           </div>
         </>

@@ -108,14 +108,14 @@ export default async function ModelPage({ params }: { params: Promise<{ slug: st
         {photo && <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-t from-black/80 via-black/10 to-black/45" />}
         <div className="mx-auto flex min-h-[inherit] max-w-[1400px] flex-col justify-between px-5 py-12 md:px-8 xl:pl-24">
           <div>
-            <p className={`label ${photo ? "text-white/85" : "text-red"}`}>{m.brand}</p>
+            <p className={`label ${photo ? "text-white/85" : "text-accent"}`}>{m.brand}</p>
             <h1 className="display mt-3 text-[clamp(2.8rem,8vw,7rem)] leading-[0.95]">{m.name}</h1>
           </div>
           <div className="flex flex-col items-center text-center">
             <p className={`max-w-xl text-lg md:text-xl ${photo ? "text-white/90" : "text-ink/80"}`}>{m.tagline}</p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-3"><ModelCta slug={m.slug} configurable={hasConfigurator(m)} onPhoto={photo} /></div>
             <ul className={`mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm ${photo ? "text-white/90" : ""}`}>
-              <li className="flex items-center gap-2"><i className="h-2.5 w-2.5 rounded-full bg-red" aria-hidden />Available</li>
+              <li className="flex items-center gap-2"><i className="h-2.5 w-2.5 rounded-full bg-accent" aria-hidden />Available</li>
               <li>Indicative from <b className="tnum">{usd(price)}</b></li>
               <li className={photo ? "text-white/70" : "text-muted"}>Final price and timing confirmed on quote</li>
             </ul>
@@ -164,7 +164,7 @@ export default async function ModelPage({ params }: { params: Promise<{ slug: st
             <div className="mt-10 divide-y divide-line border-y border-line">
               {faq.map(([q, a]) => (
                 <details key={q} className="group py-5">
-                  <summary className="flex list-none items-center justify-between gap-6 text-lg font-medium">{q}<span aria-hidden className="text-red transition-transform group-open:rotate-45">+</span></summary>
+                  <summary className="flex list-none items-center justify-between gap-6 text-lg font-medium">{q}<span aria-hidden className="text-accent transition-transform group-open:rotate-45">+</span></summary>
                   <p className="mt-3 text-muted">{a}</p>
                 </details>
               ))}

@@ -42,20 +42,20 @@ export default function FinanceEstimator({ model }: { model: Model }) {
         </div>
         <div>
           <label htmlFor="fe-d" className="label text-muted">Deposit · {dep}%</label>
-          <input id="fe-d" type="range" min={10} max={70} step={5} value={dep} onChange={(e) => setDep(+e.target.value)} className="mt-3 w-full accent-[var(--color-red)]" />
+          <input id="fe-d" type="range" min={10} max={70} step={5} value={dep} onChange={(e) => setDep(+e.target.value)} className="mt-3 w-full accent-[var(--color-accent)]" />
         </div>
         <div>
           <label htmlFor="fe-t" className="label text-muted">Term · {term} months</label>
-          <input id="fe-t" type="range" min={12} max={72} step={12} value={term} onChange={(e) => setTerm(+e.target.value)} className="mt-3 w-full accent-[var(--color-red)]" />
+          <input id="fe-t" type="range" min={12} max={72} step={12} value={term} onChange={(e) => setTerm(+e.target.value)} className="mt-3 w-full accent-[var(--color-accent)]" />
         </div>
       </div>
       <div className="flex flex-col justify-between">
         <div>
           <p className="label text-muted">Estimated instalment</p>
-          <p className="display tnum mt-2 text-5xl text-red">{usd(Math.round(monthly))}<span className="text-lg text-muted"> /mo</span></p>
+          <p className="display tnum mt-2 text-5xl text-accent">{usd(Math.round(monthly))}<span className="text-lg text-muted"> /mo</span></p>
           <p className="mt-3 text-sm text-muted">Deposit {usd(Math.round(price * (dep / 100)))} on an indicative {usd(price)}. Illustrative at 12% a year. Final terms depend on the finance provider.</p>
         </div>
-        <button className="btn btn-red mt-6" onClick={() => rfq.open({ modelSlug: model.slug, variantId: vid, notes: `Finance enquiry: ${v.name}, ${dep}% deposit, ${term} months, estimate ${usd(Math.round(monthly))}/month.` })}>Send me this quote</button>
+        <button className="btn btn-accent mt-6" onClick={() => rfq.open({ modelSlug: model.slug, variantId: vid, notes: `Finance enquiry: ${v.name}, ${dep}% deposit, ${term} months, estimate ${usd(Math.round(monthly))}/month.` })}>Send me this quote</button>
       </div>
       </div>
     </div>

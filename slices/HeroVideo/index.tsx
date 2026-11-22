@@ -1,12 +1,13 @@
 import { FC } from "react";
 import { Content, asLink, isFilled } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
+import { rel } from "@/lib/href";
 import HeroVideoClient, { type HeroSlide } from "@/components/home/HeroVideo";
 
 export type HeroVideoProps = SliceComponentProps<Content.HeroVideoSlice>;
 
 const cta = (l: unknown, fallback: string) => {
-  const href = asLink(l as never);
+  const href = rel(asLink(l as never));
   return href ? { href, label: (l as { text?: string }).text ?? fallback } : null;
 };
 

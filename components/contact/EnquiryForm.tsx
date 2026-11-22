@@ -12,7 +12,7 @@ import { whatsappLink } from "@/lib/site";
 const TOPICS = [
   { id: "buy", label: "Buy a vehicle", lead: "Tell us what you have in mind and we will confirm availability and a firm price.", type: "enquiry" as LeadType, vehicle: true, budget: true },
   { id: "source", label: "Source a car", lead: "Not in the showroom? Describe the vehicle and budget and we will search for it.", type: "enquiry" as LeadType, vehicle: true, budget: true },
-  { id: "viewing", label: "Book a viewing", lead: "Choose a day and time to visit the Mount Pleasant showroom. We confirm by WhatsApp.", type: "viewing" as LeadType, vehicle: true, budget: false },
+  { id: "viewing", label: "Book a viewing", lead: "Choose a day and time to visit the Borrowdale showroom. We confirm by WhatsApp.", type: "viewing" as LeadType, vehicle: true, budget: false },
   { id: "finance", label: "Finance and trade-in", lead: "Ask about finance options or what your current vehicle is worth.", type: "enquiry" as LeadType, vehicle: false, budget: false },
 ];
 
@@ -59,7 +59,7 @@ export default function EnquiryForm() {
 
   const live: Record<string, string> = {
     name: name.trim().length >= 2 ? "" : "Please enter your name",
-    phone: normalisePhone(phone) ? "" : "Enter a valid phone number, e.g. 077 226 2946",
+    phone: normalisePhone(phone) ? "" : "Enter a valid phone number, e.g. 0772 589 624",
     email: !email || /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email) ? "" : "Enter a valid email",
     slot: topic.id === "viewing" && (!dayIso || !time) ? "Pick a day and a time" : "",
     message: topic.id !== "viewing" && message.trim().length < 5 ? "Add a short message so we can help" : "",
@@ -99,14 +99,14 @@ export default function EnquiryForm() {
   if (done) {
     return (
       <div className="panel-in rounded-3xl bg-soft p-8 md:p-12" role="status">
-        <span className="grid h-12 w-12 place-items-center rounded-full bg-red text-white"><Check className="h-6 w-6" aria-hidden /></span>
+        <span className="grid h-12 w-12 place-items-center rounded-full bg-accent text-white"><Check className="h-6 w-6" aria-hidden /></span>
         <h2 className="display mt-6 text-2xl md:text-3xl">Thank you, {done.name}</h2>
         <p className="measure mt-3 text-muted">
           {done.slot ? <>We have your viewing request for <strong className="text-ink">{done.slot}</strong>. A consultant will confirm it by {done.method === "Call" ? "phone" : done.method.toLowerCase()} shortly.</> : <>A consultant will reply by {done.method === "Call" ? "phone" : done.method.toLowerCase()} on the next working day at the latest.</>}
         </p>
         <p className="label mt-6 text-muted">Reference {done.id}</p>
         <div className="mt-8 flex flex-wrap gap-3">
-          <a className="btn btn-red" href={whatsappLink(`Hello Zimoco, I just sent a request (${done.id}): ${done.topic}${done.slot ? `, ${done.slot}` : ""}.`)}>Message us on WhatsApp too</a>
+          <a className="btn btn-accent" href={whatsappLink(`Hello Zimoco, I just sent a request (${done.id}): ${done.topic}${done.slot ? `, ${done.slot}` : ""}.`)}>Message us on WhatsApp too</a>
           <button className="btn btn-ghost" onClick={() => { setDone(null); setMessage(""); setTime(""); setTouched({}); }}>Send another</button>
         </div>
       </div>
@@ -147,7 +147,7 @@ export default function EnquiryForm() {
             <div className="mt-3 grid grid-cols-3 gap-2 sm:grid-cols-5">
               {day?.slots.map((s) => (
                 <button key={s} type="button" aria-pressed={s === time} onClick={() => setTime(s)}
-                  className={`tnum min-h-11 rounded-lg border text-sm transition-[background-color,color,border-color,transform] duration-200 active:scale-[0.97] ${s === time ? "border-red bg-red text-white" : "border-line hover:border-ink"}`}>{s}</button>
+                  className={`tnum min-h-11 rounded-lg border text-sm transition-[background-color,color,border-color,transform] duration-200 active:scale-[0.97] ${s === time ? "border-accent bg-accent text-white" : "border-line hover:border-ink"}`}>{s}</button>
               ))}
             </div>
             {err("slot") && <p className="mt-2 text-sm text-[#b4472f]" role="alert">{err("slot")}</p>}
@@ -180,7 +180,7 @@ export default function EnquiryForm() {
           </div>
           <div>
             <label className="label text-muted" htmlFor={fid("phone")}>Phone or WhatsApp</label>
-            <input id={fid("phone")} className="field mt-2" type="tel" inputMode="tel" autoComplete="tel" placeholder="077 226 2946" value={phone} onChange={(e) => setPhone(e.target.value)} onBlur={() => setTouched((t) => ({ ...t, phone: true }))} aria-invalid={!!err("phone")} aria-describedby={err("phone") ? fid("phone-e") : undefined} />
+            <input id={fid("phone")} className="field mt-2" type="tel" inputMode="tel" autoComplete="tel" placeholder="0772 589 624" value={phone} onChange={(e) => setPhone(e.target.value)} onBlur={() => setTouched((t) => ({ ...t, phone: true }))} aria-invalid={!!err("phone")} aria-describedby={err("phone") ? fid("phone-e") : undefined} />
             {err("phone") && <p id={fid("phone-e")} className="mt-1.5 text-sm text-[#b4472f]">{err("phone")}</p>}
           </div>
           <div className="sm:col-span-2">
@@ -210,7 +210,7 @@ export default function EnquiryForm() {
 
         {serverErr && <p className="mt-6 rounded-lg bg-[#b4472f]/10 p-3 text-sm text-[#8f3722]" role="alert">{serverErr}</p>}
         <div className="mt-8 flex flex-wrap items-center gap-4">
-          <button type="submit" className="btn btn-red" disabled={busy}>{busy ? "Sending…" : topic.id === "viewing" ? "Request this viewing" : "Send enquiry"}</button>
+          <button type="submit" className="btn btn-accent" disabled={busy}>{busy ? "Sending…" : topic.id === "viewing" ? "Request this viewing" : "Send enquiry"}</button>
           <p className="text-sm text-muted">We only use your details to reply to this request.</p>
         </div>
       </div>

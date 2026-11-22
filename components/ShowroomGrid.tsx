@@ -77,7 +77,7 @@ export default function ShowroomGrid() {
           {["All", ...bodies].map((b) => {
             const on = body === b;
             return (
-              <button key={b} role="tab" aria-selected={on} onClick={() => setBody(b)} className={`shrink-0 border-b-[3px] pb-2 text-base transition-colors duration-200 ${on ? "border-red font-semibold text-ink" : "border-transparent text-[#9a9a9f] hover:border-black/15 hover:text-ink"}`}>
+              <button key={b} role="tab" aria-selected={on} onClick={() => setBody(b)} className={`shrink-0 border-b-[3px] pb-2 text-base transition-colors duration-200 ${on ? "border-accent font-semibold text-ink" : "border-transparent text-[#9a9a9f] hover:border-black/15 hover:text-ink"}`}>
                 {tabName[b] ?? b}
               </button>
             );

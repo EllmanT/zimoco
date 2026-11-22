@@ -9,3 +9,6 @@ _template-asia/
 data/
 
 *.log
+
+# Demo source images (large); manifests stay tracked
+_tools/images/**/*.jpg

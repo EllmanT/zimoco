@@ -32,7 +32,7 @@ const chapters = [
   },
   {
     n: "04", title: "Hand over",
-    body: "Collect from our Mount Pleasant showroom, with a consultant beside you for the final walk-round. Then the road is yours.",
+    body: "Collect from our Borrowdale showroom, with a consultant beside you for the final walk-round. Then the road is yours.",
     images: [{ src: "/site/about/road-suv.jpg", alt: "An SUV driving fast along a sandy road", tall: false }],
   },
 ];
@@ -51,13 +51,13 @@ export default function About() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/85 via-black/40 to-black/10" />
         <div className="mx-auto w-full max-w-[1100px] px-5 pb-12 pt-32 md:px-10 md:pb-16">
           <h1 id="about-h" className="display rise rise-2 mt-3 max-w-3xl text-[clamp(2.4rem,5.4vw,4.4rem)]">Buying a vehicle, made clear.</h1>
-          <p className="measure rise rise-3 mt-5 text-lg text-white/80">Zimoco is based on Norfolk Road in Mount Pleasant, Harare. Our digital showroom helps you explore, configure and compare, then request a quote when you are ready.</p>
+          <p className="measure rise rise-3 mt-5 text-lg text-white/80">Zimoco is based at 24 Douglas Road, Workington, Harare, with showrooms at Borrowdale and the Harare Showgrounds. Our digital showroom helps you explore, configure and compare, then request a quote when you are ready.</p>
         </div>
       </section>
 
       <div className="mx-auto max-w-[1100px] px-5 py-16 md:px-10 md:py-24">
         <Reveal>
-          <p className="label text-red">How we work</p>
+          <p className="label text-accent">How we work</p>
           <h2 className="display mt-3 max-w-2xl text-[clamp(1.6rem,3.4vw,2.8rem)]">From a dealer overseas to your driveway.</h2>
         </Reveal>
 
@@ -74,7 +74,7 @@ export default function About() {
                     ))}
                   </div>
                   <div>
-                    <p className="display text-5xl text-red/90 tnum" aria-hidden>{c.n}</p>
+                    <p className="display text-5xl text-accent/90 tnum" aria-hidden>{c.n}</p>
                     <h3 className="display mt-4 text-3xl">{c.title}</h3>
                     <p className="measure mt-4 text-lg text-muted">{c.body}</p>
                   </div>
@@ -92,7 +92,7 @@ export default function About() {
           <Reveal>
             <h2 id="about-cta" className="display max-w-2xl text-[clamp(1.8rem,4vw,3.2rem)]">Ready when you are.</h2>
             <p className="measure mt-4 text-lg text-white/80">Explore the showroom at your own pace. When something catches your eye, a consultant at {site.address} will take it from there.</p>
-            <div className="mt-8 flex flex-wrap gap-3"><Link href="/showroom" className="btn btn-red">Explore the showroom</Link><Link href="/contact" className="btn border-white/40 text-white hover:bg-white/10">Contact us</Link></div>
+            <div className="mt-8 flex flex-wrap gap-3"><Link href="/showroom" className="btn btn-accent">Explore the showroom</Link><Link href="/contact" className="btn border-white/40 text-white hover:bg-white/10">Contact us</Link></div>
           </Reveal>
         </div>
       </section>
