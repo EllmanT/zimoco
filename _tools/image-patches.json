@@ -1,0 +1,1562 @@
+{
+ "mercedes-benz-a-class": {
+  "uid": "mercedes-benz-a-class",
+  "isNew": false,
+  "hero_image": {
+   "id": "IV76dZjTPcIXI3sR",
+   "file": "a-class-main.avif"
+  },
+  "card_image": {
+   "id": "IV76dZjTPcIXI3sR",
+   "file": "a-class-main.avif"
+  },
+  "exterior_shots": [
+   {
+    "image": {
+     "id": "IV76dZjTPcIXI3sR",
+     "file": "a-class-main.avif"
+    },
+    "caption": ""
+   }
+  ],
+  "interior_shots": [
+   {
+    "image": {
+     "id": "ushhjW3iiqgyJdwg",
+     "file": "a-class-interior-1.avif"
+    },
+    "caption": ""
+   },
+   {
+    "image": {
+     "id": "VEO54EQs3MuAKTiX",
+     "file": "a-class-interrior-2.avif"
+    },
+    "caption": ""
+   }
+  ],
+  "highlights": [
+   {
+    "index": 0,
+    "id": "x261M6-jfxDwA2d4",
+    "file": "a-200-highlight-1.avif",
+    "title": "MBUX in front of you"
+   },
+   {
+    "index": 1,
+    "id": "y9e_0sfS2LVdQT2E",
+    "file": "a-200-highlight-2.avif",
+    "title": "Quick DCT gearbox"
+   },
+   {
+    "index": 2,
+    "id": "1q1OzYY3BnNv9qOS",
+    "file": "a-200-highlight-3.avif",
+    "title": "Hatch or sedan"
+   }
+  ],
+  "colours": [
+   {
+    "action": "attach",
+    "name": "Obsidian Black",
+    "hex": "#101114",
+    "variant_id": null,
+    "id": "KxO1y7mEcLgMxeeH",
+    "file": "a-200-black-side-front.avif"
+   },
+   {
+    "action": "add",
+    "name": "Metallic Grey",
+    "hex": "#646464",
+    "variant_id": "a200-hatch,a200-sedan,amg-a35-4matic",
+    "id": "wtbpn6dDxK_Dor9Q",
+    "file": "a-200-grey-mettalic-side-front.avif"
+   },
+   {
+    "action": "add",
+    "name": "Grey",
+    "hex": "#585959",
+    "variant_id": "a200-hatch,a200-sedan,amg-a35-4matic",
+    "id": "SvKk8H7guNGIX6Xr",
+    "file": "a-200-grey-side-front.avif"
+   },
+   {
+    "action": "add",
+    "name": "Metallic Black",
+    "hex": "#3c3c3d",
+    "variant_id": "a200-hatch,a200-sedan,amg-a35-4matic",
+    "id": "Ep1eOluseQaQGS1b",
+    "file": "a-200-mettalic-black-side-front.avif"
+   },
+   {
+    "action": "attach",
+    "name": "Polar White",
+    "hex": "#f4f4f2",
+    "variant_id": null,
+    "id": "I5REY7xysfk_ONs8",
+    "file": "a-200-polarwhite-side-front.avif"
+   },
+   {
+    "action": "attach",
+    "name": "Patagonia Red",
+    "hex": "#8d1626",
+    "variant_id": null,
+    "id": "RctTsBDLhX9x6e15",
+    "file": "a-200-red-side-front.avif"
+   },
+   {
+    "action": "attach",
+    "name": "Mojave Silver",
+    "hex": "#a8a49b",
+    "variant_id": null,
+    "id": "1pwthoVC3WmZsp8U",
+    "file": "a-200-silver-side-front.avif"
+   }
+  ]
+ },
+ "mercedes-benz-c-class": {
+  "uid": "mercedes-benz-c-class",
+  "isNew": false,
+  "hero_image": {
+   "id": "YLk-6qbMcLt5nPi1",
+   "file": "c-class-main.avif"
+  },
+  "card_image": {
+   "id": "YLk-6qbMcLt5nPi1",
+   "file": "c-class-main.avif"
+  },
+  "exterior_shots": [
+   {
+    "image": {
+     "id": "YLk-6qbMcLt5nPi1",
+     "file": "c-class-main.avif"
+    },
+    "caption": ""
+   }
+  ],
+  "interior_shots": [
+   {
+    "image": {
+     "id": "ln-7Y4byxL_0mPfG",
+     "file": "c-class-interror-1.jpg"
+    },
+    "caption": ""
+   },
+   {
+    "image": {
+     "id": "ietpW5iQUZXiqSfk",
+     "file": "c-class-interior-2.avif"
+    },
+    "caption": ""
+   }
+  ],
+  "highlights": [
+   {
+    "index": 0,
+    "id": "Maml1THoy6gt7RQb",
+    "file": "c-class-highlight-1.webp",
+    "title": "Built in East London"
+   },
+   {
+    "index": 1,
+    "id": "9OyLREQwljBqDCrX",
+    "file": "c-class-highlight-2.avif",
+    "title": "Diesel option"
+   },
+   {
+    "index": 2,
+    "id": "eb93u9NqnkQBO_Jm",
+    "file": "c-class-highlight-3.avif",
+    "title": "Portrait MBUX screen"
+   }
+  ],
+  "colours": [
+   {
+    "action": "add",
+    "name": "AMG White",
+    "hex": "#dadbdb",
+    "variant_id": "c200,c220d,amg-c63-s-e",
+    "id": "pK_mth_Z1Oas4e9K",
+    "file": "c-class-amg-white-side-front.avif"
+   },
+   {
+    "action": "add",
+    "name": "AMG Grey",
+    "hex": "#5d605f",
+    "variant_id": "c200,c220d,amg-c63-s-e",
+    "id": "G3RsFDi4212TEUMV",
+    "file": "c-class-amg-grey-side-front.webp"
+   },
+   {
+    "action": "attach",
+    "name": "Nautical Blue",
+    "hex": "#1a2b4a",
+    "variant_id": null,
+    "id": "zfU5C5xe5czbFBU6",
+    "file": "c-class-blue-side-front.avif"
+   },
+   {
+    "action": "add",
+    "name": "Light Blue",
+    "hex": "#a3aab1",
+    "variant_id": "c200,c220d,amg-c63-s-e",
+    "id": "8ZstN1uVaFjSBMed",
+    "file": "c-class-light-blue-side-front.avif"
+   }
+  ]
+ },
+ "chrysler-pacifica": {
+  "uid": "chrysler-pacifica",
+  "isNew": false,
+  "hero_image": {
+   "id": "uEUb2fgOde3cRYIq",
+   "file": "chrysler-main.avif"
+  },
+  "card_image": {
+   "id": "uEUb2fgOde3cRYIq",
+   "file": "chrysler-main.avif"
+  },
+  "exterior_shots": [
+   {
+    "image": {
+     "id": "uEUb2fgOde3cRYIq",
+     "file": "chrysler-main.avif"
+    },
+    "caption": ""
+   }
+  ],
+  "interior_shots": [
+   {
+    "image": {
+     "id": "TQ_z84MSmKVL6KHs",
+     "file": "chrysler-interior-1.avif"
+    },
+    "caption": ""
+   },
+   {
+    "image": {
+     "id": "f3o--6XCJMho6OSs",
+     "file": "chrisysler-interior-2.avif"
+    },
+    "caption": ""
+   }
+  ],
+  "highlights": [
+   {
+    "index": 0,
+    "id": "VVWcaJC0tiWofSsS",
+    "file": "chrysler-highlight-1.avif",
+    "title": "Seven seats"
+   },
+   {
+    "index": 1,
+    "id": "zyIgKrhxka_M6QuS",
+    "file": "chrysler-highlight-2.avif",
+    "title": "3.6 V6"
+   }
+  ],
+  "colours": [
+   {
+    "action": "attach",
+    "name": "Bright White",
+    "hex": "#f4f4f2",
+    "variant_id": null,
+    "id": "4rra0pZ5MYlrzIbS",
+    "file": "chrysler-white-side-front.avif"
+   },
+   {
+    "action": "attach",
+    "name": "Diamond Black",
+    "hex": "#101012",
+    "variant_id": null,
+    "id": "zHrD-hlfU1eOWb2w",
+    "file": "chrysler-side-front-black.avif"
+   }
+  ]
+ },
+ "mercedes-benz-cla": {
+  "uid": "mercedes-benz-cla",
+  "isNew": false,
+  "hero_image": {
+   "id": "QRbXMNjB_sfw5w1c",
+   "file": "cla-main.avif"
+  },
+  "card_image": {
+   "id": "QRbXMNjB_sfw5w1c",
+   "file": "cla-main.avif"
+  },
+  "exterior_shots": [
+   {
+    "image": {
+     "id": "QRbXMNjB_sfw5w1c",
+     "file": "cla-main.avif"
+    },
+    "caption": ""
+   }
+  ],
+  "interior_shots": [
+   {
+    "image": {
+     "id": "5thqLZkjk5yAeMKI",
+     "file": "cla-interior-1.avif"
+    },
+    "caption": ""
+   },
+   {
+    "image": {
+     "id": "3nE6-192jad57EuT",
+     "file": "cla-interor-2.avif"
+    },
+    "caption": ""
+   }
+  ],
+  "highlights": [
+   {
+    "index": 0,
+    "id": "aK3YF0OZ3N-m7gkX",
+    "file": "cla-highlight-1.avif",
+    "title": "Electric or hybrid"
+   },
+   {
+    "index": 1,
+    "id": "CsXmEtx6XQmr3nKR",
+    "file": "cla-highlight-2.avif",
+    "title": "Long claimed range"
+   },
+   {
+    "index": 2,
+    "id": "eLZXEi0IipYXFqfg",
+    "file": "cla-highlight-3.jpg",
+    "title": "Coupe silhouette"
+   }
+  ],
+  "colours": [
+   {
+    "action": "attach",
+    "name": "Polar White",
+    "hex": "#f4f4f2",
+    "variant_id": null,
+    "id": "2sGmBbVwIXmvzvcI",
+    "file": "cla-white-side-front.avif"
+   },
+   {
+    "action": "add",
+    "name": "Alpine Grey",
+    "hex": "#878789",
+    "variant_id": "cla-200,cla-250-plus",
+    "id": "t_S-8sOohX6C97FY",
+    "file": "cla-alpine-grey-side-front.avif"
+   },
+   {
+    "action": "attach",
+    "name": "Spectral Blue",
+    "hex": "#4f7fa8",
+    "variant_id": null,
+    "id": "nSVBi1t5Du246Pw6",
+    "file": "cla-blue-side-front.avif"
+   },
+   {
+    "action": "add",
+    "name": "Metallic Black",
+    "hex": "#2f2f32",
+    "variant_id": "cla-200,cla-250-plus",
+    "id": "LPm-iRHlpJFNf4Zv",
+    "file": "cla-mettalic-black-side-front.avif"
+   },
+   {
+    "action": "add",
+    "name": "Night Black",
+    "hex": "#302f33",
+    "variant_id": "cla-200,cla-250-plus",
+    "id": "1sd2_rignvvZ0dUx",
+    "file": "cla-night-black-side-fron.avif"
+   },
+   {
+    "action": "attach",
+    "name": "Patagonia Red",
+    "hex": "#8d1626",
+    "variant_id": null,
+    "id": "bEWTHLtPY0ZFIhpq",
+    "file": "cla-red-side-front.avif"
+   },
+   {
+    "action": "add",
+    "name": "White (alt)",
+    "hex": "#d6d7d7",
+    "variant_id": "cla-200,cla-250-plus",
+    "id": "P-z91ofAAo-W7x3Y",
+    "file": "cla-side-front-white.avif"
+   },
+   {
+    "action": "attach",
+    "name": "High-tech Silver",
+    "hex": "#b9bcc1",
+    "variant_id": null,
+    "id": "tzWkjOcYILukQjGJ",
+    "file": "cla-silver-side-front.avif"
+   }
+  ]
+ },
+ "dodge-durango": {
+  "uid": "dodge-durango",
+  "isNew": false,
+  "hero_image": {
+   "id": "HZyYxhUT0KJw8KFT",
+   "file": "dodge-durango-main.avif"
+  },
+  "card_image": {
+   "id": "HZyYxhUT0KJw8KFT",
+   "file": "dodge-durango-main.avif"
+  },
+  "exterior_shots": [
+   {
+    "image": {
+     "id": "HZyYxhUT0KJw8KFT",
+     "file": "dodge-durango-main.avif"
+    },
+    "caption": ""
+   }
+  ],
+  "interior_shots": [
+   {
+    "image": {
+     "id": "zh0rurtTnI04lh8t",
+     "file": "dodge-durango-interior-1.avif"
+    },
+    "caption": ""
+   },
+   {
+    "image": {
+     "id": "W6qHih0f6FsxGAju",
+     "file": "dodge-durango-interior-2.avif"
+    },
+    "caption": ""
+   }
+  ],
+  "highlights": [
+   {
+    "index": 0,
+    "id": "_HvJldF7SAnQrdk_",
+    "file": "dodge-durango-highlight-1.avif",
+    "title": "Seven seats"
+   },
+   {
+    "index": 1,
+    "id": "VDoohgfcRqimqsxQ",
+    "file": "dodge-durango-highlight-2.avif",
+    "title": "Two petrol engines"
+   }
+  ],
+  "colours": [
+   {
+    "action": "attach",
+    "name": "Bright White",
+    "hex": "#f4f4f2",
+    "variant_id": null,
+    "id": "GnQhFk6wwZX0XWl_",
+    "file": "dodge-durango-white-side-front.avif"
+   },
+   {
+    "action": "attach",
+    "name": "Diamond Black",
+    "hex": "#101012",
+    "variant_id": null,
+    "id": "J4OUdceeuE2-KMjy",
+    "file": "dodge-durango-black.avif"
+   },
+   {
+    "action": "attach",
+    "name": "Granite Crystal",
+    "hex": "#4d5258",
+    "variant_id": null,
+    "id": "buGdIlMk_BBwbZiG",
+    "file": "dodge-durango-grey-side-front.avif"
+   }
+  ]
+ },
+ "mercedes-benz-e-class": {
+  "uid": "mercedes-benz-e-class",
+  "isNew": false,
+  "hero_image": {
+   "id": "Coc9aXWYSFDPWYKZ",
+   "file": "e-class-main.avif"
+  },
+  "card_image": {
+   "id": "Coc9aXWYSFDPWYKZ",
+   "file": "e-class-main.avif"
+  },
+  "exterior_shots": [
+   {
+    "image": {
+     "id": "Coc9aXWYSFDPWYKZ",
+     "file": "e-class-main.avif"
+    },
+    "caption": ""
+   }
+  ],
+  "interior_shots": [
+   {
+    "image": {
+     "id": "Zo34WnwVZISBhLkE",
+     "file": "e-class-interiror-1.avif"
+    },
+    "caption": ""
+   },
+   {
+    "image": {
+     "id": "FkPVh8LMVgirYQRJ",
+     "file": "e-class-interior-2.avif"
+    },
+    "caption": ""
+   }
+  ],
+  "highlights": [
+   {
+    "index": 0,
+    "id": "cljY3ahQYwuajpuP",
+    "file": "e-class-highlight-1.jpg",
+    "title": "Quiet long-distance ride"
+   },
+   {
+    "index": 1,
+    "id": "LxZTTGi3eh2aKKrg",
+    "file": "e-class-highlight-2.webp",
+    "title": "Roomy rear seat"
+   },
+   {
+    "index": 2,
+    "id": "LfjLL6BMORwHs3vv",
+    "file": "e-class-highlight-3.avif",
+    "title": "Diesel economy"
+   }
+  ],
+  "colours": [
+   {
+    "action": "attach",
+    "name": "Obsidian Black",
+    "hex": "#101114",
+    "variant_id": null,
+    "id": "UHvwAUcTwgcpA6Ln",
+    "file": "e-class-black-side-front.avif"
+   },
+   {
+    "action": "attach",
+    "name": "Nautical Blue",
+    "hex": "#1a2b4a",
+    "variant_id": null,
+    "id": "dblREUWi7pwu2TLR",
+    "file": "e-class-blue-side-front.avif"
+   },
+   {
+    "action": "attach",
+    "name": "Polar White",
+    "hex": "#f4f4f2",
+    "variant_id": null,
+    "id": "EhkZX9re24x-VLVz",
+    "file": "e-class-side-front-white.avif"
+   },
+   {
+    "action": "add",
+    "name": "White (alt)",
+    "hex": "#dbdbda",
+    "variant_id": "e200-avantgarde,e200-amg-line,e220d-amg-line",
+    "id": "w80gBKxIM_WjUx55",
+    "file": "e-class-whit-side-front.avif"
+   }
+  ]
+ },
+ "mercedes-benz-g-class": {
+  "uid": "mercedes-benz-g-class",
+  "isNew": false,
+  "hero_image": {
+   "id": "uqlp9OCcpulPF4Zd",
+   "file": "g-class-main.avif"
+  },
+  "card_image": {
+   "id": "uqlp9OCcpulPF4Zd",
+   "file": "g-class-main.avif"
+  },
+  "exterior_shots": [
+   {
+    "image": {
+     "id": "uqlp9OCcpulPF4Zd",
+     "file": "g-class-main.avif"
+    },
+    "caption": ""
+   }
+  ],
+  "interior_shots": [
+   {
+    "image": {
+     "id": "74Ly--V8HxlzsLOb",
+     "file": "g-class-interior-1.webp"
+    },
+    "caption": ""
+   },
+   {
+    "image": {
+     "id": "oqQDCzif9YrhOCVt",
+     "file": "g-class-interior-2.avif"
+    },
+    "caption": ""
+   },
+   {
+    "image": {
+     "id": "Eb4VdBVm-htchksC",
+     "file": "g-class-interior-3.webp"
+    },
+    "caption": ""
+   }
+  ],
+  "highlights": [
+   {
+    "index": 0,
+    "id": "tVRcOrPMQ0ViEQz4",
+    "file": "g-class-highlight-1.avif",
+    "title": "Three locking diffs"
+   },
+   {
+    "index": 1,
+    "id": "8p5niWzZEtG90a_y",
+    "file": "g-class-highlight-2.avif",
+    "title": "Ladder frame"
+   },
+   {
+    "index": 2,
+    "id": "SxGCqWxpwyGe32vC",
+    "file": "g-class-highlight-3.avif",
+    "title": "Low-range gearbox"
+   }
+  ],
+  "colours": [
+   {
+    "action": "attach",
+    "name": "Polar White",
+    "hex": "#f4f4f2",
+    "variant_id": null,
+    "id": "1Ew02cvxlfbIcUbk",
+    "file": "g-class-white-side-front.avif"
+   },
+   {
+    "action": "attach",
+    "name": "Obsidian Black",
+    "hex": "#101114",
+    "variant_id": null,
+    "id": "VXc_htYglS1YW-zP",
+    "file": "g-class-black-side-front.avif"
+   },
+   {
+    "action": "add",
+    "name": "Blue",
+    "hex": "#3c4353",
+    "variant_id": "g450d,amg-g63",
+    "id": "1dkvQqgNcuYC1VKH",
+    "file": "g-class-blue-side-front.avif"
+   },
+   {
+    "action": "attach",
+    "name": "Selenite Grey",
+    "hex": "#4b4f55",
+    "variant_id": null,
+    "id": "5tQgmeiPeFfkZgau",
+    "file": "g-class-grey-side-front.avif"
+   },
+   {
+    "action": "attach",
+    "name": "High-tech Silver",
+    "hex": "#b9bcc1",
+    "variant_id": null,
+    "id": "va-hHjYZuGFmBO50",
+    "file": "g-class-silver-side-front.avif"
+   }
+  ]
+ },
+ "mercedes-benz-gla": {
+  "uid": "mercedes-benz-gla",
+  "isNew": false,
+  "hero_image": {
+   "id": "xwfgzQEUmsVbzRT1",
+   "file": "gla-main.avif"
+  },
+  "card_image": {
+   "id": "xwfgzQEUmsVbzRT1",
+   "file": "gla-main.avif"
+  },
+  "exterior_shots": [
+   {
+    "image": {
+     "id": "xwfgzQEUmsVbzRT1",
+     "file": "gla-main.avif"
+    },
+    "caption": ""
+   }
+  ],
+  "interior_shots": [
+   {
+    "image": {
+     "id": "aSaztC8082RQqGs7",
+     "file": "gla-interior-1.webp"
+    },
+    "caption": ""
+   },
+   {
+    "image": {
+     "id": "qE5JjSj52xrEX3Mt",
+     "file": "gla-interior-2.avif"
+    },
+    "caption": ""
+   }
+  ],
+  "highlights": [
+   {
+    "index": 0,
+    "id": "FHNjFXZVuDtP-5Yt",
+    "file": "gla-highlight-1.avif",
+    "title": "Higher seating"
+   },
+   {
+    "index": 1,
+    "id": "LfVTLfm-eaxbwehC",
+    "file": "gla-highlight-2.avif",
+    "title": "4Matic option"
+   },
+   {
+    "index": 2,
+    "id": "JZnHwLRcl586INeB",
+    "file": "gla-highlight-3.avif",
+    "title": "MBUX with voice control"
+   }
+  ],
+  "colours": [
+   {
+    "action": "attach",
+    "name": "Polar White",
+    "hex": "#f4f4f2",
+    "variant_id": null,
+    "id": "YyD4PKpuOzcnAcA-",
+    "file": "gla-white-side-front.avif"
+   },
+   {
+    "action": "attach",
+    "name": "Obsidian Black",
+    "hex": "#101114",
+    "variant_id": null,
+    "id": "zLWam4AzyuGXDmO_",
+    "file": "gla-black-side-front.avif"
+   },
+   {
+    "action": "add",
+    "name": "Light Blue",
+    "hex": "#91979d",
+    "variant_id": "gla-200,gla-250-4matic,amg-gla-35-4matic",
+    "id": "Y-VDszeKI33VtpG2",
+    "file": "gla-side-light-blue-side-front.avif"
+   },
+   {
+    "action": "attach",
+    "name": "Mojave Silver",
+    "hex": "#a8a49b",
+    "variant_id": null,
+    "id": "CNiovbt13iYqR1zp",
+    "file": "gla-silver-side-front.avif"
+   }
+  ]
+ },
+ "mercedes-benz-glc": {
+  "uid": "mercedes-benz-glc",
+  "isNew": false,
+  "hero_image": {
+   "id": "lBd9cGh3BwdBYCEc",
+   "file": "glc-main.avif"
+  },
+  "card_image": {
+   "id": "lBd9cGh3BwdBYCEc",
+   "file": "glc-main.avif"
+  },
+  "exterior_shots": [
+   {
+    "image": {
+     "id": "lBd9cGh3BwdBYCEc",
+     "file": "glc-main.avif"
+    },
+    "caption": ""
+   }
+  ],
+  "interior_shots": [
+   {
+    "image": {
+     "id": "fD-UCORr3dGk4D8k",
+     "file": "glc-interior-12.avif"
+    },
+    "caption": ""
+   },
+   {
+    "image": {
+     "id": "bxbAhPEAlNYnJpTf",
+     "file": "glc-side-front-interior-2.avif"
+    },
+    "caption": ""
+   }
+  ],
+  "highlights": [
+   {
+    "index": 0,
+    "id": "Uz1LEp7nZic4yLPH",
+    "file": "glc-highlight-1.avif",
+    "title": "4Matic as standard"
+   },
+   {
+    "index": 1,
+    "id": "QiQeD_T7tgHpPSW_",
+    "file": "glc-highlight-2.avif",
+    "title": "Diesel choice"
+   },
+   {
+    "index": 2,
+    "id": "bDyk3XpZDjVCVXJb",
+    "file": "glc-highlight-3.jpg",
+    "title": "Transparent bonnet"
+   }
+  ],
+  "colours": [
+   {
+    "action": "add",
+    "name": "Opalite White",
+    "hex": "#d1d2d4",
+    "variant_id": "glc200-4matic-avantgarde,glc200-4matic-amg-line,glc220d-4matic,amg-glc43-4matic",
+    "id": "6fCgX2wfuzwKObiH",
+    "file": "glc-opalite-white-side-front.avif"
+   },
+   {
+    "action": "attach",
+    "name": "Polar White",
+    "hex": "#f4f4f2",
+    "variant_id": null,
+    "id": "zonoRpaAQbcp4Jbw",
+    "file": "glc-white-side-front.avif"
+   },
+   {
+    "action": "attach",
+    "name": "Obsidian Black",
+    "hex": "#101114",
+    "variant_id": null,
+    "id": "XSqERMfZXd_Wcpvl",
+    "file": "glc-black-side-front.avif"
+   },
+   {
+    "action": "attach",
+    "name": "Nautical Blue",
+    "hex": "#1a2b4a",
+    "variant_id": null,
+    "id": "UUiqtanSBYtv-LKE",
+    "file": "glc-blue-side-front.avif"
+   },
+   {
+    "action": "attach",
+    "name": "Olive Green",
+    "hex": "#4a5236",
+    "variant_id": null,
+    "id": "W1_rGn8YlsMxMTlQ",
+    "file": "glc-green-side-front.avif"
+   },
+   {
+    "action": "attach",
+    "name": "Selenite Grey",
+    "hex": "#4b4f55",
+    "variant_id": null,
+    "id": "Kh6kM4Ugq9q71x8H",
+    "file": "glc-grey-side-front.avif"
+   },
+   {
+    "action": "attach",
+    "name": "Patagonia Red",
+    "hex": "#8d1626",
+    "variant_id": null,
+    "id": "4CcSKMwsF3urUHy2",
+    "file": "glc-red-side-front.avif"
+   },
+   {
+    "action": "attach",
+    "name": "High-tech Silver",
+    "hex": "#b9bcc1",
+    "variant_id": null,
+    "id": "nkX75LA4eYP4OJtP",
+    "file": "glc-silver-side-front.avif"
+   }
+  ]
+ },
+ "mercedes-benz-glc-coupe": {
+  "uid": "mercedes-benz-glc-coupe",
+  "isNew": true,
+  "hero_image": {
+   "id": "as2h2og5RBKexCdg",
+   "file": "glc-coupe-main.avif"
+  },
+  "card_image": {
+   "id": "as2h2og5RBKexCdg",
+   "file": "glc-coupe-main.avif"
+  },
+  "exterior_shots": [
+   {
+    "image": {
+     "id": "as2h2og5RBKexCdg",
+     "file": "glc-coupe-main.avif"
+    },
+    "caption": ""
+   }
+  ],
+  "interior_shots": [
+   {
+    "image": {
+     "id": "Dr7Chmk2UVQgWldk",
+     "file": "glc-coupe-interior-1.avif"
+    },
+    "caption": ""
+   },
+   {
+    "image": {
+     "id": "72CIK3b2fssBaB0J",
+     "file": "glc-coupe-interior-2.avif"
+    },
+    "caption": ""
+   }
+  ],
+  "highlights": [
+   {
+    "index": 0,
+    "id": "ha5-f5sZNpneY_qz",
+    "file": "glc-coupe-highlight-1.avif",
+    "title": "(new doc)"
+   },
+   {
+    "index": 1,
+    "id": "w2SCjC7OEjx1pXEC",
+    "file": "glc-coupe-highlight-2.avif",
+    "title": "(new doc)"
+   },
+   {
+    "index": 2,
+    "id": "z7V0ENTMYUba1ShX",
+    "file": "glc-coupe-highlight-3.avif",
+    "title": "(new doc)"
+   }
+  ],
+  "colours": [
+   {
+    "action": "add",
+    "name": "White",
+    "hex": "#d5d6d7",
+    "variant_id": "",
+    "id": "9OrCnTrSOrRnvA3g",
+    "file": "glc-coupe-white-side-front.avif"
+   },
+   {
+    "action": "add",
+    "name": "Black",
+    "hex": "#2e2e2f",
+    "variant_id": "",
+    "id": "vUohS6s7Ij8MY39D",
+    "file": "glc-coupe-black-side-front.avif"
+   },
+   {
+    "action": "add",
+    "name": "Blue",
+    "hex": "#304765",
+    "variant_id": "",
+    "id": "hdx-Aiin4op0ctVh",
+    "file": "glc-coupe-blue-side-front.avif"
+   },
+   {
+    "action": "add",
+    "name": "Grey",
+    "hex": "#3e3e3f",
+    "variant_id": "",
+    "id": "kU9kYFqdg2u4ieWK",
+    "file": "glc-coupe-grey-side-front.avif"
+   },
+   {
+    "action": "add",
+    "name": "Red",
+    "hex": "#773438",
+    "variant_id": "",
+    "id": "YrqDpO_qOmYjMUjf",
+    "file": "glc-coupe-red-side-front.avif"
+   },
+   {
+    "action": "add",
+    "name": "Silver",
+    "hex": "#8c9399",
+    "variant_id": "",
+    "id": "SMcPXWdfFTbGi_30",
+    "file": "glc-coupe-side-front-silver.avif"
+   }
+  ]
+ },
+ "mercedes-benz-gle": {
+  "uid": "mercedes-benz-gle",
+  "isNew": false,
+  "hero_image": {
+   "id": "Xnupc1z_KTMhJPTm",
+   "file": "gle-main.avif"
+  },
+  "card_image": {
+   "id": "Xnupc1z_KTMhJPTm",
+   "file": "gle-main.avif"
+  },
+  "exterior_shots": [
+   {
+    "image": {
+     "id": "Xnupc1z_KTMhJPTm",
+     "file": "gle-main.avif"
+    },
+    "caption": ""
+   }
+  ],
+  "interior_shots": [
+   {
+    "image": {
+     "id": "0GUanS-rmv9negS4",
+     "file": "gle-interior-1.avif"
+    },
+    "caption": ""
+   },
+   {
+    "image": {
+     "id": "pkk_HhtduTm9d_TX",
+     "file": "gle-interior-2.avif"
+    },
+    "caption": ""
+   }
+  ],
+  "highlights": [
+   {
+    "index": 0,
+    "id": "za6NKDtRdJBPLV91",
+    "file": "gle-highlight-1.avif",
+    "title": "Diesel torque"
+   },
+   {
+    "index": 1,
+    "id": "NLusACo_q2xEuyMV",
+    "file": "gle-highlight-2.avif",
+    "title": "Air suspension"
+   },
+   {
+    "index": 2,
+    "id": "1ApuYMsLaZaEtF7f",
+    "file": "gle-highlight-3.webp",
+    "title": "4Matic all-wheel drive"
+   }
+  ],
+  "colours": [
+   {
+    "action": "attach",
+    "name": "Polar White",
+    "hex": "#f4f4f2",
+    "variant_id": null,
+    "id": "9s2rO43q-KE71F9J",
+    "file": "gle-white-side-front.avif"
+   },
+   {
+    "action": "attach",
+    "name": "Obsidian Black",
+    "hex": "#101114",
+    "variant_id": null,
+    "id": "RRV6FmHqfQ5OQ5NX",
+    "file": "gle-black-side-front.avif"
+   },
+   {
+    "action": "attach",
+    "name": "Selenite Grey",
+    "hex": "#4b4f55",
+    "variant_id": null,
+    "id": "fIvd6cwynVbaiuCK",
+    "file": "gle-grey-side-front.avif"
+   },
+   {
+    "action": "attach",
+    "name": "Mojave Silver",
+    "hex": "#a8a49b",
+    "variant_id": null,
+    "id": "oXLKH87h55uEHr2T",
+    "file": "gle-silver-side-front.avif"
+   }
+  ]
+ },
+ "mercedes-benz-gle-coupe": {
+  "uid": "mercedes-benz-gle-coupe",
+  "isNew": true,
+  "hero_image": {
+   "id": "crX1V_bpqF54XdlY",
+   "file": "gle-coupe-main.avif"
+  },
+  "card_image": {
+   "id": "crX1V_bpqF54XdlY",
+   "file": "gle-coupe-main.avif"
+  },
+  "exterior_shots": [
+   {
+    "image": {
+     "id": "crX1V_bpqF54XdlY",
+     "file": "gle-coupe-main.avif"
+    },
+    "caption": ""
+   }
+  ],
+  "interior_shots": [],
+  "highlights": [
+   {
+    "index": 0,
+    "id": "PBaA9XD3xHdseOHO",
+    "file": "gle-coupe-highligh-1.webp",
+    "title": "(new doc)"
+   },
+   {
+    "index": 1,
+    "id": "39EaRLtCxHOGc-uY",
+    "file": "gle-coupe-highlight-2.webp",
+    "title": "(new doc)"
+   },
+   {
+    "index": 2,
+    "id": "pov9TRvr0ehteDZH",
+    "file": "gle-coupe-highlight-3.avif",
+    "title": "(new doc)"
+   }
+  ],
+  "colours": [
+   {
+    "action": "add",
+    "name": "White",
+    "hex": "#d9dadc",
+    "variant_id": "",
+    "id": "zgAQhLlKTw8tBZhU",
+    "file": "gle-coupe-white-side-front.avif"
+   },
+   {
+    "action": "add",
+    "name": "Black",
+    "hex": "#202020",
+    "variant_id": "",
+    "id": "babuFn91mrPH8AMD",
+    "file": "gle-coupe-black-side-front.avif"
+   },
+   {
+    "action": "add",
+    "name": "Grey",
+    "hex": "#5e6263",
+    "variant_id": "",
+    "id": "Ohp1FzRq22d_qEkv",
+    "file": "gle-coupe-grey-side-front.avif"
+   }
+  ]
+ },
+ "mercedes-benz-gls": {
+  "uid": "mercedes-benz-gls",
+  "isNew": false,
+  "hero_image": {
+   "id": "XrLjAQLKvp6w70JR",
+   "file": "gls-main.avif"
+  },
+  "card_image": {
+   "id": "XrLjAQLKvp6w70JR",
+   "file": "gls-main.avif"
+  },
+  "exterior_shots": [
+   {
+    "image": {
+     "id": "XrLjAQLKvp6w70JR",
+     "file": "gls-main.avif"
+    },
+    "caption": ""
+   }
+  ],
+  "interior_shots": [],
+  "highlights": [
+   {
+    "index": 0,
+    "id": "DaW7FDTh4C7kKgFg",
+    "file": "gls-highlight-1.avif",
+    "title": "Seven proper seats"
+   },
+   {
+    "index": 1,
+    "id": "-H6UkXChNNu6wHFT",
+    "file": "gls-highlight-2.avif",
+    "title": "Air suspension standard"
+   },
+   {
+    "index": 2,
+    "id": "H5RhvE6YQZ5QnPbi",
+    "file": "gls-highlight-3.avif",
+    "title": "750 Nm diesel"
+   }
+  ],
+  "colours": [
+   {
+    "action": "attach",
+    "name": "Obsidian Black",
+    "hex": "#101114",
+    "variant_id": null,
+    "id": "ayWzjoM5bUPimdHC",
+    "file": "gls-black-side-front.avif"
+   }
+  ]
+ },
+ "mercedes-benz-gls-maybach": {
+  "uid": "mercedes-benz-gls-maybach",
+  "isNew": true,
+  "hero_image": {
+   "id": "LVPoMrhfxo3mUncE",
+   "file": "gls-maybach-main.avif"
+  },
+  "card_image": {
+   "id": "LVPoMrhfxo3mUncE",
+   "file": "gls-maybach-main.avif"
+  },
+  "exterior_shots": [
+   {
+    "image": {
+     "id": "LVPoMrhfxo3mUncE",
+     "file": "gls-maybach-main.avif"
+    },
+    "caption": ""
+   }
+  ],
+  "interior_shots": [
+   {
+    "image": {
+     "id": "j4PXmt8_GZAbbvNH",
+     "file": "gls-maybach-interior-1.avif"
+    },
+    "caption": ""
+   }
+  ],
+  "highlights": [
+   {
+    "index": 0,
+    "id": "wqeytv9_RrtjCNWq",
+    "file": "gls-maybach-highlight-1.avif",
+    "title": "(new doc)"
+   },
+   {
+    "index": 1,
+    "id": "w6Vx9XqR2knQni3-",
+    "file": "gls-maybach-highlight-2.avif",
+    "title": "(new doc)"
+   },
+   {
+    "index": 2,
+    "id": "k1ThiggFlcLnS_gK",
+    "file": "gls-maybach-highlight-3.avif",
+    "title": "(new doc)"
+   }
+  ],
+  "colours": [
+   {
+    "action": "add",
+    "name": "Black",
+    "hex": "#454545",
+    "variant_id": "",
+    "id": "bSjQQlfS8wTKkNry",
+    "file": "gls-maybach-black-side-front.avif"
+   }
+  ]
+ },
+ "jeep-cherokee": {
+  "uid": "jeep-cherokee",
+  "isNew": true,
+  "hero_image": null,
+  "card_image": null,
+  "exterior_shots": [],
+  "interior_shots": [
+   {
+    "image": {
+     "id": "vqmsRk1FsGXl8D2w",
+     "file": "jeep-cherokee-interior-1.jpg"
+    },
+    "caption": ""
+   },
+   {
+    "image": {
+     "id": "OY6DpHPfjtOaNjrh",
+     "file": "jeep-chreokee-interior-2.avif"
+    },
+    "caption": ""
+   },
+   {
+    "image": {
+     "id": "4me_sivBWXhM5mmV",
+     "file": "jeep-cherokee-interior-3.jpg"
+    },
+    "caption": ""
+   }
+  ],
+  "highlights": [],
+  "colours": [
+   {
+    "action": "add",
+    "name": "White",
+    "hex": "#bec1be",
+    "variant_id": "",
+    "id": "4AOeY5n1xcGIF0FW",
+    "file": "jeep-cherokee-white-side-front.avif"
+   },
+   {
+    "action": "add",
+    "name": "Black",
+    "hex": "#131313",
+    "variant_id": "",
+    "id": "QrXuQINzBb8CozJu",
+    "file": "jeep-cherokee-black-side-front.jpg"
+   },
+   {
+    "action": "add",
+    "name": "Grey",
+    "hex": "#3a3c3b",
+    "variant_id": "",
+    "id": "41uiJowxWMhmC7GB",
+    "file": "jeep-cherokee-grey-side-front.avif"
+   }
+  ]
+ },
+ "jeep-grand-cherokee": {
+  "uid": "jeep-grand-cherokee",
+  "isNew": false,
+  "hero_image": {
+   "id": "VEquPwvkR5CsUFgF",
+   "file": "jeep-grand-cherokee-main.avif"
+  },
+  "card_image": {
+   "id": "VEquPwvkR5CsUFgF",
+   "file": "jeep-grand-cherokee-main.avif"
+  },
+  "exterior_shots": [
+   {
+    "image": {
+     "id": "VEquPwvkR5CsUFgF",
+     "file": "jeep-grand-cherokee-main.avif"
+    },
+    "caption": ""
+   }
+  ],
+  "interior_shots": [],
+  "highlights": [
+   {
+    "index": 0,
+    "id": "anfYu3fAYnPQ_O92",
+    "file": "jeep-grand-cherokee-highlight-1.avif",
+    "title": "3.6 V6, 210 kW"
+   },
+   {
+    "index": 1,
+    "id": "Ek7Bq9QETvtlbzHI",
+    "file": "jeep-grand-cherokee-highlight-2.avif",
+    "title": "Full-time 4x4"
+   }
+  ],
+  "colours": []
+ },
+ "jeep-wrangler": {
+  "uid": "jeep-wrangler",
+  "isNew": false,
+  "hero_image": {
+   "id": "qn32H5-0gs2jzoUm",
+   "file": "jeep-wrangler-main.jpg"
+  },
+  "card_image": {
+   "id": "qn32H5-0gs2jzoUm",
+   "file": "jeep-wrangler-main.jpg"
+  },
+  "exterior_shots": [
+   {
+    "image": {
+     "id": "qn32H5-0gs2jzoUm",
+     "file": "jeep-wrangler-main.jpg"
+    },
+    "caption": ""
+   }
+  ],
+  "interior_shots": [
+   {
+    "image": {
+     "id": "3_YUBD3N7Sewfe_x",
+     "file": "jeep-wrangler-interior-1.jpg"
+    },
+    "caption": ""
+   }
+  ],
+  "highlights": [
+   {
+    "index": 0,
+    "id": "GiRk0qgMEE9txecw",
+    "file": "jeep-wrangler-highlight-1.jpg",
+    "title": "2.0 turbo petrol"
+   },
+   {
+    "index": 1,
+    "id": "pnlqqjXGuvdbTWQb",
+    "file": "jeepwrangler-highlight-2.jpg",
+    "title": "Low-range 4x4"
+   }
+  ],
+  "colours": [
+   {
+    "action": "attach",
+    "name": "Bright White",
+    "hex": "#f2f2f0",
+    "variant_id": null,
+    "id": "D0xWHWNFFxTuH9WO",
+    "file": "jeep-wrangler-white-side-front.png"
+   },
+   {
+    "action": "attach",
+    "name": "Black",
+    "hex": "#141414",
+    "variant_id": null,
+    "id": "TfnSo_Ly_BLCibDp",
+    "file": "jeep-wrangler-black-side-front.avif"
+   },
+   {
+    "action": "attach",
+    "name": "Firecracker Red",
+    "hex": "#b3262b",
+    "variant_id": null,
+    "id": "m4SPb9243D8Gwzpa",
+    "file": "jeep-wrangler-red-side-front.avif"
+   },
+   {
+    "action": "add",
+    "name": "Silver",
+    "hex": "#373833",
+    "variant_id": "unlimited-2-0t-sahara,unlimited-2-0t-rubicon,unlimited-85th-anniversary",
+    "id": "TX1m6OqmPt63WuUg",
+    "file": "jeep-wrangler-silver-side-front.png"
+   }
+  ]
+ },
+ "mitsubishi-triton": {
+  "uid": "mitsubishi-triton",
+  "isNew": false,
+  "hero_image": {
+   "id": "DdK4pXai1xVJLXnp",
+   "file": "mitsubish-triton-main.png"
+  },
+  "card_image": {
+   "id": "DdK4pXai1xVJLXnp",
+   "file": "mitsubish-triton-main.png"
+  },
+  "exterior_shots": [
+   {
+    "image": {
+     "id": "DdK4pXai1xVJLXnp",
+     "file": "mitsubish-triton-main.png"
+    },
+    "caption": ""
+   }
+  ],
+  "interior_shots": [],
+  "highlights": [],
+  "colours": [
+   {
+    "action": "add",
+    "name": "Orange",
+    "hex": "#a14c1c",
+    "variant_id": "2.4-gl-sc-4x2-mt,2.4-gl-dc-4x4-mt,2.4-gls-dc-4x4-at,2.4-xtreme-dc-4x4-at,2.4-bi-turbo-dc-4x4-at",
+    "id": "tSGDkidTO7JD-xM-",
+    "file": "mitsubishi-orange-side-front.png"
+   }
+  ]
+ },
+ "mercedes-benz-v-class": {
+  "uid": "mercedes-benz-v-class",
+  "isNew": false,
+  "hero_image": {
+   "id": "kOBAls4WOCsUPqhh",
+   "file": "v-class-main.avif"
+  },
+  "card_image": {
+   "id": "kOBAls4WOCsUPqhh",
+   "file": "v-class-main.avif"
+  },
+  "exterior_shots": [
+   {
+    "image": {
+     "id": "kOBAls4WOCsUPqhh",
+     "file": "v-class-main.avif"
+    },
+    "caption": ""
+   }
+  ],
+  "interior_shots": [
+   {
+    "image": {
+     "id": "Y8kkCw4nwE9MurSQ",
+     "file": "v-class-interior-1.avif"
+    },
+    "caption": ""
+   },
+   {
+    "image": {
+     "id": "OqPBuKVcRyaVZRLC",
+     "file": "v-class-interior-2.avif"
+    },
+    "caption": ""
+   }
+  ],
+  "highlights": [
+   {
+    "index": 0,
+    "id": "FrfDov7Ynoe5JmIh",
+    "file": "v-class-highlight-1.jpg",
+    "title": "Seven seats"
+   },
+   {
+    "index": 1,
+    "id": "GqLT2lx1z4AQVqvJ",
+    "file": "v-class-highlight-2.avif",
+    "title": "Powerful diesel"
+   },
+   {
+    "index": 2,
+    "id": "ZfTuzD53JA7-f5jb",
+    "file": "v-class-highlight-3.avif",
+    "title": "Sliding doors"
+   }
+  ],
+  "colours": [
+   {
+    "action": "attach",
+    "name": "Polar White",
+    "hex": "#f4f4f2",
+    "variant_id": null,
+    "id": "I0AFEjKVKmaMd0BY",
+    "file": "v-class-white-side-front.avif"
+   },
+   {
+    "action": "attach",
+    "name": "Obsidian Black",
+    "hex": "#101114",
+    "variant_id": null,
+    "id": "bJDQYN1_0FnqHUTF",
+    "file": "v-class-black-side-front.avif"
+   },
+   {
+    "action": "attach",
+    "name": "Selenite Grey",
+    "hex": "#4b4f55",
+    "variant_id": null,
+    "id": "cJLHN2gzCHnaOkfx",
+    "file": "v-class-grey-side-front.avif"
+   },
+   {
+    "action": "attach",
+    "name": "Mojave Silver",
+    "hex": "#a8a49b",
+    "variant_id": null,
+    "id": "RZaHLlfdEub1O94L",
+    "file": "v-class-silver-side-front.avif"
+   }
+  ]
+ }
+}

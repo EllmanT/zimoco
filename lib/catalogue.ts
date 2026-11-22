@@ -407,9 +407,19 @@ export const COMPARE_ONLY_SLUGS = new Set(["ford-ranger", "ford-ranger-raptor", 
 /** Card photos that face the opposite way to the rest of the range; mirrored so every vehicle points the same direction. */
 export const FLIPPED_CARD_SLUGS = new Set(["toyota-coaster", "toyota-hiace"]);
 
+/** Brands Zimoco sells. Anything else left in Prismic (old Starbell brands) stays hidden on the site. */
+export const ZIMOCO_BRANDS = new Set([
+  "Mercedes-Benz", "Jeep", "Chrysler", "Dodge", "Fiat", "Alfa Romeo", "Mitsubishi", "Haval", "GWM",
+  "Mercedes-Benz Trucks & Buses", "FUSO", "Freightliner",
+]);
+
+/** Vehicles loaded from Prismic that have no hero or card image yet stay off the site until photos are added. Set to false to show them. */
+export const HIDE_MODELS_WITHOUT_IMAGES = true;
+const lacksImages = (m: Model) => HIDE_MODELS_WITHOUT_IMAGES && !!m.cms && !m.cms.hero && !m.cms.card;
+
 export function makeCatalogue(all: Model[], presets: ComparePreset[] = comparePresets): Catalogue {
   const list = all
-    .filter((m) => !HIDDEN_SLUGS.has(m.slug))
+    .filter((m) => ZIMOCO_BRANDS.has(m.brand) && !HIDDEN_SLUGS.has(m.slug) && !lacksImages(m))
     .map((m) => ({ ...m, rivals: m.rivals.filter((r) => !HIDDEN_SLUGS.has(r)) }));
   const known = new Set(list.map((m) => m.slug));
   const selling = list.filter((m) => !COMPARE_ONLY_SLUGS.has(m.slug));

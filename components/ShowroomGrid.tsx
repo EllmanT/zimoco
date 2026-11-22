@@ -32,11 +32,16 @@ function QuietSelect({ label, value, onChange, options }: { label: string; value
   );
 }
 
+/** Mercedes-Benz Trucks & Buses, FUSO and Freightliner share one "Commercial" entry in the brand filter, to keep the list short. */
+const COMMERCIAL = new Set(["Mercedes-Benz Trucks & Buses", "FUSO", "Freightliner"]);
+const brandGroup = (b: string) => (COMMERCIAL.has(b) ? "Commercial" : b);
+
 export default function ShowroomGrid() {
   const params = useSearchParams();
-  const { models, bodies, brands } = useCatalogue();
+  const { models, bodies, brands: allBrands } = useCatalogue();
+  const brands = useMemo(() => [...new Set(allBrands.map(brandGroup))], [allBrands]);
   const [body, setBody] = useState("All");
-  const [brand, setBrand] = useState(params.get("brand") ?? "All");
+  const [brand, setBrand] = useState(brandGroup(params.get("brand") ?? "All"));
   const [bi, setBi] = useState(0);
   const [open, setOpen] = useState(false);
   const [q, setQ] = useState("");
@@ -65,7 +70,7 @@ export default function ShowroomGrid() {
     return models.filter((m) => {
       const p = fromPrice(m) ?? 0;
       const hay = `${m.brand} ${m.name} ${m.body}`.toLowerCase();
-      return (body === "All" || m.body === body) && (brand === "All" || m.brand === brand) && p >= budgets[bi][1] && p < budgets[bi][2] && (!term || term.split(/\s+/).every((w) => hay.includes(w)));
+      return (body === "All" || m.body === body) && (brand === "All" || brandGroup(m.brand) === brand) && p >= budgets[bi][1] && p < budgets[bi][2] && (!term || term.split(/\s+/).every((w) => hay.includes(w)));
     });
   }, [models, body, brand, bi, q]);
 

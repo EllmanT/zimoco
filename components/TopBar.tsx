@@ -51,7 +51,7 @@ export default function TopBar() {
             <Link href="/" className="flex items-center gap-3 rounded-sm" aria-label="Zimoco home">
               <Image src="/zimoco-logo-white.png" alt="" width={333} height={152} className="h-9 w-auto" priority />
             </Link>
-            <nav aria-label="Primary" className="label hidden items-center gap-8 lg:flex">
+            <nav aria-label="Primary" className="label !normal-case hidden items-center gap-8 lg:flex">
               {nav.map((n) => (
                 <Link key={n.href} href={n.href} aria-current={active(n.href)} className="nav-link">
                   {n.label}
