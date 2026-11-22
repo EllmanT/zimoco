@@ -849,6 +849,16 @@ export interface VehicleDocumentDataVariantsItem {
 	 * - **Documentation**: https://prismic.io/docs/fields/table
 	 */
 	specs: prismic.TableField;
+	
+	/**
+	 * Hero image for this version field in *Vehicle → Variants*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.variants[].hero_image
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	hero_image: prismic.ImageField<never>;
 }
 
 /**
@@ -984,6 +994,382 @@ export interface VehicleDocumentDataFaqItem {
 	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
 	 */
 	answer: prismic.RichTextField;
+}
+
+/**
+ * Item in *Vehicle → Highlights (bento)*
+ */
+export interface VehicleDocumentDataHighlightsItem {
+	/**
+	 * Version IDs (comma-separated; blank = all versions) field in *Vehicle → Highlights (bento)*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.highlights[].variant_id
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	variant_id: prismic.KeyTextField;
+	
+	/**
+	 * Title field in *Vehicle → Highlights (bento)*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.highlights[].title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	title: prismic.KeyTextField;
+	
+	/**
+	 * Text field in *Vehicle → Highlights (bento)*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.highlights[].text
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	text: prismic.KeyTextField;
+	
+	/**
+	 * Image field in *Vehicle → Highlights (bento)*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.highlights[].image
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	image: prismic.ImageField<never>;
+}
+
+/**
+ * Item in *Vehicle → Exterior colour views*
+ */
+export interface VehicleDocumentDataExteriorViewsItem {
+	/**
+	 * Version IDs (comma-separated; blank = all versions) field in *Vehicle → Exterior colour views*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.exterior_views[].variant_id
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	variant_id: prismic.KeyTextField;
+	
+	/**
+	 * Colour name field in *Vehicle → Exterior colour views*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.exterior_views[].colour_name
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	colour_name: prismic.KeyTextField;
+	
+	/**
+	 * Colour hex (e.g. #1a1a1a) field in *Vehicle → Exterior colour views*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.exterior_views[].colour_hex
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	colour_hex: prismic.KeyTextField;
+	
+	/**
+	 * Angle field in *Vehicle → Exterior colour views*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.exterior_views[].angle
+	 * - **Documentation**: https://prismic.io/docs/fields/select
+	 */
+	angle: prismic.SelectField<"Front" | "Front left" | "Left" | "Rear left" | "Rear" | "Rear right" | "Right" | "Front right">;
+	
+	/**
+	 * Studio image field in *Vehicle → Exterior colour views*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.exterior_views[].image
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	image: prismic.ImageField<never>;
+}
+
+/**
+ * Item in *Vehicle → Wheel options*
+ */
+export interface VehicleDocumentDataWheelOptionsItem {
+	/**
+	 * Version IDs (comma-separated; blank = all versions) field in *Vehicle → Wheel options*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.wheel_options[].variant_id
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	variant_id: prismic.KeyTextField;
+	
+	/**
+	 * Wheel name field in *Vehicle → Wheel options*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.wheel_options[].name
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	name: prismic.KeyTextField;
+	
+	/**
+	 * Angle field in *Vehicle → Wheel options*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.wheel_options[].angle
+	 * - **Documentation**: https://prismic.io/docs/fields/select
+	 */
+	angle: prismic.SelectField<"Front" | "Front left" | "Left" | "Rear left" | "Rear" | "Rear right" | "Right" | "Front right">;
+	
+	/**
+	 * Image field in *Vehicle → Wheel options*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.wheel_options[].image
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	image: prismic.ImageField<never>;
+}
+
+/**
+ * Item in *Vehicle → Interior views*
+ */
+export interface VehicleDocumentDataInteriorViewsItem {
+	/**
+	 * Version IDs (comma-separated; blank = all versions) field in *Vehicle → Interior views*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.interior_views[].variant_id
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	variant_id: prismic.KeyTextField;
+	
+	/**
+	 * Tab field in *Vehicle → Interior views*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: Upholstery
+	 * - **API ID Path**: vehicle.interior_views[].tab
+	 * - **Documentation**: https://prismic.io/docs/fields/select
+	 */
+	tab: prismic.SelectField<"Upholstery" | "Trims", "filled">;
+	
+	/**
+	 * Option name field in *Vehicle → Interior views*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.interior_views[].option_name
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	option_name: prismic.KeyTextField;
+	
+	/**
+	 * Swatch hex field in *Vehicle → Interior views*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.interior_views[].swatch_hex
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	swatch_hex: prismic.KeyTextField;
+	
+	/**
+	 * Image field in *Vehicle → Interior views*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.interior_views[].image
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	image: prismic.ImageField<never>;
+}
+
+/**
+ * Item in *Vehicle → Equipment highlights*
+ */
+export interface VehicleDocumentDataEquipmentItem {
+	/**
+	 * Version IDs (comma-separated; blank = all versions) field in *Vehicle → Equipment highlights*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.equipment[].variant_id
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	variant_id: prismic.KeyTextField;
+	
+	/**
+	 * Category (e.g. Multimedia) field in *Vehicle → Equipment highlights*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.equipment[].category
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	category: prismic.KeyTextField;
+	
+	/**
+	 * Title field in *Vehicle → Equipment highlights*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.equipment[].title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	title: prismic.KeyTextField;
+	
+	/**
+	 * Text field in *Vehicle → Equipment highlights*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.equipment[].text
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	text: prismic.KeyTextField;
+	
+	/**
+	 * Image field in *Vehicle → Equipment highlights*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.equipment[].image
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	image: prismic.ImageField<never>;
+}
+
+/**
+ * Item in *Vehicle → Technical data rows*
+ */
+export interface VehicleDocumentDataSpecRowsItem {
+	/**
+	 * Version IDs (comma-separated; blank = all versions) field in *Vehicle → Technical data rows*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.spec_rows[].variant_id
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	variant_id: prismic.KeyTextField;
+	
+	/**
+	 * Section (e.g. Performance) field in *Vehicle → Technical data rows*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.spec_rows[].section
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	section: prismic.KeyTextField;
+	
+	/**
+	 * Label field in *Vehicle → Technical data rows*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.spec_rows[].label
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	label: prismic.KeyTextField;
+	
+	/**
+	 * Value field in *Vehicle → Technical data rows*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.spec_rows[].value
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	value: prismic.KeyTextField;
+	
+	/**
+	 * Show in the key figures table field in *Vehicle → Technical data rows*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.spec_rows[].key_figure
+	 * - **Documentation**: https://prismic.io/docs/fields/boolean
+	 */
+	key_figure: prismic.BooleanField;
+}
+
+/**
+ * Item in *Vehicle → Offers and prices*
+ */
+export interface VehicleDocumentDataOffersItem {
+	/**
+	 * Version IDs (comma-separated; blank = all versions) field in *Vehicle → Offers and prices*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.offers[].variant_id
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	variant_id: prismic.KeyTextField;
+	
+	/**
+	 * Type field in *Vehicle → Offers and prices*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.offers[].type
+	 * - **Documentation**: https://prismic.io/docs/fields/select
+	 */
+	type: prismic.SelectField<"Leasing" | "Finance" | "Cash offer" | "Trade-in" | "Other">;
+	
+	/**
+	 * Title field in *Vehicle → Offers and prices*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.offers[].title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	title: prismic.KeyTextField;
+	
+	/**
+	 * Text field in *Vehicle → Offers and prices*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.offers[].text
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	text: prismic.KeyTextField;
+	
+	/**
+	 * Button label field in *Vehicle → Offers and prices*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.offers[].cta_label
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	cta_label: prismic.KeyTextField;
+	
+	/**
+	 * Background image field in *Vehicle → Offers and prices*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.offers[].image
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	image: prismic.ImageField<never>;
 }
 
 /**
@@ -1220,7 +1606,84 @@ interface VehicleDocumentData {
 	 * - **Tab**: Main
 	 * - **Documentation**: https://prismic.io/docs/fields/timestamp
 	 */
-	synced_at: prismic.TimestampField;/**
+	synced_at: prismic.TimestampField;
+	
+	/**
+	 * Highlights (bento) field in *Vehicle*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.highlights[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	highlights: prismic.GroupField<Simplify<VehicleDocumentDataHighlightsItem>>;
+	
+	/**
+	 * Exterior colour views field in *Vehicle*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.exterior_views[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	exterior_views: prismic.GroupField<Simplify<VehicleDocumentDataExteriorViewsItem>>;
+	
+	/**
+	 * Wheel options field in *Vehicle*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.wheel_options[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	wheel_options: prismic.GroupField<Simplify<VehicleDocumentDataWheelOptionsItem>>;
+	
+	/**
+	 * Interior views field in *Vehicle*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.interior_views[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	interior_views: prismic.GroupField<Simplify<VehicleDocumentDataInteriorViewsItem>>;
+	
+	/**
+	 * Equipment highlights field in *Vehicle*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.equipment[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	equipment: prismic.GroupField<Simplify<VehicleDocumentDataEquipmentItem>>;
+	
+	/**
+	 * Technical data rows field in *Vehicle*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.spec_rows[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	spec_rows: prismic.GroupField<Simplify<VehicleDocumentDataSpecRowsItem>>;
+	
+	/**
+	 * Offers and prices field in *Vehicle*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vehicle.offers[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	offers: prismic.GroupField<Simplify<VehicleDocumentDataOffersItem>>;/**
 	 * Meta Title field in *Vehicle*
 	 *
 	 * - **Field Type**: Text
@@ -1887,6 +2350,13 @@ declare module "@prismicio/client" {
 			VehicleDocumentDataInteriorShotsItem,
 			VehicleDocumentDataRivalsItem,
 			VehicleDocumentDataFaqItem,
+			VehicleDocumentDataHighlightsItem,
+			VehicleDocumentDataExteriorViewsItem,
+			VehicleDocumentDataWheelOptionsItem,
+			VehicleDocumentDataInteriorViewsItem,
+			VehicleDocumentDataEquipmentItem,
+			VehicleDocumentDataSpecRowsItem,
+			VehicleDocumentDataOffersItem,
 			AllDocumentTypes,
 			BrandPicksSlice,
 			BrandPicksSliceDefaultPrimary,
