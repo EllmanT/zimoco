@@ -65,7 +65,7 @@ export default function Viewer({ tabs, name, studio }: { tabs: Tab[]; name: stri
         aria-roledescription="carousel"
         aria-label={`${name}: ${set.name}`}
       >
-        <div className="relative aspect-[4/3] md:aspect-[16/8]">
+        <div className="relative aspect-[4/3] max-h-[60svh] w-full md:aspect-auto md:h-[min(52svh,32rem)]">
           {set.views.map((x, i) => (
             <Image
               key={x.src}

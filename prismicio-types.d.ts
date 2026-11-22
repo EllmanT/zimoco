@@ -274,66 +274,6 @@ interface CategoryDocumentData {
  */
 export type CategoryDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<Simplify<CategoryDocumentData>, "category", Lang>;
 
-/**
- * Content for Compare Preset documents
- */
-interface ComparePresetDocumentData {
-	/**
-	 * Label field in *Compare Preset*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: compare_preset.label
-	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/fields/text
-	 */
-	label: prismic.KeyTextField;
-	
-	/**
-	 * Vehicle A field in *Compare Preset*
-	 *
-	 * - **Field Type**: Content Relationship
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: compare_preset.vehicle_a
-	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/fields/content-relationship
-	 */
-	vehicle_a: ContentRelationshipFieldWithData<[{"fields":["model_name"],"id":"vehicle"}]>;
-	
-	/**
-	 * Vehicle B field in *Compare Preset*
-	 *
-	 * - **Field Type**: Content Relationship
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: compare_preset.vehicle_b
-	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/fields/content-relationship
-	 */
-	vehicle_b: ContentRelationshipFieldWithData<[{"fields":["model_name"],"id":"vehicle"}]>;
-	
-	/**
-	 * Vehicle C (optional) field in *Compare Preset*
-	 *
-	 * - **Field Type**: Content Relationship
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: compare_preset.vehicle_c
-	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/fields/content-relationship
-	 */
-	vehicle_c: ContentRelationshipFieldWithData<[{"fields":["model_name"],"id":"vehicle"}]>;
-}
-
-/**
- * Compare Preset document from Prismic
- *
- * - **API ID**: `compare_preset`
- * - **Repeatable**: `true`
- * - **Documentation**: https://prismic.io/docs/content-modeling
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type ComparePresetDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<Simplify<ComparePresetDocumentData>, "compare_preset", Lang>;
-
 type ContactPageDocumentDataSlicesSlice = never
 
 /**
@@ -1728,7 +1668,7 @@ interface VehicleDocumentData {
  */
 export type VehicleDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<Simplify<VehicleDocumentData>, "vehicle", Lang>;
 
-export type AllDocumentTypes = AboutPageDocument | BrandDocument | CategoryDocument | ComparePresetDocument | ContactPageDocument | HomepageDocument | SettingsDocument | VehicleDocument;
+export type AllDocumentTypes = AboutPageDocument | BrandDocument | CategoryDocument | ContactPageDocument | HomepageDocument | SettingsDocument | VehicleDocument;
 
 /**
  * Primary content in *BrandPicks → Default → Primary*
@@ -2329,8 +2269,6 @@ declare module "@prismicio/client" {
 			BrandDocumentDataCategoryImagesItem,
 			CategoryDocument,
 			CategoryDocumentData,
-			ComparePresetDocument,
-			ComparePresetDocumentData,
 			ContactPageDocument,
 			ContactPageDocumentData,
 			ContactPageDocumentDataSlicesSlice,
