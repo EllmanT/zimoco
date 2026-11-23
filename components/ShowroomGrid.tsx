@@ -66,7 +66,8 @@ export default function ShowroomGrid() {
 
   const list = useMemo(() => {
     const term = q.trim().toLowerCase();
-    return models.filter((m) => {
+    const byName = (a: string, b: string) => a.localeCompare(b, "en", { numeric: true, sensitivity: "base" });
+    return [...models].sort((a, b) => byName(a.brand, b.brand) || byName(a.name, b.name)).filter((m) => {
       const p = fromPrice(m) ?? 0;
       const hay = `${m.brand} ${m.name} ${m.body}`.toLowerCase();
       return (body === "All" || m.body === body) && (brand === "All" || brandGroup(m.brand) === brand) && p >= budgets[bi][1] && p < budgets[bi][2] && (!term || term.split(/\s+/).every((w) => hay.includes(w)));
