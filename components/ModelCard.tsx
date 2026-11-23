@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FACES_LEFT, cardImage, fromPrice, usd, type Model } from "@/lib/catalogue";
+import { FACES_LEFT, SHOWROOM_IMAGE_SCALE, cardImage, fromPrice, usd, type Model } from "@/lib/catalogue";
 import { useRfq } from "./RfqProvider";
 
 /** Borderless card: image, name, "From" price. The whole card is the link (Toyota SA pattern). */
@@ -10,6 +10,10 @@ export default function ModelCard({ model, priority = false }: { model: Model; p
   const img = cardImage(model);
   const rfq = useRfq();
   const price = fromPrice(model);
+  const scale = img?.studio ? SHOWROOM_IMAGE_SCALE[model.slug] : undefined;
+  const flip = FACES_LEFT.has(model.slug);
+  // Static transform, so it composes with the hover zoom class (a separate scale property) without clashing.
+  const imgStyle = flip || scale ? { transform: `${flip ? "scaleX(-1) " : ""}${scale ? `scale(${scale})` : ""}`.trim() } : undefined;
 
   return (
     <article className="group relative flex flex-col">
@@ -20,7 +24,7 @@ export default function ModelCard({ model, priority = false }: { model: Model; p
             alt={`${model.brand} ${model.name}`}
             fill
             priority={priority}
-            style={FACES_LEFT.has(model.slug) ? { transform: "scaleX(-1)" } : undefined}
+            style={imgStyle}
             sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
             className={img.studio
               ? "object-contain p-2 drop-shadow-[0_14px_16px_rgba(0,0,0,0.14)] transition-transform duration-300 ease-[var(--ease-out-strong)] [@media(hover:hover)]:group-hover:scale-[1.03]"

@@ -449,6 +449,16 @@ export const FACES_LEFT = new Set([
   "dodge-durango", "jeep-wrangler", "jeep-cherokee", "chrysler-pacifica",
 ]);
 
+/**
+ * Showroom-card image scale for models whose cut-out fills more of the frame than the rest (1 = unchanged).
+ * Tuned so the car appears about the same width as the GLC Coupe, GLS Maybach and E-Class.
+ */
+export const SHOWROOM_IMAGE_SCALE: Record<string, number> = {
+  "mercedes-benz-gla": 0.7, "mercedes-benz-c-class": 0.7,
+  "mercedes-benz-gle": 0.6, "mercedes-benz-gle-coupe": 0.6,
+  "jeep-wrangler": 0.6, "jeep-cherokee": 0.6, "jeep-grand-cherokee": 0.6,
+};
+
 /** Mercedes-Benz Trucks & Buses, FUSO and Freightliner are presented together as one "Commercial" entry (brand filter, homepage pill). */
 export const COMMERCIAL_BRANDS = new Set(["Mercedes-Benz Trucks & Buses", "FUSO", "Freightliner"]);
 
