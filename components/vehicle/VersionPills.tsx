@@ -21,7 +21,7 @@ export default function VersionPills({ versions, active, label }: P) {
     (e.currentTarget.parentElement?.children[idx] as HTMLElement | undefined)?.focus();
   };
   return (
-    <div className="relative z-30 -mt-8 h-[3.75rem]" aria-busy={pending}>
+    <div className="relative z-30 -mt-3 h-[3.75rem]" aria-busy={pending}>
       <div className="absolute inset-x-0 top-0 px-5 md:px-8">
         <div className="mx-auto max-w-[1100px]">
           <div role="tablist" aria-label={label} className="no-scrollbar flex gap-1 overflow-x-auto rounded-full bg-white p-1.5 shadow-[0_16px_40px_-12px_rgba(0,0,0,.35)]">
