@@ -60,7 +60,7 @@ export default function TopBar() {
             </nav>
           </div>
           <div className="flex items-center gap-4">
-            <a href={whatsappLink("Hello Zimoco, I would like to enquire about a vehicle.")} className={`label hidden transition-colors hover:text-accent md:inline ${"text-white/90"}`}>WhatsApp</a>
+            <a href={whatsappLink("Hello Zimoco, I would like to enquire about a vehicle.")} className={`label !normal-case hidden transition-colors hover:text-accent md:inline ${"text-white/90"}`}>Whatsapp</a>
             <button type="button" onClick={() => rfq.open()} className="btn btn-accent !min-h-10 !px-5 !text-sm">Request a quote</button>
             <button type="button" className="label inline-flex h-10 items-center lg:hidden" aria-expanded={open} aria-controls="mobile-menu" onClick={() => setOpen((o) => !o)}>
               {open ? "Close" : "Menu"}
@@ -84,7 +84,7 @@ export default function TopBar() {
         </nav>
         <div className="mt-8 grid gap-4">
           <button className="btn btn-accent" onClick={() => { setOpen(false); rfq.open(); }}>Request a quote</button>
-          <a className="btn btn-ghost !border-white/40 !text-white" href={whatsappLink("Hello Zimoco, I would like to enquire about a vehicle.")}>WhatsApp us</a>
+          <a className="btn btn-ghost !border-white/40 !text-white" href={whatsappLink("Hello Zimoco, I would like to enquire about a vehicle.")}>Whatsapp us</a>
           <a href={`tel:${site.phoneTel}`} className="text-center text-muted">{site.phoneDisplay}</a>
         </div>
       </div>
