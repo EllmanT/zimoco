@@ -52,6 +52,8 @@ export type Cms = {
   card?: string;
   /** Vehicle-page groups (highlights, views, specs, offers). */
   page?: PageGroups;
+  /** Every studio colour image on the vehicle, whether or not the row names a trim. */
+  cutouts?: ColourOption[];
   /** Studio colour images per variant id. */
   colours: Record<string, ColourOption[]>;
   exterior: string[];
@@ -66,6 +68,8 @@ export type Cms = {
 export type Model = {
   /** Present when this model is served from Prismic. */
   cms?: Cms;
+  /** Prismic category name (e.g. "Luxury SUV"); `body` only holds the coarse group. */
+  category?: string;
   slug: string;
   folder: string; // folder under public/showroom
   brand: string;
@@ -368,10 +372,28 @@ export function heroImage(m: Model): { src: string; focus: string; kind: "photo"
   const c = first && (colourOptions(m, first.id).find((x) => x.colour === "white") ?? colourOptions(m, first.id)[0]);
   return c ? { src: c.src, focus: "50% 50%", kind: "studio" } : { src: "", focus: "50% 50%", kind: "none" };
 }
-/** Card image: studio cut-out (preferred, white background) or the photo. */
+/** Every distinct studio cut-out (transparent background) of a model, across all its trims. */
+export function cutouts(m: Model): ColourOption[] {
+  const seen = new Set<string>();
+  if (LOCAL_CUTOUTS[m.slug]) return LOCAL_CUTOUTS[m.slug];
+  // Prismic colour rows can leave the trim blank; those are still the model's images.
+  const all = [...m.variants.flatMap((v) => colourOptions(m, v.id)), ...(m.cms?.cutouts ?? [])];
+  return all.filter((o) => !seen.has(o.src) && !!seen.add(o.src));
+}
+/**
+ * The model's cut-out for cards and tiles: one colour, chosen by hashing the slug so it is varied across the range
+ * but the same on every render (server and browser agree). `flip` is true when the shot faces left and must be mirrored.
+ * Null when the model has no cut-out.
+ */
+export function cutout(m: Model): { src: string; colour: string; flip: boolean } | null {
+  const all = cutouts(m);
+  if (!all.length) return null;
+  const c = all[hashStr(m.slug) % all.length];
+  return { src: c.src, colour: c.colour, flip: FACES_LEFT.has(m.slug) };
+}
+/** Card image: the colour cut-out when there is one, else the photo. */
 export function cardImage(m: Model) {
-  const first = configurableVariants(m)[0];
-  const c = first && (colourOptions(m, first.id).find((x) => x.colour === "white") ?? colourOptions(m, first.id)[0]);
+  const c = cutout(m);
   if (c) return { src: c.src, studio: true };
   // A card that is just the hero photo is a photograph, not a studio cut-out.
   if (m.cms?.card) return { src: m.cms.card, studio: m.cms.card !== m.cms.hero };
@@ -404,8 +426,31 @@ export const HIDDEN_SLUGS = new Set(["honda-cr-v", "honda-fit", "toyota-aqua", "
  */
 export const COMPARE_ONLY_SLUGS = new Set(["ford-ranger", "ford-ranger-raptor", "isuzu-d-max", "mazda-cx-5"]);
 
-/** Card photos that face the opposite way to the rest of the range; mirrored so every vehicle points the same direction. */
-export const FLIPPED_CARD_SLUGS = new Set(["toyota-coaster", "toyota-hiace"]);
+/**
+ * Background-removed images kept in /public. They replace the model's Prismic colour images, which for these models either
+ * do not exist yet (Grand Cherokee) or have a white box instead of a transparent background (Triton, Cherokee).
+ * Remove an entry once Prismic has proper transparent images for the model.
+ */
+const LOCAL_CUTOUTS: Record<string, ColourOption[]> = {
+  "jeep-grand-cherokee": [{ colour: "silver", src: "/cutouts/jeep-grand-cherokee.webp" }],
+  "mitsubishi-triton": [{ colour: "orange", src: "/cutouts/mitsubishi-triton-orange.webp" }],
+  "jeep-cherokee": [
+    { colour: "white", src: "/cutouts/jeep-cherokee-white.webp" },
+    { colour: "black", src: "/cutouts/jeep-cherokee-black.webp" },
+    { colour: "grey", src: "/cutouts/jeep-cherokee-grey.webp" },
+  ],
+};
+
+/** Models whose card / cut-out image faces left; mirrored (scaleX(-1)) so every vehicle points right. */
+export const FACES_LEFT = new Set([
+  "toyota-coaster", "toyota-hiace", "jeep-grand-cherokee",
+  "mitsubishi-triton", "haval-jolion", "haval-h6", "gwm-p300", "gwm-tank-300", "gwm-tank-500",
+  "mercedes-benz-v-class", "mercedes-benz-glc", "mercedes-benz-glc-coupe", "mercedes-benz-g-class", "mercedes-benz-e-class",
+  "dodge-durango", "jeep-wrangler", "jeep-cherokee", "chrysler-pacifica",
+]);
+
+/** Mercedes-Benz Trucks & Buses, FUSO and Freightliner are presented together as one "Commercial" entry (brand filter, homepage pill). */
+export const COMMERCIAL_BRANDS = new Set(["Mercedes-Benz Trucks & Buses", "FUSO", "Freightliner"]);
 
 /** Brands Zimoco sells. Anything else left in Prismic (old Starbell brands) stays hidden on the site. */
 export const ZIMOCO_BRANDS = new Set([
@@ -413,9 +458,9 @@ export const ZIMOCO_BRANDS = new Set([
   "Mercedes-Benz Trucks & Buses", "FUSO", "Freightliner",
 ]);
 
-/** Vehicles loaded from Prismic that have no hero or card image yet stay off the site until photos are added. Set to false to show them. */
+/** Vehicles loaded from Prismic with no background-free colour image stay off the site until one is added. Set to false to show them. */
 export const HIDE_MODELS_WITHOUT_IMAGES = true;
-const lacksImages = (m: Model) => HIDE_MODELS_WITHOUT_IMAGES && !!m.cms && !m.cms.hero && !m.cms.card;
+const lacksImages = (m: Model) => HIDE_MODELS_WITHOUT_IMAGES && !!m.cms && cutouts(m).length === 0;
 
 export function makeCatalogue(all: Model[], presets: ComparePreset[] = comparePresets): Catalogue {
   const list = all

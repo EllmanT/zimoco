@@ -4,23 +4,20 @@ import Link from "next/link";
 import { Content, asLink, isFilled } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import { rel } from "@/lib/href";
-import { createClient } from "@/prismicio";
+import { cutout } from "@/lib/catalogue";
+import { getCatalogue } from "@/lib/prismic/catalogue";
 
 export type VehicleHighlightsProps = SliceComponentProps<Content.VehicleHighlightsSlice>;
 
 const VehicleHighlights: FC<VehicleHighlightsProps> = async ({ slice }) => {
-  const client = createClient();
-  const cards = await Promise.all(
-    slice.primary.vehicles.map(async (v) => {
-      if (!isFilled.contentRelationship(v.vehicle)) return null;
-      try {
-        const doc = await client.getByID<Content.VehicleDocument>(v.vehicle.id);
-        const d = doc.data;
-        const image = d.card_image?.url ? d.card_image : d.hero_image;
-        return { uid: doc.uid ?? doc.id, label: v.label ?? "", name: d.model_name ?? "", tagline: d.tagline ?? "", image: image?.url ? { url: image.url, alt: image.alt ?? "" } : null };
-      } catch { return null; }
-    }),
-  );
+  const { models } = await getCatalogue();
+  const cards = slice.primary.vehicles.map((v) => {
+    if (!isFilled.contentRelationship(v.vehicle)) return null;
+    const m = models.find((x) => x.slug === (v.vehicle as { uid?: string }).uid);
+    const co = m && cutout(m);
+    if (!m || !co) return null; // not on the site (hidden, or no background-free image yet)
+    return { uid: m.slug, name: m.name, tagline: m.tagline, image: { url: co.src, alt: `${m.brand} ${m.name}`, flip: co.flip } };
+  });
   const items = cards.filter((c): c is NonNullable<typeof c> => !!c);
   if (!items.length) return null;
   const href = isFilled.link(slice.primary.cta) ? rel(asLink(slice.primary.cta)) : null;
@@ -36,11 +33,10 @@ const VehicleHighlights: FC<VehicleHighlightsProps> = async ({ slice }) => {
             <li key={c.uid}>
               <Link href={`/showroom/${c.uid}`} className="group block overflow-hidden rounded-[2rem] bg-white">
                 <div className="relative aspect-[4/3] bg-gradient-to-b from-sky-soft to-sunken">
-                  {c.image && <Image src={c.image.url} alt={c.image.alt || c.name} fill sizes="(min-width:768px) 33vw, 100vw" className="object-contain p-5 transition-transform duration-500 ease-[var(--ease-out-strong)] group-hover:scale-[1.04]" />}
+                  <Image src={c.image.url} alt={c.image.alt} fill sizes="(min-width:768px) 33vw, 100vw" style={c.image.flip ? { transform: "scaleX(-1)" } : undefined} className="object-contain p-5 transition-transform duration-500 ease-[var(--ease-out-strong)] group-hover:scale-[1.04]" />
                 </div>
                 <div className="p-5">
-                  {c.label && <p className="label text-accent-deep">{c.label}</p>}
-                  <h3 className="display mt-1 text-2xl">{c.name}</h3>
+                  <h3 className="display text-2xl">{c.name}</h3>
                   {c.tagline && <p className="mt-1 text-muted">{c.tagline}</p>}
                 </div>
               </Link>

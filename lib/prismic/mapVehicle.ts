@@ -95,7 +95,9 @@ export function mapVehicle(doc: Content.VehicleDocument): Model | null {
   });
 
   const colours: Record<string, ColourOption[]> = {};
+  const cutouts: ColourOption[] = [];
   for (const c of d.colour_options) {
+    if (c.colour_name && isFilled.image(c.image)) cutouts.push({ colour: c.colour_name.trim().toLowerCase(), src: c.image.url, hex: c.hex?.trim() || undefined });
     if (!c.variant_id || !c.colour_name || !isFilled.image(c.image)) continue;
     const option: ColourOption = { colour: c.colour_name.trim().toLowerCase(), src: c.image.url, hex: c.hex?.trim() || undefined };
     // One entry may list several trims (comma-separated) that share this colour.
@@ -118,6 +120,7 @@ export function mapVehicle(doc: Content.VehicleDocument): Model | null {
     card: isFilled.image(d.card_image) ? d.card_image.url : undefined,
     page: mapPage(d, rows),
     colours,
+    cutouts,
     exterior: shots(d.exterior_shots),
     interior: shots(d.interior_shots),
     longDescription: isFilled.richText(d.long_description) ? asText(d.long_description, "\n").split("\n").filter(Boolean) : undefined,
@@ -135,6 +138,7 @@ export function mapVehicle(doc: Content.VehicleDocument): Model | null {
 
   return {
     cms,
+    category: categoryName || undefined,
     slug,
     folder: slug,
     brand: linkedName(d.brand),

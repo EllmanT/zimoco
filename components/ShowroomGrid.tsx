@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import ModelCard from "./ModelCard";
-import { fromPrice } from "@/lib/catalogue";
+import { COMMERCIAL_BRANDS, fromPrice } from "@/lib/catalogue";
 import { useCatalogue } from "./CatalogueProvider";
 
 const budgets: [string, number, number][] = [
@@ -33,8 +33,7 @@ function QuietSelect({ label, value, onChange, options }: { label: string; value
 }
 
 /** Mercedes-Benz Trucks & Buses, FUSO and Freightliner share one "Commercial" entry in the brand filter, to keep the list short. */
-const COMMERCIAL = new Set(["Mercedes-Benz Trucks & Buses", "FUSO", "Freightliner"]);
-const brandGroup = (b: string) => (COMMERCIAL.has(b) ? "Commercial" : b);
+const brandGroup = (b: string) => (COMMERCIAL_BRANDS.has(b) ? "Commercial" : b);
 
 export default function ShowroomGrid() {
   const params = useSearchParams();

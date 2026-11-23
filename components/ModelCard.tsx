@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FLIPPED_CARD_SLUGS, cardImage, fromPrice, usd, type Model } from "@/lib/catalogue";
+import { FACES_LEFT, cardImage, fromPrice, usd, type Model } from "@/lib/catalogue";
 import { useRfq } from "./RfqProvider";
 
 /** Borderless card: image, name, "From" price. The whole card is the link (Toyota SA pattern). */
@@ -20,7 +20,7 @@ export default function ModelCard({ model, priority = false }: { model: Model; p
             alt={`${model.brand} ${model.name}`}
             fill
             priority={priority}
-            style={FLIPPED_CARD_SLUGS.has(model.slug) ? { transform: "scaleX(-1)" } : undefined}
+            style={FACES_LEFT.has(model.slug) ? { transform: "scaleX(-1)" } : undefined}
             sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
             className={img.studio
               ? "object-contain p-2 drop-shadow-[0_14px_16px_rgba(0,0,0,0.14)] transition-transform duration-300 ease-[var(--ease-out-strong)] [@media(hover:hover)]:group-hover:scale-[1.03]"

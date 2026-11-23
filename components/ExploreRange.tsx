@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
-import { FLIPPED_CARD_SLUGS } from "@/lib/catalogue";
+import { FACES_LEFT } from "@/lib/catalogue";
 
 export type RangeItem = {
   slug: string;
@@ -86,7 +86,7 @@ export default function ExploreRange({ items }: { items: RangeItem[] }) {
                   alt={`${cur.brand} ${cur.name}`}
                   fill
                   priority
-                  style={FLIPPED_CARD_SLUGS.has(cur.slug) ? { transform: "scaleX(-1)" } : undefined}
+                  style={FACES_LEFT.has(cur.slug) ? { transform: "scaleX(-1)" } : undefined}
                   sizes="(max-width: 768px) 90vw, 896px"
                   className={cur.image.studio
                     ? "object-contain drop-shadow-[0_18px_22px_rgba(0,0,0,0.18)] transition-transform duration-500 [@media(hover:hover)]:group-hover:scale-[1.02]"

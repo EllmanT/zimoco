@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { setActiveBrand, useActiveBrand } from "@/lib/brand-store";
 
-type P = { brands: { uid: string; name: string }[]; label: string };
+type P = { brands: { uid: string; name: string; inert?: boolean }[]; label: string };
 
 /**
  * Wide pill bar. Sits over the bottom of the hero; once scrolled past it docks under the header
@@ -37,9 +37,9 @@ export default function BrandBar({ brands, label }: P) {
               <button
                 key={b.uid}
                 role="tab"
-                aria-selected={b.uid === active}
-                onClick={() => setActiveBrand(b.uid)}
-                className={`min-h-11 shrink-0 rounded-full px-5 text-[0.95rem] lg:flex-1 lg:px-2 font-medium transition-colors duration-200 ${b.uid === active ? "bg-sky text-black" : "text-ink/70 hover:bg-sky-soft hover:text-ink"}`}
+                aria-selected={!b.inert && b.uid === active}
+                onClick={b.inert ? undefined : () => setActiveBrand(b.uid)}
+                className={`min-h-11 shrink-0 rounded-full px-5 text-[0.95rem] lg:flex-1 lg:px-2 font-medium transition-colors duration-200 ${!b.inert && b.uid === active ? "bg-sky text-black" : "text-ink/70 hover:bg-sky-soft hover:text-ink"}`}
               >
                 {b.name}
               </button>
