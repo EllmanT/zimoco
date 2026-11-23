@@ -445,7 +445,7 @@ const LOCAL_CUTOUTS: Record<string, ColourOption[]> = {
 export const FACES_LEFT = new Set([
   "toyota-coaster", "toyota-hiace", "jeep-grand-cherokee",
   "mitsubishi-triton", "haval-jolion", "haval-h6", "gwm-p300", "gwm-tank-300", "gwm-tank-500",
-  "mercedes-benz-v-class", "mercedes-benz-glc", "mercedes-benz-glc-coupe", "mercedes-benz-g-class", "mercedes-benz-e-class",
+  "mercedes-benz-a-class", "mercedes-benz-cla", "mercedes-benz-v-class", "mercedes-benz-glc", "mercedes-benz-glc-coupe", "mercedes-benz-g-class", "mercedes-benz-e-class",
   "dodge-durango", "jeep-wrangler", "jeep-cherokee", "chrysler-pacifica",
 ]);
 
